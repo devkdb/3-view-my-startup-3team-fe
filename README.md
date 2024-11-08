@@ -4,7 +4,7 @@
 
 ## 팀원 구성
 
-김두봉 (https://github.com/devkdb/3-view-my-startup-3team-fe)
+김두봉 (https://github.com/devkdb)
 
 김혁진(개인 Github 링크)
 
