@@ -6,11 +6,11 @@
 
 김두봉 ([개인 Github 링크](https://github.com/devkdb))
 
-김혁진 (https://github.com/whiteuni)
+김혁진 ([개인 Github 링크](https://github.com/whiteuni))
 
 박지흔(개인 Github 링크)
 
-배진한(개인 Github 링크)
+배진한([개인 Github 링크](https://github.com/Jin-coding-333))
 
 임예지([개인 Github 링크](https://github.com/Bluemoon105))
 
