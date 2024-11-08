@@ -4,7 +4,7 @@
 
 ## 팀원 구성
 
-김두봉 (https://github.com/devkdb)
+김두봉 ([개인 Github 링크](https://github.com/devkdb))
 
 김혁진(개인 Github 링크)
 
@@ -12,7 +12,7 @@
 
 배진한(개인 Github 링크)
 
-임예지(https://github.com/Bluemoon105)
+임예지([개인 Github 링크](https://github.com/Bluemoon105))
 
 최종훈([개인 Github 링크](https://github.com/jonghun4))
 
