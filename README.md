@@ -6,7 +6,7 @@
 
 김두봉 (https://github.com/devkdb/3-view-my-startup-3team-fe)
 
-김혁진(개인 Github 링크)
+김혁진 (https://github.com/whiteuni)
 
 박지흔(개인 Github 링크)
 
