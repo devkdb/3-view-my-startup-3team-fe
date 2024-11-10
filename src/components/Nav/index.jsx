@@ -1,6 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 import "./index.css";
-import mainLogo from "../../assets/images/logo/MainLogoMiddle.png";
+import mainLogoMiddle from "../../assets/images/logo/MainLogoMiddle.png";
+import mainLogoSmall from "../../assets/images/logo/MainLogoSmall.png";
 
 const getLinkStyle = ({ isActive }) => {
   return {
@@ -15,7 +16,8 @@ function Nav() {
       <div className="navContent">
         <div className="navLogo">
           <Link to="/">
-            <img src={mainLogo} alt="Mainlogo" />
+            <img id="mainLogoImageMiddle" src={mainLogoMiddle} alt="MainlogoM" />
+            <img id="mainLogoImageSmall" src={mainLogoSmall} alt="MainlogoS" />
           </Link>
         </div>
         <div className="navMenu">
