@@ -5,6 +5,7 @@
   height: 63px;
   position: fixed;
   top: 0;
+  filter: drop-shadow(0 0 0.75rem rgba(94, 94, 94, 0.283));
 }
 
 .navContent{
