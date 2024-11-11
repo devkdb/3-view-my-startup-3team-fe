@@ -1,11 +1,46 @@
-import "./index.css";
+import "./SearchComponent.css";
+import { useState } from "react";
+import SearchIcon from "../../assets/images/icon/ic_search.png";
+import DeleteIcon from "../../assets/images/icon/ic_delete.png";
 
-function 컴포넌트이름() {
+function SearchComponent() {
+  const [text, setText] = useState('');
+
+  var type_num;
+  if (text === ''){
+    type_num = 0
+    }
+  else {
+    type_num =1
+  }
+
+  var noType_num;
+  if(text ===''){
+    noType_num =1
+  }
+  else{
+    noType_num =0
+  }
+
+  function changeInput(e){
+    setText(e.target.value)
+  }
+  
   return (
-    <div>
-      
+    <div className="searchWrapper">
+      <img src={SearchIcon} alt="돋보기" style={{opacity:noType_num}}/>
+      <input className="searchInput"
+       placeholder="검색어를 입력해주세요"
+       onChange={changeInput}
+       value={text}
+       />
+      <img className="delete" src={DeleteIcon} alt="삭제" 
+      onClick={()=> setText('')}
+      style={{opacity: type_num}}/>
+      <img src={SearchIcon} alt="돋보기"
+      style={{opacity:type_num}}/>
     </div>
-  )
+  );
 }
 
-export default 컴포넌트이름;
+export default SearchComponent;
