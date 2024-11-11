@@ -37,6 +37,7 @@ body {
 main {
   height: 1080px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
