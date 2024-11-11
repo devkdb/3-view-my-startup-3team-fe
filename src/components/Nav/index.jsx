@@ -5,7 +5,7 @@ import mainLogoSmall from "../../assets/images/logo/MainLogoSmall.png";
 
 const getLinkStyle = ({ isActive }) => {
   return {
-    color: isActive ? "##FFFFFF" : "#747474",
+    color: isActive ? "#FFFFFF" : "#747474",
     
   };
 };
