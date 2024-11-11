@@ -1,5 +1,6 @@
 .nav{
   background-color: var(--black_400);
+  border-bottom: 1px solid var(--black_100);
   width:100%;
   height: 63px;
   position: fixed;
