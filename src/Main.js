@@ -7,7 +7,7 @@ function Main() {
   return (
     <>
       <Nav />
-      <div><Outlet /></div>
+      <main><Outlet /></main>
       <Footer />
     </>
   )
