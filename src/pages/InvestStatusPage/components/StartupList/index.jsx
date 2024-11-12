@@ -23,7 +23,7 @@ function StartupList({startups}) {
                 </td>
                 <td>{startup.description}</td>
                 <td>{startup.category}</td>
-                <td>{startup.amount}</td>
+                <td>{startup.simInvest}</td>
                 <td>{startup.actualInvest}</td>
               </tr>
             )
