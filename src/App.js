@@ -5,6 +5,7 @@ import AllStartupListPage from './pages/AllStartupListPage/index.jsx';
 import ComparePage from './pages/ComparePage/index.jsx';
 import CompareStatusPage from './pages/CompareStatusPage/index.jsx';
 import InvestStatusPage from './pages/InvestStatusPage/index.jsx';
+import DetailsPage from './pages/DetailsPage/index.jsx';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Main />}>
           <Route index element={<HomePage />} />
           <Route path='all-startup-list' element={<AllStartupListPage />} />
+          <Route path='details/:companyId' element={<DetailsPage />} />
           <Route path='compare' element={<ComparePage />} />
           <Route path='compare-status' element={<CompareStatusPage />} />
           <Route path='invest-status' element={<InvestStatusPage />} />
