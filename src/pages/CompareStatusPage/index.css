@@ -1,0 +1,20 @@
+#compareStatusPage{
+    width: 375px;
+}
+
+.compareTitle{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px){
+    #compareStatusPage{
+        width: 700px;
+    }
+}
+
+@media(min-width: 1280px){
+    #compareStatusPage{
+        width: 1200px;
+    }
+}

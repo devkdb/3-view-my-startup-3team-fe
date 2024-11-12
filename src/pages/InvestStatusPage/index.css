@@ -1,0 +1,32 @@
+h2{
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#investStatus{
+    width: 375px;
+}
+
+.investTitle{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px){
+    #investStatus{
+        width: 700px;
+    }
+}
+
+@media (min-width: 1280px){
+    h2{
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    #investStatus{
+        width: 1200px;
+    }
+
+}
