@@ -19,10 +19,9 @@ li {
   gap: 8px;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid #747474;
-  background-color: #131313;
-  color: #d8d8d8;
-  font-family: Pretendard;
+  border: 1px solid var(--gray_200);
+  background-color: var(--black_400);
+  color: var(--gray_100);
   font-size: 14px;
   font-weight: 400;
   line-height: 16.71px;
@@ -40,8 +39,8 @@ li {
   min-height: 48px;
   gap: 10px;
   border-radius: 10px;
-  border: 1px solid #747474;
-  background-color: #131313;
+  border: 1px solid var(--gray_200);
+  background-color: var(--black_400);
 }
 
 .DropdownListFont {
@@ -50,17 +49,16 @@ li {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  color: #d8d8d8;
-  font-family: Pretendard;
+  color: var(--gray_100);
   font-size: 14px;
   font-weight: 400;
   line-height: 16.71px;
-  border-top: 1px solid #d8d8d8; /* 각 항목들 사이에 상단 경계선 추가 */
+  border-top: 1px solid var(--gray_100); /* 각 항목들 사이에 상단 경계선 추가 */
 }
 
 /* 첫 번째 항목을 제외한 나머지 항목들에만 경계선 추가 */
 .DropdownListFont:nth-child(1) {
-  border-top: 1px solid #d8d8d8; /* 나머지 항목에 경계선 추가 */
+  border-top: 1px solid var(--gray_100); /* 나머지 항목에 경계선 추가 */
   border-top: none; /* 나머지 항목에 경계선 추가 */
 }
 
@@ -73,7 +71,7 @@ li {
     height: 40px;
     padding: 8px;
   }
-  .DropdownListLayer{
+  .DropdownListLayer {
     top: 2.6rem;
   }
   .DropdownLayer,

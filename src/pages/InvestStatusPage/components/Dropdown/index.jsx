@@ -1,5 +1,5 @@
 import { useState } from "react";
-import toggle from "./ic_toggle.png"; //경로에 맞춰서 수정
+import toggle from "../../../../assets/images/icons/ic_toggle.png";
 import "./index.css";
 import InvestStatusDropdownList from "./List/index";
 
