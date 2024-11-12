@@ -1,4 +1,4 @@
-import "../혁진/css파일/input.css";
+import "../InputFieldError/index.css";
 
 function InputError() {
   return <div className="input"></div>;
