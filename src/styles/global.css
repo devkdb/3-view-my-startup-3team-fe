@@ -3,19 +3,19 @@
   --black_400: #131313;
   --black_300: #212121;
   --black_200: #282828;
-  --black_100: #2E2E2E;
+  --black_100: #2e2e2e;
 
   /* Gray */
   --gray_400: #333333;
-  --gray_300: #4B4B4B;
+  --gray_300: #4b4b4b;
   --gray_200: #747474;
-  --gray_100: #D8D8D8;
+  --gray_100: #d8d8d8;
 
   /* Primary color */
 
-  --brand_orange: #EB5230;
-  --blue: ##558FFF;
-  --red_error: #C41013;
+  --brand_orange: #eb5230;
+  --blue: ##558fff;
+  --red_error: #c41013;
 }
 
 * {
@@ -26,7 +26,7 @@
 
 html {
   font-size: 10px;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-style: normal;
 }
 
@@ -38,8 +38,9 @@ main {
   height: 1080px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding-top: 100px;
 }
 
 a {
