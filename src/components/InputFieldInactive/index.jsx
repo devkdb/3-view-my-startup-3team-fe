@@ -1,4 +1,4 @@
-import "../혁진/css파일/input.css";
+import "../InputFieldInactive/index.css";
 
 function InputInactive() {
   return (
