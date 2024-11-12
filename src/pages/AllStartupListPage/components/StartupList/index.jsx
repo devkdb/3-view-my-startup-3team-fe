@@ -21,6 +21,7 @@ function StartupList({startups}) {
                 <td>{startup.rank}위</td>
                 <td>
                   <img src={startup.image} alt="회사 로고 이미지"/>
+                  {startup.name}
                 </td>
                 <td>{startup.description}</td>
                 <td>{startup.category}</td>
