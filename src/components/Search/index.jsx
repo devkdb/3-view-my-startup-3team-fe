@@ -1,7 +1,7 @@
 import "./index.css";
 import { useState } from "react";
-import SearchIcon from "../../assets/images/icon/ic_search.png";
-import DeleteIcon from "../../assets/images/icon/ic_delete.png";
+import SearchIcon from "../../assets/images/icons/search/ic_search.png";
+import DeleteIcon from "../../assets/images/icons/ic_delete.png";
 
 function SearchComponent() {
   const [text, setText] = useState('');
