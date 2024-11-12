@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
-import Oneye from "./image/btn_visibility_on.png";
-import Offeye from "./image/btn_visibility_off.png";
+import Oneye from "../../assets/images/icons/visibility/btn_visibility_on.png"
+import Offeye from "../../assets/images/icons/visibility/btn_visibility_off.png";
 
 function PasswordInput() {
 
