@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+.DropdownLayer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  cursor: pointer;
+  width: 190px;
+  height: 48px;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #747474;
+  background-color: #131313;
+  color: #d8d8d8;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.71px;
+  text-align: center;
+}
+
+.DropdownListLayer {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: inherit;
+  position: absolute;
+  top: 3.1rem;
+  width: 190px;
+  min-height: 48px;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid #747474;
+  background-color: #131313;
+}
+
+.DropdownListFont {
+  display: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  color: #d8d8d8;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.71px;
+  border-top: 1px solid #d8d8d8; /* 각 항목들 사이에 상단 경계선 추가 */
+}
+
+/* 첫 번째 항목을 제외한 나머지 항목들에만 경계선 추가 */
+.DropdownListFont:nth-child(1) {
+  border-top: 1px solid #d8d8d8; /* 나머지 항목에 경계선 추가 */
+  border-top: none; /* 나머지 항목에 경계선 추가 */
+}
+
+@media (max-width: 375px) {
+  .DropdownLayer,
+  .DropdownListLayer {
+    width: 168px;
+  }
+  .DropdownLayer {
+    height: 40px;
+    padding: 8px;
+  }
+  .DropdownListLayer{
+    top: 2.6rem;
+  }
+  .DropdownLayer,
+  .DropdownListFont {
+    font-size: 12px;
+    line-height: 14.32px;
+  }
+}
