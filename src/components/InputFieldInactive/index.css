@@ -1,5 +1,6 @@
 .inactive {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   height: 300px;
   padding: 16px;
   border-radius: 4px;
@@ -16,7 +17,8 @@
 }
 
 .inactiveFill {
-  width: 1168px;
+  max-width: 1168px;
+  width: 100%;
   height: 268px;
   border-radius: 4px;
   background-color: var(--black_300);
@@ -27,26 +29,30 @@
 
 @media (max-width: 696px) {
   .inactive {
-    width: 696px;
+    max-width: 696px;
+    width: 100%;
     height: 240px;
     padding: 16px;
   }
 
   .inactiveFill {
-    width: 664px;
+    max-width: 664px;
+    width: 100%;
     height: 208px;
   }
 }
 
 @media (max-width: 343px) {
   .inactive {
-    width: 343px;
+    max-width: 343px;
+    width: 100%;
     height: 180px;
     padding: 16px;
   }
 
   .inactiveFill {
-    width: 311px;
+    max-width: 311px;
+    width: 100%;
     height: 148px;
   }
 }
