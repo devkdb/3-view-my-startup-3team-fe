@@ -27,6 +27,10 @@
   align-items: center;
 }
 
+.inactiveFill:hover {
+  filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.082));
+}
+
 @media (max-width: 696px) {
   .inactive {
     max-width: 696px;

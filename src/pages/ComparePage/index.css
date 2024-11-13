@@ -25,6 +25,7 @@ h1 {
   font-weight: 700;
   font-size: 20px;
   line-height: 23.87px;
+  margin-left: 10px;
 }
 
 .btn-plus-icon {
@@ -60,7 +61,7 @@ h1 {
   }
 
   .compare-page {
-    padding-top: 0;
+    padding-top: 32px;
   }
 }
 
