@@ -8,13 +8,13 @@ function Footer() {
       <div className="footerContent">
         <img src={MainLogoMiddle} alt="MainlogoM" className="footerMainLogo" />
         <div className="footerMenu">
-          <Link className="footerLink">
+          <Link className="footerLink" to="/about">
             <span className="footerText">프로젝트 소개</span>
           </Link>
-          <Link className="footerLink">
+          <Link className="footerLink" to="/terms">
             <span className="footerText">이용 약관</span>
           </Link>
-          <Link className="footerLink">
+          <Link className="footerLink" to="/privacy">
             <span className="footerText" id="footerTextRight">
               개인정보 처리방침
             </span>
