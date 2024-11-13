@@ -22,7 +22,7 @@ function ComparePage() {
           <div className="btn-plus-container">
             <img
               src={btnPlusIcon}
-              alt="기업비교"
+              alt="기업 추가 버튼"
               className="btn-plus-icon"
               onClick={toggleModal}
             />
