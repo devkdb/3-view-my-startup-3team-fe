@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import toggle from "../../../../assets/images/icons/ic_toggle.png";
 import "./index.css";
 import InvestStatusDropdownList from "./List/index";
@@ -8,6 +8,7 @@ function InvestStatusDropdown() {
   const [selectedValue, setSelectedValue] = useState(
     "View My Startup 투자 금액 높은순"
   ); // 선택된 항목의 기본 값 설정
+  const dropdownRef = useRef(null); // 드롭다운 박스의 ref
   // 드롭다운을 열고 닫는 함수
   const toggleDropdown = () => {
     setIsOpen((prevState) => !prevState);
@@ -18,13 +19,22 @@ function InvestStatusDropdown() {
     setIsOpen(false); // 클릭 후 드롭다운 닫기
   };
   return (
-    <div>
-      <button onClick={toggleDropdown} className="DropdownLayer">
+    <div className="DropdownBody">
+      <button
+        onClick={toggleDropdown}
+        className="DropdownLayer"
+        ref={dropdownRef}
+      >
         {selectedValue}
         <img src={toggle} alt="toggle버튼" />
       </button>
       {/* 드롭다운이 열리면 리스트 항목을 표시 */}
-      {isOpen && <InvestStatusDropdownList onItemClick={handleItemClick} />}
+      {isOpen && (
+        <InvestStatusDropdownList
+          onItemClick={handleItemClick}
+          dropdownRef={dropdownRef}
+        />
+      )}
     </div>
   );
 }

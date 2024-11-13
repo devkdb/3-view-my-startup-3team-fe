@@ -1,20 +1,29 @@
-#compareStatusPage{
-    width: 375px;
+#compareStatusPage {
+  width: 375px;
 }
 
-.compareTitle{
-    display: flex;
-    justify-content: space-between;
+.compareTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-@media (min-width: 768px){
-    #compareStatusPage{
-        width: 700px;
-    }
+h2 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23.87px;
 }
 
-@media(min-width: 1280px){
-    #compareStatusPage{
-        width: 1200px;
-    }
+@media (min-width: 768px) {
+  #compareStatusPage {
+    width: 700px;
+  }
+}
+
+@media (min-width: 1280px) {
+  #compareStatusPage {
+    width: 1200px;
+  }
 }

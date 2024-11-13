@@ -2,13 +2,19 @@ li {
   list-style: none;
 }
 
+.DropdownBody {
+  display: flex;
+  width: 188px;
+  height: 48px;
+}
+
 .DropdownLayer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
   cursor: pointer;
-  width: 190px;
+  width: 188px;
   height: 48px;
   gap: 8px;
   padding: 10px;
@@ -20,21 +26,23 @@ li {
   font-weight: 400;
   line-height: 16.71px;
   text-align: center;
+  position: relative; /* 부모 요소에 relative를 추가 */
+  z-index: 1; /* 드롭다운이 다른 요소들 위에 오도록 z-index 설정 */
 }
 
 .DropdownListLayer {
-  display: block;
+  /* display: block; */
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: inherit;
-  position: absolute;
-  top: 3.1rem;
-  width: 190px;
+  position: absolute; /* 자식 요소에 absolute 적용*/
+  width: 188px !important;
   min-height: 48px;
   gap: 10px;
   border-radius: 10px;
   border: 1px solid var(--gray_200);
   background-color: var(--black_400);
+  z-index: 2; /* 드롭다운 리스트가 드롭다운 버튼 위로 오도록 z-index 설정 */
 }
 
 .DropdownListFont {
@@ -53,20 +61,18 @@ li {
 /* 첫 번째 항목을 제외한 나머지 항목들에만 경계선 추가 */
 .DropdownListFont:nth-child(1) {
   border-top: 1px solid var(--gray_100); /* 나머지 항목에 경계선 추가 */
-  border-top: none; /* 나머지 항목에 경계선 추가 */
+  border-top: none;
+  /* 나머지 항목에 경계선 추가 */
 }
 
 @media (max-width: 375px) {
   .DropdownLayer,
   .DropdownListLayer {
-    width: 168px;
+    width: 146px;
   }
   .DropdownLayer {
     height: 40px;
     padding: 8px;
-  }
-  .DropdownListLayer {
-    top: 2.6rem;
   }
   .DropdownLayer,
   .DropdownListFont {
