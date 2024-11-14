@@ -8,6 +8,7 @@ function ComparePage() {
 
   //플러스 버튼 클릭 했을때 모달 표시 및 숨기기
   const toggleModal = () => {
+    console.log("toggleModal");
     // togglemodal 함수 실행 시 showmodal 상태 변경 !가 추가 되어있으므로 ture(보임)상태가 됨
     setShowModal(!showModal);
   };
@@ -18,7 +19,7 @@ function ComparePage() {
         <div className="choose-My-Enterprise">
           <h1>나의 기업을 선택해주세요!</h1>
         </div>
-        <InputInactive>
+        <InputInactive onClick={setShowModal}>
           <div className="btn-plus-container">
             <img
               src={btnPlusIcon}

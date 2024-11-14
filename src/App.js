@@ -1,11 +1,15 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Main from "./Main.js"
+// jsx
 import HomePage from './pages/HomePage/index.jsx';
 import AllStartupListPage from './pages/AllStartupListPage/index.jsx';
 import ComparePage from './pages/ComparePage/index.jsx';
 import CompareStatusPage from './pages/CompareStatusPage/index.jsx';
 import InvestStatusPage from './pages/InvestStatusPage/index.jsx';
 import DetailsPage from './pages/DetailsPage/index.jsx';
+import AboutPage from './pages/AboutPage/index.jsx';
+import PrivacyPage from './pages/PrivacyPage/index.jsx';
+import TermsPage from './pages/TermsPage/index.jsx';
 
 function App() {
   return (
@@ -18,6 +22,10 @@ function App() {
           <Route path='compare' element={<ComparePage />} />
           <Route path='compare-status' element={<CompareStatusPage />} />
           <Route path='invest-status' element={<InvestStatusPage />} />
+          {/* Footer */}
+          <Route path='about' element={<AboutPage />} />
+          <Route path='terms' element={<PrivacyPage />} />
+          <Route path='privacy' element={<TermsPage />} />
         </Route >
       </Routes>
     </BrowserRouter>

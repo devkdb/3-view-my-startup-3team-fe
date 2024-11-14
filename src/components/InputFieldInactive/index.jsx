@@ -1,8 +1,9 @@
 import "../InputFieldInactive/index.css";
 
-function InputInactive({ children }) {
+function InputInactive({ onClick, children }) {
+  
   return (
-    <div className="inactive">
+    <div className="inactive" onClick={onClick}>
       <div className="inactiveFill">
         {children} {/*자식요소 렌더링*/}
       </div>

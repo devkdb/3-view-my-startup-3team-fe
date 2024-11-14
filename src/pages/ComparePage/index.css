@@ -25,12 +25,17 @@ h1 {
   font-weight: 700;
   font-size: 20px;
   line-height: 23.87px;
+  margin-left: 10px;
 }
 
 .btn-plus-icon {
   width: 48px;
   height: 48px;
   cursor: pointer;
+}
+
+.btn-plus-icon:hover {
+  filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.32));
 }
 
 .btn-plus-container p {
@@ -60,7 +65,7 @@ h1 {
   }
 
   .compare-page {
-    padding-top: 0;
+    padding-top: 32px;
   }
 }
 
