@@ -34,6 +34,10 @@ h1 {
   cursor: pointer;
 }
 
+.btn-plus-icon:hover {
+  filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.32));
+}
+
 .btn-plus-container p {
   color: #ffffff;
   font-weight: 500;

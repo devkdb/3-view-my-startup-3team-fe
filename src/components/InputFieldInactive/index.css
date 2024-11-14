@@ -25,10 +25,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .inactiveFill:hover {
-  filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.082));
+  box-shadow: 0 0 0.75rem rgba(255, 255, 255, 0.329)
+}
+
+.inactiveFill:active {
+  box-shadow: 0 0 0.0 rgba(255, 255, 255, 0)
 }
 
 @media (max-width: 696px) {
