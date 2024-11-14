@@ -49,10 +49,10 @@ background: #EB5230;
 
   background-color: var(--brand_orange);
 
-  /* cursor: pointer;
   &:hover {
-    background-color: #eb6f53;
-  } */
+    color: white;
+    background-color: var(--hover_orange);
+  }
 }
 /***** Mobile *****/
 @media (max-width: 374px) {

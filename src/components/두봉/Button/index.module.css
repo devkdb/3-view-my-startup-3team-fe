@@ -35,6 +35,9 @@
   color: var(--white_100);
   /* cursor: pointer; */
 }
+.button:hover {
+  background-color: var(--hover_orange);
+}
 .button.autline {
   width: 19.4rem;
   height: 4.8rem;
@@ -45,7 +48,17 @@
   line-height: 2.148rem;
   font-weight: 600;
   color: var(--brand_orange);
+  background-color: transparent;
+  &:hover {
+    color: var(--gray_200);
+    background-color: var(--hover_orange);
+  }
 }
+.button.autline:active {
+  color: var(--white_100);
+  background-color: var(--brand_orange);
+}
+
 .button.medium {
   width: 16.3rem;
   height: 4rem;
@@ -56,10 +69,10 @@
   font-size: 1.6rem;
   line-height: 1.909rem;
   font-weight: 600;
-  /* color: var(--gray_200);
+  color: var(--gray_200);
   &:hover {
-    background-color: #eb6f53;
-  } */
+    background-color: var(--hover_orange);
+  }
 }
 .button.medium:active {
   width: 16.3rem;
@@ -83,7 +96,16 @@
   line-height: 1.9rem;
   text-align: center;
   /* cursor: pointer; */
+  &:hover {
+    color: var(--gray_200);
+    background-color: var(--hover_orange);
+  }
 }
+.button.select:active {
+  color: var(--white_100);
+  background-color: var(--brand_orange);
+}
+
 .button.cancel {
   width: 11rem;
   height: 4.8rem;
@@ -98,6 +120,14 @@
   line-height: 1.9rem;
   text-align: center;
   /* cursor: pointer; */
+  &:hover {
+    color: var(--gray_200);
+    background-color: var(--hover_orange);
+  }
+}
+.button.cancel:active {
+  color: var(--white_100);
+  background-color: var(--brand_orange);
 }
 .button.complete {
   width: 11rem;
@@ -113,6 +143,14 @@
   line-height: 1.9rem;
   text-align: center;
   /* cursor: pointer; */
+  &:hover {
+    color: var(--gray_200);
+    background-color: var(--hover_orange);
+  }
+}
+.button.complete:active {
+  color: var(--white_100);
+  background-color: var(--brand_orange);
 }
 @media (max-width: 374px) {
   .checkIcon {

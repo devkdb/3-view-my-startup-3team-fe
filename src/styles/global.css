@@ -63,11 +63,3 @@ span {
 button {
   cursor: pointer;
 }
-
-button:hover {
-  background-color: #eb6f53;
-}
-
-button:active {
-  background-color: var(--brand_orange);
-}

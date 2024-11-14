@@ -49,6 +49,10 @@ popup_two_button
   line-height: 1.909rem;
 
   /* cursor: pointer; */
+  &:hover {
+    color: white;
+    background-color: var(--hover_orange);
+  }
 }
 
 .cancel {

@@ -101,6 +101,10 @@
     cursor: default;
   }
 }
+.delete:hover {
+  color: white;
+  background-color: var(--hover_orange);
+}
 
 /***** Mobile *****/
 @media (max-width: 374px) {

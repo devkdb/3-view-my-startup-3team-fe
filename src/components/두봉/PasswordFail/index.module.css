@@ -39,6 +39,10 @@
 
   /* cursor: pointer; */
 }
+.fail:hover {
+  color: white;
+  background-color: var(--hover_orange);
+}
 
 /***** Mobile *****/
 @media (max-width: 374px) {
