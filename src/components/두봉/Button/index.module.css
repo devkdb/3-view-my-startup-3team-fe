@@ -1,0 +1,166 @@
+/* .content {
+  width: 23.8rem;
+  height: 41.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+} */
+
+.checkIcon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.restartIcon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.button {
+  width: 18.3rem;
+  height: 4.8rem;
+  padding: 1.3rem 4rem;
+  border: none;
+  border-radius: 5rem;
+  background-color: var(--black_100);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.909rem;
+  color: var(--gray_200);
+}
+.button:active {
+  background-color: var(--brand_orange);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.909rem;
+  color: var(--white_100);
+  /* cursor: pointer; */
+}
+.button.autline {
+  width: 19.4rem;
+  height: 4.8rem;
+  padding: 1.3rem 4rem;
+  border: 1px solid var(--brand_orange);
+  border-radius: 5rem;
+  font-size: 1.8rem;
+  line-height: 2.148rem;
+  font-weight: 600;
+  color: var(--brand_orange);
+}
+.button.medium {
+  width: 16.3rem;
+  height: 4rem;
+  padding: 0.8rem 2.4rem;
+  border: none;
+  border-radius: 5rem;
+  background-color: var(--black_100);
+  font-size: 1.6rem;
+  line-height: 1.909rem;
+  font-weight: 600;
+  /* color: var(--gray_200);
+  &:hover {
+    background-color: #eb6f53;
+  } */
+}
+.button.medium:active {
+  width: 16.3rem;
+  height: 4rem;
+  padding: 0.8rem 2.4rem;
+  background-color: var(--brand_orange);
+  color: var(--white_100);
+  /* cursor: pointer; */
+}
+.button.select {
+  width: 11rem;
+  height: 4.8rem;
+  padding: 1.3rem 2.4rem;
+  gap: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--brand_orange);
+  background-color: var(--black_300);
+  color: var(--brand_orange);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  text-align: center;
+  /* cursor: pointer; */
+}
+.button.cancel {
+  width: 11rem;
+  height: 4.8rem;
+  padding: 1.3rem 2.4rem;
+  gap: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--gray_200);
+  background-color: var(--black_300);
+  color: var(--gray_200);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  text-align: center;
+  /* cursor: pointer; */
+}
+.button.complete {
+  width: 11rem;
+  height: 4.8rem;
+  padding: 1.3rem 2.4rem;
+  gap: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--gray_100);
+  background-color: var(--black_300);
+  color: var(--gray_100);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  text-align: center;
+  /* cursor: pointer; */
+}
+@media (max-width: 374px) {
+  .checkIcon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .restartIcon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .button {
+    height: 4rem;
+    font-size: 1.4rem;
+    line-height: 1.671rem;
+  }
+  .button.active {
+    height: 4rem;
+    font-size: 1.4rem;
+    line-height: 1.671rem;
+  }
+  .button.outline {
+    height: 4rem;
+    font-size: 1.4rem;
+    line-height: 1.671rem;
+  }
+  .button.medium {
+    height: 3.2rem;
+    font-size: 1.4rem;
+    line-height: 1.671rem;
+  }
+  .button.medium_active {
+    height: 3.2rem;
+    font-size: 1.4rem;
+    line-height: 1.671px;
+  }
+  .button.select {
+    height: 3.2rem;
+    font-size: 1.4rem;
+    line-height: 1.671rem;
+  }
+  .button.cancel {
+    height: 3.2rem;
+    font-size: 1.4rem;
+    line-height: 1.671rem;
+  }
+  .button.complete {
+    height: 3.2rem;
+    font-size: 1.4rem;
+    line-height: 1.671px;
+  }
+}
