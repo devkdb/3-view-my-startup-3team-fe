@@ -35,8 +35,24 @@
   margin-right: 0px;
 }
 
-.footerCopyright{
+.footerCopyright {
   color: var(--gray_300);
   font-size: 14px;
   margin-top: 18px;
+}
+
+.footerCopyrightContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerGitHub {
+  width: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+
+  &:hover {
+    filter: drop-shadow(0 0 1px rgba(223, 112, 8, 0.767));
+  }
 }

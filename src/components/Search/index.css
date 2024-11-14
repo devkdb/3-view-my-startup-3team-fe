@@ -10,6 +10,15 @@
   top: 115px;
   left: 16px;
   padding: 0px 12px;
+  &:hover {
+    box-shadow: 0 0 0.75rem rgba(138, 137, 137, 0.63)
+  }
+
+  ;
+
+  &:active {
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0)
+  }
 }
 
 .searchInput {
