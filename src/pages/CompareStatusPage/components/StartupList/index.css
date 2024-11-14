@@ -17,10 +17,5 @@ table{
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
-  }
-
-  @media (max-width:375px){
-    table{
-      overflow-x: scroll;
-    }
+    scrollbar-width: 101px;
   }
