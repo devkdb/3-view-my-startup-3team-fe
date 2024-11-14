@@ -1,16 +1,16 @@
-import styles from "./ModalPassword.module.css";
+import styles from "./index.module.css";
 import X from "../../../assets/images/icons/svg/ic_x.svg";
 import visibilityOff from "../../assets/images/icons/visibility/btn_visibility_off.svg";
 import visibilityOn from "../../assets/images/icons/visibility/btn_visibility_on.svg";
-import Modal from "./Modal";
+import Modal from "../../../../components/";
 import { useState, useRef, useEffect } from "react";
-import PopupTwoButton from "../components/PopupTwoButton";
-import PasswordFail from "../PasswordFail/index";
+import DeleteConfirmInvestment from "../Modal/DeleteConfirmInvestment/index";
+import FailInvestmentPassword from "../Modal/FailInvestmentPassword/index";
 
-import PasswordInput from "../../PasswordInput/index";
+import PasswordInput from "../../../../components/PasswordInput/index";
 
 // MockInvestor 테이블의 id, password를 가져와서 input에 입력한 password와 비교한다.
-export default function ModalPassword({ onClose, mockInvestor }) {
+export default function DeleteInvestmentInfo({ onClose, mockInvestor }) {
   const { id, password: storedPassword } = mockInvestor || {
     id: 1,
     password: "1111",
@@ -121,9 +121,9 @@ export default function ModalPassword({ onClose, mockInvestor }) {
           삭제하기
         </button>
       </div>
-      {fail && <PasswordFail setFail={setFail} />}
+      {fail && <FailInvestmentPassword setFail={setFail} />}
       {confirm && (
-        <PopupTwoButton
+        <DeleteConfirmInvestment
           onDelete={confirmDelete}
           onClose={() => setConfirm(false)}
         />

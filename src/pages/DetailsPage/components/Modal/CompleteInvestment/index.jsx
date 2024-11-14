@@ -1,8 +1,8 @@
 import styles from "./index.module.css";
 import X from "../../../assets/images/icons/svg/ic_x.svg";
-import Modal from "./Modal";
+import Modal from "../../../../../../components/Modal/index";
 
-export default function PopupOneButton({ onClose }) {
+function CompleteInvestment({ onClose }) {
   return (
     <Modal>
       <div className={styles.content}>
@@ -12,7 +12,7 @@ export default function PopupOneButton({ onClose }) {
           style={{ cursor: "pointer" }}
           alt="close btn"
         />
-        <span>팝업 내용이 들어갑니다</span>
+        <span>투자가 완료되었어요!</span>
         <button className={styles.complete} onClick={onClose}>
           확인
         </button>
@@ -20,7 +20,7 @@ export default function PopupOneButton({ onClose }) {
     </Modal>
   );
 }
-
+export default CompleteInvestment;
 /*
 참고 예제
 

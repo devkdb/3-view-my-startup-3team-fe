@@ -9,5 +9,5 @@ export default function Modal({ children }) {
 }
 
 /*
-PopupOneButton, PopupTwoButton 예제 참고
+CompleteInvestment(팝업 1버튼), DeleteConfirmInvestment(팝업 2버튼) 예제 참고
 */

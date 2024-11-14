@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
-import X from "../ic_x.svg";
-import Modal from "../Modal/index";
+import X from "../../../assets/images/icons/svg/ic_x.svg";
+import Modal from "../../../../../components/Modal/index";
 
 function PasswordFail({ setFail }) {
   const handleCloseFailModal = () => {

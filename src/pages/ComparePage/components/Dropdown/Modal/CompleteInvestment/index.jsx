@@ -1,8 +1,8 @@
 import styles from "./index.module.css";
 import X from "../../../assets/images/icons/svg/ic_x.svg";
-import Modal from "./Modal";
+import Modal from "../../../../../../components/Modal/index";
 
-export default function PopupTwoButton({ onDelete, onClose }) {
+function CompleteInvestment({ onClose }) {
   return (
     <Modal>
       <div className={styles.content}>
@@ -12,63 +12,47 @@ export default function PopupTwoButton({ onDelete, onClose }) {
           style={{ cursor: "pointer" }}
           alt="close btn"
         />
-        <span>해당 정보를 삭제하시겠습니까?</span>
-        <div className={styles.buttons}>
-          <button className={styles.cancel} onClick={onClose}>
-            취소
-          </button>
-          <button className={styles.confirm} onClick={onDelete}>
-            확인
-          </button>
-        </div>
+        <span>투자가 완료되었어요!</span>
+        <button className={styles.complete} onClick={onClose}>
+          확인
+        </button>
       </div>
     </Modal>
   );
 }
-
+export default CompleteInvestment;
 /*
 참고 예제
 
-<App3.js>
-import "../styles/App3.css";
+<App4.js>
+import "../styles/App4.css";
 import Button from "./Button";
-import PopupTwoButton from "./PopupTwoButton";
-
+import PopupOneButton from "./PopupOneButton";
 
 import { useState } from "react";
 
-function App3() {
+function App4() {
   const [modalOpen, setModalOpen] = useState(false);
-
-  const confirmDelete = async () => {
-    console.log("삭제버튼 누름");
-    setModalOpen(false);
-  };
 
   return (
     <>
       <div className={"btn-wrapper"}>
         <Button variant="active" onClick={() => setModalOpen(true)}>
-          2버튼모달 열기
+          확인 모달 열기
         </Button>
       </div>
       <div>
-        {modalOpen && (
-          <PopupTwoButton
-            onDelete={confirmDelete}
-            onClose={() => setModalOpen(false)}
-          />
-        )}
+        {modalOpen && <PopupOneButton onClose={() => setModalOpen(false)} />}
       </div>
     </>
   );
 }
 
-export default App3;
+export default App4;
 
 
-
-<App3.css>.btn-wrapper {
+<App4.css>
+.btn-wrapper {
   display: flex;
   justify-content: center;
   margin-top: 5rem;
@@ -76,7 +60,7 @@ export default App3;
 
 .modal-open-button,
 .modal-close-btn {
-  
+  cursor: pointer;
   margin-left: auto;
 }
 
@@ -93,10 +77,9 @@ export default App3;
 }
 
 .modal-content {
-  background-color: var(--white_100);
+  background-color: #ffffff;
   width: 250px;
   height: 150px;
   padding: 15px;
 }
-
 */

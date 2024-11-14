@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import styles from "./index.module.css";
-import ic_check from "../ic_check.svg";
+//import ic_check from "../ic_check.svg";
 
 function Button({ variant, className, as, ...restProps }) {
   if (as === "check") {
