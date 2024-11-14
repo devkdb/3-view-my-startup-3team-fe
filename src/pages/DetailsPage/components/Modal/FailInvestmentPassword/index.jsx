@@ -2,7 +2,7 @@ import styles from "./index.module.css";
 import X from "../../../assets/images/icons/svg/ic_x.svg";
 import Modal from "../../../../../components/Modal/index";
 
-function PasswordFail({ setFail }) {
+function FailInvestmentPassword({ setFail }) {
   const handleCloseFailModal = () => {
     setFail(false);
   };
@@ -24,4 +24,4 @@ function PasswordFail({ setFail }) {
     </Modal>
   );
 }
-export default PasswordFail;
+export default FailInvestmentPassword;
