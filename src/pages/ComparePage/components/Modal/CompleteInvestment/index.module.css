@@ -1,0 +1,78 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  width: 44.8rem;
+
+  /* gap: 2.4rem; */
+}
+
+.content img {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+/* margin: 0 auto 
+  여기서 0값은 모든 곳에 (위 우 아래 좌) 여백을 주지 않는다는 의미.
+  auto 가로 중앙에 배치 한다는 뜻.
+*/
+.content span {
+  margin: 1rem auto 1rem auto;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.79rem;
+  /* color: var(--white_100); */
+}
+
+/*
+popup_one_button 
+팝업창 원버튼 확인 194 X 48
+radius 50px
+padding 13 48
+background: #EB5230;
+확인 600 16px 19.09px  글자색깔 #FFFFFF;
+*/
+.complete {
+  width: 19.4rem;
+  height: 4.8rem;
+
+  margin: 2rem auto 0 auto;
+  padding: 1.3rem 4.8rem;
+  border-radius: 5rem;
+  border: none;
+
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.909rem;
+
+  background-color: var(--brand_orange);
+
+  &:hover {
+    color: white;
+    background-color: var(--hover_orange);
+  }
+}
+/***** Mobile *****/
+@media (max-width: 374px) {
+  .content {
+    max-width: 31.1rem;
+  }
+  .content img {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .content span {
+    font-size: 1.4rem;
+    line-height: 1.671rem;
+  }
+
+  .complete {
+    width: 12.4rem;
+    height: 4rem;
+
+    font-size: 1.4rem;
+    line-height: 1.671rem;
+  }
+}
