@@ -11,11 +11,15 @@
   --gray_200: #747474;
   --gray_100: #d8d8d8;
 
+  /* White */
+  --white_100: #ffffff;
+
   /* Primary color */
 
   --brand_orange: #eb5230;
   --blue: ##558fff;
   --red_error: #c41013;
+  --hover_orange: #eb6f53;
 }
 
 * {
@@ -47,4 +51,16 @@ main {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h1 {
+  color: var(--white_100);
+}
+
+span {
+  color: var(--white_100);
+}
+
+button {
+  cursor: pointer;
 }
