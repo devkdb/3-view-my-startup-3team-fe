@@ -1,9 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./index.css";
-import CompareStatusDropdown from "./components/Dropdown/index";
-import StartupList from "./components/StartupList/index";
+import CompareStatusDropdown from "./components/Dropdown/index.jsx";
+import StartupList from "./components/StartupList/index.jsx";
+import PageList from "./components/PageList/index.jsx";
 
 function CompareStatusPage() {
+  const ten = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+
   return (
     <div id="compareStatusPage">
       <div className="compareTitle">
@@ -11,6 +15,15 @@ function CompareStatusPage() {
         <CompareStatusDropdown />
       </div>
       <StartupList />
+      <div className="pageList">
+        {ten.map((item, index) => {
+          return (
+            <Link key={index} to="Details/companyId">
+              <PageList />
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 }
