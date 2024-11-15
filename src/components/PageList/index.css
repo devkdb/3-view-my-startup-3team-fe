@@ -1,0 +1,77 @@
+.pageListItemPosition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basicText {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.pageList {
+  width: 100%;
+  max-height: 640px;
+  margin-top: 16px;
+  color: var(--gray_100);
+}
+
+.pageListItem {
+  height: 64px;
+  display: flex;
+  background-color: var(--black_300);
+  border-bottom: 1px solid var(--gray_300);
+  border-radius: 4px;
+  cursor: pointer;
+
+  
+}
+
+.pageListItemLank {
+  height: 100%;
+  width: 68px;
+}
+
+.pageListItemName {
+  width: 213px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pageListItemName img {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 50%;
+}
+
+.pageListItemDescription {
+  width: 304px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.71px;
+
+  display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pageListItemCategory {
+  width: 153px;
+}
+
+.pageListItemTotalInvestment {
+  width: 153px;
+}
+
+.pageListItemRevenueTotal {
+  width: 153px;
+}
+
+.pageListItemStaffTotal {
+  width: 153px;
+}

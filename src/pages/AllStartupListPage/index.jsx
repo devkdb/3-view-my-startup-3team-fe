@@ -3,6 +3,7 @@ import "./index.css";
 import SearchComponent from "../../components/Search/index";
 import AllStartupDropdown from "./components/Dropdown/index";
 import StartupList from "./components/StartupList/index";
+import PageList from "../../components/PageList/index.jsx";
 
 function AllStartupListPage() {
   return (
@@ -15,7 +16,9 @@ function AllStartupListPage() {
         </div>
       </div>
       <StartupList />
+      <PageList />
     </div>
+    
   );
 }
 

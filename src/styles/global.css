@@ -32,6 +32,7 @@ html {
   font-size: 10px;
   font-family: "Pretendard-Regular";
   font-style: normal;
+  color: var(--white_100);
 }
 
 body {
