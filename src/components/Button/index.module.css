@@ -1,20 +1,3 @@
-/* .content {
-  width: 23.8rem;
-  height: 41.4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-} */
-
-.checkIcon {
-  width: 2.4rem;
-  height: 2.4rem;
-}
-.restartIcon {
-  width: 2.4rem;
-  height: 2.4rem;
-}
-
 .button {
   width: 18.3rem;
   height: 4.8rem;
@@ -70,6 +53,16 @@
   line-height: 1.909rem;
   font-weight: 600;
   color: var(--gray_200);
+
+  /* 버튼 이미지 추가 셋팅 */
+  text-align: right;
+  display: inline-block;
+  background-image: url(../ic_restart.svg);
+  background-size: 2.4rem 2.4rem;
+  background-repeat: no-repeat;
+  background-position: 1.8rem center;
+  vertical-align: center;
+
   &:hover {
     background-color: var(--hover_orange);
   }
@@ -82,6 +75,7 @@
   color: var(--white_100);
   /* cursor: pointer; */
 }
+
 .button.select {
   width: 11rem;
   height: 4.8rem;
@@ -89,7 +83,7 @@
   gap: 1rem;
   border-radius: 1rem;
   border: 1px solid var(--brand_orange);
-  background-color: var(--black_300);
+  background-color: transparent;
   color: var(--brand_orange);
   font-size: 1.6rem;
   font-weight: 500;
@@ -113,7 +107,7 @@
   gap: 1rem;
   border-radius: 1rem;
   border: 1px solid var(--gray_200);
-  background-color: var(--black_300);
+  background-color: transparent;
   color: var(--gray_200);
   font-size: 1.6rem;
   font-weight: 500;
@@ -132,17 +126,25 @@
 .button.complete {
   width: 11rem;
   height: 4.8rem;
-  padding: 1.3rem 2.4rem;
+  padding: 1.3rem 1.2rem;
   gap: 1rem;
   border-radius: 1rem;
   border: 1px solid var(--gray_100);
-  background-color: var(--black_300);
+  background-color: transparent;
   color: var(--gray_100);
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.9rem;
-  text-align: center;
-  /* cursor: pointer; */
+
+  /* 버튼 이미지 추가 셋팅 */
+  text-align: right;
+  display: inline-block;
+  background-image: url(../ic_check.svg);
+  background-size: 2.4rem 2.4rem;
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+  vertical-align: center;
+
   &:hover {
     color: var(--gray_200);
     background-color: var(--hover_orange);
