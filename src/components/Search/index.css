@@ -10,15 +10,6 @@
   top: 115px;
   left: 16px;
   padding: 0px 12px;
-  &:hover {
-    box-shadow: 0 0 0.75rem rgba(138, 137, 137, 0.63)
-  }
-
-  ;
-
-  &:active {
-    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0)
-  }
 }
 
 .searchInput {
@@ -46,7 +37,6 @@
   background-color: var(--gray_200);
   width: 16px;
   height: 16px;
-  margin-right: ;
   border-radius: 20px;
   display: none; /* 기본적으로 삭제 아이콘은 숨김 */
 }
