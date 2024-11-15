@@ -69,4 +69,14 @@ li {
     width: 146px;
     padding: 6px 8px;
   }
+
+  .DropdownListLayerStartup{
+    width: 146px;
+  }
+
+  .DropdownListFontStartup{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.32px;
+  }
 }
