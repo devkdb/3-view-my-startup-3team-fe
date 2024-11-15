@@ -4,7 +4,7 @@ li {
 
 .DropdownBody {
   display: flex;
-  width: 188px;
+  width: 264px;
   height: 48px;
 }
 
@@ -14,7 +14,6 @@ li {
   justify-content: space-between;
   flex-direction: row;
   cursor: pointer;
-  width: 188px;
   height: 48px;
   gap: 8px;
   padding: 10px;
@@ -31,12 +30,12 @@ li {
 }
 
 .DropdownListLayer {
-  /* display: block; */
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
+  width: inherit;
   position: absolute; /* 자식 요소에 absolute 적용*/
-  width: 188px !important;
+  width: 264px !important;
   min-height: 48px;
   gap: 10px;
   border-radius: 10px;
@@ -66,20 +65,7 @@ li {
 }
 
 @media (max-width: 375px) {
-  .DropdownLayer,
-  .DropdownListLayer {
-    width: 168px;
-  }
-  .DropdownLayer {
-    height: 40px;
-    padding: 8px;
-  }
-  .DropdownListLayer {
-    top: 2.6rem;
-  }
-  .DropdownLayer,
-  .DropdownListFont {
-    font-size: 12px;
-    line-height: 14.32px;
+  .DropdownBody{
+    width: 146px;
   }
 }
