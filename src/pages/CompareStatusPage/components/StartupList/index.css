@@ -4,10 +4,18 @@ table{
     height: 39px;
     width: 100%;
     top: 164px;
-    left: 360px;
+    left: 320px;
     font-weight: 500;
     font-size: 14px;
     color: #ffffff;
     background-color: #2e2e2e;
   }
-  
+
+  .scroll-x{
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: 101px;
+  }

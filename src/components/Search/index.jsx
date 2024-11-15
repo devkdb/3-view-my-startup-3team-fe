@@ -42,7 +42,7 @@ function SearchComponent() {
         onClick={() => setText("")}
         style={{ opacity: type_num }}
       />
-      <img src={SearchIcon} alt="돋보기" style={{ opacity: type_num }} />
+      <img src={SearchIcon} alt="돋보기" style={{ opacity: type_num }}/>
     </div>
   );
 }
