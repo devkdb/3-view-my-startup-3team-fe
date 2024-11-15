@@ -1,0 +1,65 @@
+/* 글로벌css로 적용하여 나중에 삭제할 부분 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ModalPaginationLayer {
+  display: flex;
+  width: 256px;
+  height: 32px;
+  gap: 8px;
+}
+
+.ModalBtnLayer {
+  display: flex;
+  width: 176px;
+  height: 32px;
+  gap: 4px;
+}
+
+.ModalBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--black_100);
+  color: var(--gray_200);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.09px;
+  text-align: center;
+  &:active {
+    background-color: #eb6f53;
+  }
+}
+
+.Modalarrowimg {
+  width: 24px;
+  height: 24px;
+}
+
+.ModalInnerBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--black_100);
+  color: var(--gray_200);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.09px;
+  text-align: center;
+  &:hover,
+  &:focus {
+    background-color: var(--brand_orange);
+    color: var(--white_100);
+  }
+  &:active {
+    background-color: #eb6f53;
+    color: var(--white_100);
+  }
+}
