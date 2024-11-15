@@ -6,43 +6,43 @@ function AllStartupDropdownList({ onItemClick, dropdownRef }) {
   const listPosition = dropdownRect ? dropdownRect.bottom + window.scrollY : 0; // 드롭다운 박스 바로 아래에 리스트 위치
   return (
     <ul
-      className="DropdownListLayer"
+      className="DropdownListLayerStartup"
       style={{
         top: `${listPosition + 6}px`, // 동적으로 위치 설정
       }}
     >
       <li
-        className="DropdownListFont"
+        className="DropdownListFontStartup"
         onClick={() => onItemClick("누적 투자금액 높은순")}
       >
         누적 투자금액 높은순
       </li>
       <li
-        className="DropdownListFont"
+        className="DropdownListFontStartup"
         onClick={() => onItemClick("누적 투자금액 낮은순")}
       >
         누적 투자금액 낮은순
       </li>
       <li
-        className="DropdownListFont"
+        className="DropdownListFontStartup"
         onClick={() => onItemClick("매출액 높은순")}
       >
         매출액 높은순
       </li>
       <li
-        className="DropdownListFont"
+        className="DropdownListFontStartup"
         onClick={() => onItemClick("매출액 낮은순")}
       >
         매출액 낮은순
       </li>
       <li
-        className="DropdownListFont"
+        className="DropdownListFontStartup"
         onClick={() => onItemClick("고용 인원 많은순")}
       >
         고용 인원 많은순
       </li>
       <li
-        className="DropdownListFont"
+        className="DropdownListFontStartup"
         onClick={() => onItemClick("고용 인원 적은순")}
       >
         고용 인원 적은순

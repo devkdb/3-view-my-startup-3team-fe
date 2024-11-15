@@ -66,20 +66,7 @@ li {
 }
 
 @media (max-width: 375px) {
-  .DropdownLayer,
-  .DropdownListLayer {
-    width: 241px;
-  }
-  .DropdownLayer {
-    height: 40px;
-    padding: 8px;
-  }
-  .DropdownListLayer {
-    top: 2.6rem;
-  }
-  .DropdownLayer,
-  .DropdownListFont {
-    font-size: 13px;
-    line-height: 15.51px;
+  .DropdownBody{
+    width: 146px;
   }
 }
