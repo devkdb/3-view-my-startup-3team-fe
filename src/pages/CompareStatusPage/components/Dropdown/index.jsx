@@ -18,7 +18,7 @@ function CompareStatusDropdown() {
     setIsOpen(false); // 클릭 후 드롭다운 닫기
   };
   return (
-    <div className="DropdownBody">
+    <div className="DropdownBodyCompare">
       <button
         onClick={toggleDropdown}
         className="DropdownLayer"
