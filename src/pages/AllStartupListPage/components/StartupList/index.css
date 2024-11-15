@@ -1,6 +1,5 @@
 table{
     height: 39px;
-    width: 100%;
     top: 164px;
     left: 360px;
     font-weight: 500;
@@ -38,7 +37,11 @@ table{
     background-clip: padding-box;
   }
 
-  @media (max-width:744px){
+  th{
+    width: 150px;
+  }
+
+  @media (min-width:768px){
     table{
       width: 696px;
     }
