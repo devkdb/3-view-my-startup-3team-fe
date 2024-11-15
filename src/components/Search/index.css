@@ -70,8 +70,12 @@
     width: 170px;
   }
 
-  .searchInput::placeholder {
+  .searchInput::placeholder  {
     font-size: 11.5px;
+  }
+  .searchWrapper {
+    width: 160px;
+  }
 
     .searchWrapper {
       width: 160px;
