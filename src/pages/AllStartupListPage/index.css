@@ -21,6 +21,13 @@ h1 {
   width: 375px;
 }
 
+.pageList {
+  width: 100%;
+  max-height: 640px;
+  color: var(--gray_100);
+  margin-top: 16px;
+}
+
 @media (min-width: 768px) {
   #allStartupListPage {
     width: 700px;

@@ -1,10 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./index.css";
 import SearchComponent from "../../components/Search/index";
 import AllStartupDropdown from "./components/Dropdown/index";
 import StartupList from "./components/StartupList/index";
+import PageList from "./components/PageList/index.jsx";
 
 function AllStartupListPage() {
+  const ten = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+
   return (
     <div id="allStartupListPage">
       <div className="title">
@@ -15,6 +19,12 @@ function AllStartupListPage() {
         </div>
       </div>
       <StartupList />
+      <div className="pageList">
+      {ten.map((item, index) => {
+        return <Link key={index} to="Details/companyId"><PageList /></Link>
+      }
+        )}
+        </div>
     </div>
   );
 }
