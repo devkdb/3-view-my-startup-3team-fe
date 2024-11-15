@@ -17,7 +17,7 @@ function AllStartupDropdown() {
     setIsOpen(false); // 클릭 후 드롭다운 닫기
   };
   return (
-    <div className="DropdownBodyStartup">
+    <div className="DropdownBody">
       <button
         onClick={toggleDropdown}
         className="DropdownLayer"
