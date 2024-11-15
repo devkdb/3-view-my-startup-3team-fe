@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 import X from "../../../assets/images/icons/svg/ic_x.svg";
-import Modal from "../../../../../../components/Modal/index";
+import Modal from "../../../../../components/Modal/index";
 
 function CompleteInvestment({ onClose }) {
   return (
