@@ -2,6 +2,7 @@ import InputInactive from "../../components/InputFieldInactive";
 import "../ComparePage/index.css";
 import btnPlusIcon from "../../assets/images/icons/btn_plus.png";
 import { useState } from "react";
+import Button from "../../components/Button";
 
 function ComparePage() {
   const [showModal, setShowModal] = useState(false); //모달 false(숨김)상태
@@ -30,8 +31,8 @@ function ComparePage() {
             <p>기업 추가</p>
           </div>
         </InputInactive>
+        <Button variant="default">기업 비교하기</Button>
       </div>
-
       {showModal && (
         <div className="modal-overlay" onClick={toggleModal}>
           <p>모달 자리</p>
