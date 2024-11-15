@@ -2,13 +2,13 @@ li {
   list-style: none;
 }
 
-.DropdownBody {
+.DropdownBodyCompare {
   display: flex;
   width: 264px;
   height: 48px;
 }
 
-.DropdownLayer {
+.DropdownLayerCompare {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,7 +30,7 @@ li {
   z-index: 1; /* 드롭다운이 다른 요소들 위에 오도록 z-index 설정 */
 }
 
-.DropdownListLayer {
+.DropdownListLayerCompare {
   /* display: block; */
   display: flex;
   align-items: center;
@@ -66,7 +66,7 @@ li {
 }
 
 @media (max-width: 375px) {
-  .DropdownBody{
+  .DropdownBodyCompare{
     width: 146px;
   }
 }
