@@ -58,7 +58,7 @@ li {
 }
 
 /* 첫 번째 항목을 제외한 나머지 항목들에만 경계선 추가 */
-.DropdownListFont:nth-child(1) {
+.DropdownListFontStartup:nth-child(1) {
   border-top: 1px solid var(--gray_100); /* 나머지 항목에 경계선 추가 */
   border-top: none;
   /* 나머지 항목에 경계선 추가 */
