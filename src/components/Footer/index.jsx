@@ -1,6 +1,7 @@
-import MainLogoMiddle from "../../assets/images/logo/MainLogoMiddle.png";
 import "./index.css";
 import { Link } from "react-router-dom";
+import MainLogoMiddle from "../../assets/images/logo/MainLogoMiddle.png";
+import gitHubIcon from "../../assets/images/logo/gitHub.logo.png";
 
 function Footer() {
   return (
@@ -20,9 +21,18 @@ function Footer() {
             </span>
           </Link>
         </div>
-        <span className="footerCopyright">
-          © 2024 View My Startup. All rights reserved.
-        </span>
+        <div className="footerCopyrightContainer">
+          <span className="footerCopyright">
+            © 2024 View My Startup. All rights reserved.
+          </span>
+          <a
+            href="https://github.com/devkdb/3-view-my-startup-3team-fe"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={gitHubIcon} alt="github" className="footerGitHub" />
+          </a>
+        </div>
       </div>
     </div>
   );
