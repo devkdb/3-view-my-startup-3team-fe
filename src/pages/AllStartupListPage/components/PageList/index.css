@@ -10,13 +10,6 @@
   text-align: center;
 }
 
-.pageList {
-  width: 100%;
-  max-height: 640px;
-  margin-top: 16px;
-  color: var(--gray_100);
-}
-
 .pageListItem {
   height: 64px;
   display: flex;
@@ -25,7 +18,15 @@
   border-radius: 4px;
   cursor: pointer;
 
-  
+  &:hover {
+    box-shadow: 0 0 0.75rem rgba(138, 137, 137, 0.63);
+  }
+
+  ;
+
+  &:active {
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0);
+  }
 }
 
 .pageListItemLank {
@@ -48,16 +49,20 @@
 
 .pageListItemDescription {
   width: 304px;
-
+  padding: 15px 16px;
   font-size: 14px;
   font-weight: 400;
-  line-height: 16.71px;
+}
 
-  display: flex;
-  flex-wrap: wrap;
-  white-space: nowrap;
-  overflow: hidden;
+.pageListItemDescription span {
+  line-height: 16.71px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   text-overflow: ellipsis;
+  overflow: hidden;
+  line-clamp: 2;
+  /* 표준 속성 추가 */
 }
 
 .pageListItemCategory {
