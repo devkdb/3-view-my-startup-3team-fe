@@ -10,6 +10,13 @@
   top: 115px;
   left: 16px;
   padding: 0px 12px;
+  &:hover {
+    box-shadow: 0 0 0.75rem rgba(138, 137, 137, 0.63);
+  }
+
+  &:active {
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0);
+  }
 }
 
 .searchInput {
@@ -53,12 +60,16 @@
   .searchInput {
     width: 120px;
   }
+  
   .searchWrapper{
     width: 170px;
   }
 
   .searchInput::placeholder{
     font-size: 11.5px;
+
+  .searchWrapper {
+    width: 160px;
   }
 
   .searchInput.hasText {
