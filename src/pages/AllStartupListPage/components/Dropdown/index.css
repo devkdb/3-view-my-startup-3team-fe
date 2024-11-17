@@ -28,6 +28,12 @@ li {
   text-align: center;
   position: relative; /* 부모 요소에 relative를 추가 */
   z-index: 1; /* 드롭다운이 다른 요소들 위에 오도록 z-index 설정 */
+  &:hover {
+    box-shadow: 0 0 0.75rem rgba(138, 137, 137, 0.63);
+  }
+  &:active {
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0);
+  }
 }
 
 .DropdownListLayerStartup {
@@ -42,6 +48,12 @@ li {
   border: 1px solid var(--gray_200);
   background-color: var(--black_400);
   z-index: 2; /* 드롭다운 리스트가 드롭다운 버튼 위로 오도록 z-index 설정 */
+  &:hover {
+    box-shadow: 0 0 0.75rem rgba(138, 137, 137, 0.63);
+  }
+  &:active {
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0);
+  }
 }
 
 .DropdownListFontStartup {
@@ -70,11 +82,11 @@ li {
     padding: 6px 8px;
   }
 
-  .DropdownListLayerStartup{
+  .DropdownListLayerStartup {
     width: 146px;
   }
 
-  .DropdownListFontStartup{
+  .DropdownListFontStartup {
     font-size: 12px;
     font-weight: 400;
     line-height: 14.32px;

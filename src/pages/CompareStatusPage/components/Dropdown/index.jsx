@@ -21,7 +21,7 @@ function CompareStatusDropdown() {
     <div className="DropdownBodyCompare">
       <button
         onClick={toggleDropdown}
-        className="DropdownLayer"
+        className="DropdownLayerCompare"
         ref={dropdownRef}
       >
         {selectedValue}

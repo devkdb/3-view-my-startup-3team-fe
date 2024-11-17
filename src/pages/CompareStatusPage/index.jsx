@@ -4,6 +4,7 @@ import "./index.css";
 import CompareStatusDropdown from "./components/Dropdown/index.jsx";
 import StartupList from "./components/StartupList/index.jsx";
 import PageList from "./components/PageList/index.jsx";
+import Pagination from "../../components/Pagination/index.jsx";
 
 function CompareStatusPage() {
   const ten = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
@@ -23,6 +24,9 @@ function CompareStatusPage() {
             </Link>
           );
         })}
+      </div>
+      <div className="pagination">
+        <Pagination />
       </div>
     </div>
   );
