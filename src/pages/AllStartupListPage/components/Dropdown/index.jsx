@@ -20,7 +20,7 @@ function AllStartupDropdown() {
     <div className="DropdownBodyStartup">
       <button
         onClick={toggleDropdown}
-        className="DropdownLayer"
+        className="DropdownLayerStartup"
         ref={dropdownRef}
       >
         {selectedValue}
