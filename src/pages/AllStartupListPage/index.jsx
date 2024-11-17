@@ -5,6 +5,7 @@ import SearchComponent from "../../components/Search/index";
 import AllStartupDropdown from "./components/Dropdown/index";
 import StartupList from "./components/StartupList/index";
 import PageList from "./components/PageList/index.jsx";
+import Pagination from "../../components/Pagination/index.jsx";
 
 function AllStartupListPage() {
   const ten = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
@@ -20,11 +21,17 @@ function AllStartupListPage() {
       </div>
       <StartupList />
       <div className="pageList">
-      {ten.map((item, index) => {
-        return <Link key={index} to="Details/companyId"><PageList /></Link>
-      }
-        )}
-        </div>
+        {ten.map((item, index) => {
+          return (
+            <Link key={index} to="Details/companyId">
+              <PageList />
+            </Link>
+          );
+        })}
+      </div>
+      <div className="pagination">
+        <Pagination />
+      </div>
     </div>
   );
 }

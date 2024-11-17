@@ -28,6 +28,13 @@ h1 {
   margin-top: 16px;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
 @media (min-width: 768px) {
   #allStartupListPage {
     width: 700px;

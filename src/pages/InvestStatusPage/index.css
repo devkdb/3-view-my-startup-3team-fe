@@ -16,6 +16,13 @@ h2 {
   margin-bottom: 20px;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
 @media (min-width: 768px) {
   #investStatus {
     width: 700px;
