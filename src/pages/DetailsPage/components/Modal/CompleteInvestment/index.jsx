@@ -27,7 +27,7 @@ export default CompleteInvestment;
 <App4.js>
 import "../styles/App4.css";
 import Button from "./Button";
-import PopupOneButton from "./PopupOneButton";
+import CompleteInvestment from "./CompleteInvestment";
 
 import { useState } from "react";
 
@@ -42,7 +42,7 @@ function App4() {
         </Button>
       </div>
       <div>
-        {modalOpen && <PopupOneButton onClose={() => setModalOpen(false)} />}
+        {modalOpen && <CompleteInvestment onClose={() => setModalOpen(false)} />}
       </div>
     </>
   );
