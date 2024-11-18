@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
-import X from "../../../assets/images/icons/svg/ic_x.svg";
-import Modal from "../../../../../../components/Modal/index";
+import X from "../../../../../assets/images/icons/x/ic_x.svg";
+import Modal from "../../../../../components/Modal/index";
 
 function DeleteConfirmInvestment({ onDelete, onClose }) {
   return (
@@ -32,7 +32,7 @@ export default DeleteConfirmInvestment;
 <App3.js>
 import "../styles/App3.css";
 import Button from "./Button";
-import PopupTwoButton from "./PopupTwoButton";
+import DeleteConfirmInvestment from "./DeleteConfirmInvestment";
 
 
 import { useState } from "react";
@@ -54,7 +54,7 @@ function App3() {
       </div>
       <div>
         {modalOpen && (
-          <PopupTwoButton
+          <DeleteConfirmInvestment
             onDelete={confirmDelete}
             onClose={() => setModalOpen(false)}
           />

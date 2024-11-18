@@ -1,5 +1,5 @@
 import styles from "./index.module.css";
-import X from "../../../assets/images/icons/svg/ic_x.svg";
+import X from "../../../../../assets/images/icons/x/ic_x.svg";
 import Modal from "../../../../../components/Modal/index";
 
 function FailInvestmentPassword({ setFail }) {

@@ -1,8 +1,8 @@
 import styles from "./index.module.css";
-import X from "../../../assets/images/icons/svg/ic_x.svg";
-import visibilityOff from "../../assets/images/icons/visibility/btn_visibility_off.svg";
-import visibilityOn from "../../assets/images/icons/visibility/btn_visibility_on.svg";
-import Modal from "../../../../components/";
+import X from "../../../../assets/images/icons/x/ic_x.svg";
+import visibilityOff from "../../../../assets/images/icons/visibility/btn_visibility_off.svg";
+import visibilityOn from "../../../../assets/images/icons/visibility/btn_visibility_on.svg";
+import Modal from "../../../../components/Modal/index";
 import { useState, useRef, useEffect } from "react";
 import DeleteConfirmInvestment from "../Modal/DeleteConfirmInvestment/index";
 import FailInvestmentPassword from "../Modal/FailInvestmentPassword/index";
@@ -10,11 +10,12 @@ import FailInvestmentPassword from "../Modal/FailInvestmentPassword/index";
 import PasswordInput from "../../../../components/PasswordInput/index";
 
 // MockInvestor 테이블의 id, password를 가져와서 input에 입력한 password와 비교한다.
-export default function DeleteInvestmentInfo({ onClose, mockInvestor }) {
-  const { id, password: storedPassword } = mockInvestor || {
-    id: 1,
-    password: "1111",
-  };
+function DeleteCompanyInvestment({ onClose, mockInvestor }) {
+  const { id, password: storedPassword } = mockInvestor || {};
+  // const { id, password: storedPassword } = mockInvestor || {
+  //   id: 1,
+  //   password: "pw1234",
+  // };
 
   const [password, setPassword] = useState(""); // input에 입력한 패스워드 값
   const [isPasswordVisible, setIsPasswordVisible] = useState(false); // 눈알 토클 처리
@@ -131,6 +132,7 @@ export default function DeleteInvestmentInfo({ onClose, mockInvestor }) {
     </Modal>
   );
 }
+export default DeleteCompanyInvestment;
 
 /*
 참고 예제

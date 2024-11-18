@@ -19,7 +19,7 @@ function InvestStatus() {
       <div className="pageList">
         {ten.map((item, index) => {
           return (
-            <Link key={index} to="Details/companyId">
+            <Link key={index} to="/Details/2">
               <PageList />
             </Link>
           );
