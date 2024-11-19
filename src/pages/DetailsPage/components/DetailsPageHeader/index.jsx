@@ -27,6 +27,13 @@ import { useParams } from "react-router-dom";
   }
 */
 
+// 카테고리 번호에 따른 이름 HTTP 화면에 보여준다.
+// const CATEGORIES = [
+//   { id: 1, category: '에듀테크' },
+//   { id: 2, category: '전자상거래' },
+//   { id: 3, category: '솔루션' },
+// ];
+
 function DetailsPageheader() {
   const { companyId } = useParams();
   const { startup, error } = useFetchStartup(companyId);
@@ -38,9 +45,6 @@ function DetailsPageheader() {
   if (!startup) {
     return;
   }
-  console.log(`DetailsPageHeader startup.image:${startup.image}`);
-  console.log(`DetailsPageHeader startup.name:${startup.name}`);
-  console.log(`DetailsPageHeaderstartup.categoryName:${startup.categoryName}`);
 
   return (
     <div className={styles.header}>
