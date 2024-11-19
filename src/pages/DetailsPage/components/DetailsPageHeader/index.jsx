@@ -27,6 +27,7 @@ import { useParams } from "react-router-dom";
   }
 */
 
+// 카테고리 번호에 따른 이름 HTTP 화면에 보여준다.
 // const CATEGORIES = [
 //   { id: 1, category: '에듀테크' },
 //   { id: 2, category: '전자상거래' },
