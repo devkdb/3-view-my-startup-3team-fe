@@ -27,6 +27,12 @@ import { useParams } from "react-router-dom";
   }
 */
 
+// const CATEGORIES = [
+//   { id: 1, category: '에듀테크' },
+//   { id: 2, category: '전자상거래' },
+//   { id: 3, category: '솔루션' },
+// ];
+
 function DetailsPageheader() {
   const { companyId } = useParams();
   const { startup, error } = useFetchStartup(companyId);
@@ -38,9 +44,6 @@ function DetailsPageheader() {
   if (!startup) {
     return;
   }
-  console.log(`DetailsPageHeader startup.image:${startup.image}`);
-  console.log(`DetailsPageHeader startup.name:${startup.name}`);
-  console.log(`DetailsPageHeaderstartup.categoryName:${startup.categoryName}`);
 
   return (
     <div className={styles.header}>
