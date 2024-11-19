@@ -41,6 +41,7 @@ li {
   align-items: center;
   justify-content: center;
   position: absolute; /* 자식 요소에 absolute 적용*/
+  cursor: pointer;
   width: 188px !important;
   min-height: 48px;
   gap: 10px;

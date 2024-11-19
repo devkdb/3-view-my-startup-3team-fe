@@ -1,0 +1,59 @@
+.select-btn {
+  width: 123px;
+  height: 48px;
+  border: 1px solid var(--brand_orange);
+  border-radius: 10px;
+  color: #ff6b6b;
+  background-color: transparent;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.09px;
+  text-align: center;
+  &:hover {
+    box-shadow: 0 0 0.75rem rgba(138, 137, 137, 0.63);
+  }
+  &:active {
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0);
+  }
+}
+
+.select-btn.selected {
+  color: var(--gray_200);
+  background-color: transparent;
+  border-color: var(--gray_200);
+  width: 134px;
+  height: 48px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.09px;
+  text-align: center;
+  &:hover {
+    box-shadow: 0 0 0.75rem rgba(138, 137, 137, 0.63);
+  }
+  &:active {
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0);
+  }
+}
+
+@media (max-width: 375px) {
+  .select-btn {
+    width: 102px;
+    height: 32px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 16.71px;
+  }
+  .select-btn.selected {
+    width: 110px;
+    height: 32px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 16.71px;
+  }
+}
