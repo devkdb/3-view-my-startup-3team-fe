@@ -34,3 +34,20 @@
 
 //  투자 삭제
 // investment /investments/{investmentId} DELETE
+
+async function UseGetApi() {
+  const BaseUrl = new URL("http://localhost:8000/startups");
+  const query = new URLSearchParams({});
+  try {
+    const response = await fetch(`${BaseUrl}?${query}`);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("error", error.result.status);
+  }
+}
+
+export default UseGetApi;
