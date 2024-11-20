@@ -6,18 +6,18 @@
 // });
 
 // 기업 전체 조회
-// company /companies GET
-// test -> http://localhost:3002/companies
+// company /startups GET
+// test -> http://localhost:3002/startups
 
 // 내 기업과 비교 대상 기벙들 비교하기 (정렬)
-// company /companies/comparison GET
+// company /startups/comparison GET
 
 //특정 기업 상세 조회
-// company /companies/{companyId} GET
-// test -> http://localhost:3002/companies/10
+// company /startups/{companyId} GET
+// test -> http://localhost:3002/startups/10
 
 // 내 기업의 순위와 근접한 순위의 기업 정보 확인
-// company /companies/{companyId}/rank GET
+// company /startups/{companyId}/rank GET
 
 //기업 선택 횟수 조회
 // selections /selections GET
