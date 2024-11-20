@@ -3,7 +3,7 @@ import { useState } from "react";
 import SearchIcon from "../../assets/images/icons/search/ic_search.png";
 import DeleteIcon from "../../assets/images/icons/ic_delete.png";
 
-function SearchComponent() {
+function SearchComponent(props) {
   const [text, setText] = useState("");
 
   var type_num;
@@ -21,7 +21,12 @@ function SearchComponent() {
   }
 
   function changeInput(e) {
-    setText(e.target.value);
+    const value = e.target.value;
+    setText(value);
+
+    if (props.onChange) {
+      props.onChange(value);
+    }
   }
 
   return (
@@ -29,6 +34,8 @@ function SearchComponent() {
       <img src={SearchIcon} alt="돋보기" style={{ opacity: noType_num }} />
       <input
         // className="searchInput"
+        id="searchKeyword"
+        name="searchKeyword"
         className={`searchInput ${text ? "hasText" : ""}`} // 입력값이 있을 때 'hasText' 클래스를 추가
         placeholder="검색어를 입력해주세요"
         onChange={changeInput}
@@ -42,7 +49,7 @@ function SearchComponent() {
         onClick={() => setText("")}
         style={{ opacity: type_num }}
       />
-      <img src={SearchIcon} alt="돋보기" style={{ opacity: type_num }}/>
+      <img src={SearchIcon} alt="돋보기" style={{ opacity: type_num }} />
     </div>
   );
 }
