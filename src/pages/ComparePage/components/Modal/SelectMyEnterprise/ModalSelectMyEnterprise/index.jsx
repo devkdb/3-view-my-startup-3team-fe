@@ -16,7 +16,7 @@ function ModalSelect({ isOpen, onClose }) {
           </button>
         </div>
         <SearchComponent />
-        <div className="recent-companies">
+        <div className="recent-startups">
           <p>최근 선택된 기업 (2)</p>
           {/* 나중에 뽑는 내용에 따라 변경 ex) (startuplength) */}
           <div className="company-list">

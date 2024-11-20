@@ -3,7 +3,7 @@ const { startups, mockinvestors } = mock;
 
 const API_BASE_URL = "http://localhost:8000";
 
-// company /api/companies/{companyId} GET 특정 기업 상세 조회
+// company /api/startups/{companyId} GET 특정 기업 상세 조회
 
 // Mock 데이터 사용할때
 // export async function getStartup(companyId) {
@@ -13,7 +13,7 @@ const API_BASE_URL = "http://localhost:8000";
 
 export async function getStartup(companyId) {
   try {
-    const response = await fetch(`${API_BASE_URL}/companies/${companyId}`);
+    const response = await fetch(`${API_BASE_URL}/startups/${companyId}`);
     if (!response.ok) {
       const errorMessage = await response.text();
       console.log("errMessage", errorMessage);
