@@ -25,7 +25,7 @@ function ComparePage() {
               src={btnPlusIcon}
               alt="기업 추가 버튼"
               className="btn-plus-icon"
-              onClick={openModal}
+              onClick={toggleModal}
             />
             <p>기업 추가</p>
           </div>
