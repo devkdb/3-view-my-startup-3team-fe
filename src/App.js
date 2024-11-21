@@ -18,7 +18,7 @@ function App() {
         <Route path="/" element={<Main />}>
           <Route index element={<HomePage />} />
           <Route path='all-startup-list' element={<AllStartupListPage />} />
-          <Route path='details/:companyId' element={<DetailsPage />} />
+          <Route path='details/:startupId' element={<DetailsPage />} />
           <Route path='compare' element={<ComparePage />} />
           <Route path='compare-status' element={<CompareStatusPage />} />
           <Route path='invest-status' element={<InvestStatusPage />} />

@@ -1,36 +1,44 @@
 import "./index.css";
-import codeItImg from "../../../../assets/images/logo/codeItImg.png";
 
-function PageList() {
+function PageList({
+  rank,
+  name,
+  image,
+  description,
+  category,
+  actualInvest,
+  revenue,
+  employees,
+}) {
+
+  const changeActualInvest = Math.floor(actualInvest / 100000000);
+  const changeRevenue = Math.floor(revenue / 100000000);
+
   return (
-      <div className="pageListItem">
-        <div className="pageListItemLank pageListItemPosition basicText">
-          1위
-        </div>
-        <div className="pageListItemName pageListItemPosition">
-          <img src={codeItImg} alt="스타트업 이미지" />
-          <span>코드잇</span>
-        </div>
-        <div className="pageListItemDescription pageListItemPosition">
-          <span className="basicText">
-            코드잇은 '온라인 코딩 교육 서비스'를 운영하는 EdTech 스타트업입니다.
-            코딩 교육에 대한 빠른 시작, 쉽고 편리한 지원을 제공하며 실무에서
-            개발하는 방법을 학습할 수 있는 플랫폼입니다.
-          </span>
-        </div>
-        <div className="pageListItemCategory pageListItemPosition basicText">
-          에듀테크
-        </div>
-        <div className="pageListItemTotalInvestment pageListItemPosition basicText">
-          140억원
-        </div>
-        <div className="pageListItemRevenueTotal pageListItemPosition basicText">
-          50억원
-        </div>
-        <div className="pageListItemStaffTotal pageListItemPosition basicText">
-          68명
-        </div>
+    <div className="pageListItem">
+      <div className="pageListItemLank pageListItemPosition basicText">
+        {rank}위
       </div>
+      <div className="pageListItemName">
+        <img src={image} alt="스타트업 이미지" />
+        <span>{name}</span>
+      </div>
+      <div className="pageListItemDescription pageListItemPosition">
+        <span className="basicText">{description}</span>
+      </div>
+      <div className="pageListItemCategory pageListItemPosition basicText">
+        {category}
+      </div>
+      <div className="pageListItemTotalInvestment pageListItemPosition basicText">
+        {changeActualInvest}억원
+      </div>
+      <div className="pageListItemRevenueTotal pageListItemPosition basicText">
+        {changeRevenue}억원
+      </div>
+      <div className="pageListItemStaffTotal pageListItemPosition basicText">
+        {employees}명
+      </div>
+    </div>
   );
 }
 
