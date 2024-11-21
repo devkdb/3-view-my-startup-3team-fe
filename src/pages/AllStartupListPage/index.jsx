@@ -1,14 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
-import SearchComponent from "../../components/Search/index";
-import AllStartupDropdown from "./components/Dropdown/index";
+import { apiRouter } from "../../api/allApiService.js";
+import { useEffect, useState } from "react";
+// jsx
+import SearchComponent from "../../components/Search/index.jsx";
+import AllStartupDropdown from "./components/Dropdown/index.jsx";
 import StartupList from "./components/StartupList/index";
 import PageList from "./components/PageList/index.jsx";
-import Pagination from "../../components/Pagination/index.jsx";
+import Pagination from "./components/Pagination/index.jsx";
 
 function AllStartupListPage() {
-  const ten = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+  const [startup, setStartup] = useState([]);
+
+  const loadHandler = async () => {
+    try {
+      const res = await apiRouter.getAllStartupsList();
+      setStartup(res);
+    } catch (error) {
+      console.error("Error fetching startups:", error);
+    }
+  };
+
+  useEffect(() => {
+    loadHandler();
+  }, []);
+  console.log("startup", startup);
+
+  const company = startup.startups || [];
+  const currentPages = startup.currentPage || 0;
 
   return (
     <div id="allStartupListPage">
@@ -21,10 +41,19 @@ function AllStartupListPage() {
       </div>
       <StartupList />
       <div className="pageList">
-        {ten.map((item, index) => {
+        {company.map((item, index) => {
           return (
-            <Link key={index} to="/Details/1">
-              <PageList />
+            <Link key={index} to={`/Details/${item.id}`}>
+              <PageList
+                rank={(currentPages - 1) * 10 + index + 1}
+                name={item.name}
+                image={item.image}
+                description={item.description}
+                category={item.category}
+                employees={item.employees}
+                actualInvest={item.actualInvest}
+                revenue={item.revenue}
+              />
             </Link>
           );
         })}
