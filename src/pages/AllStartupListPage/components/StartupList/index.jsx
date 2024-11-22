@@ -3,7 +3,7 @@ import "./index.css";
 
 function StartupList({startups}) {
   return (
-    <div className="scroll-x">
+    <div>
       <table>
         <tbody>
           <tr>

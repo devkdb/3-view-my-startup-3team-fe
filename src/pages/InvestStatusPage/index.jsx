@@ -15,6 +15,7 @@ function InvestStatus() {
         <h2>투자 현황</h2>
         <InvestStatusDropdown />
       </div>
+      <div className="scroll-x">
       <StartupList />
       <div className="pageList">
         {ten.map((item, index) => {
@@ -24,6 +25,7 @@ function InvestStatus() {
             </Link>
           );
         })}
+      </div>
       </div>
       <div className="pagination">
         <Pagination />
