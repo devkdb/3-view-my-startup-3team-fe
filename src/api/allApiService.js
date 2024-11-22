@@ -1,7 +1,7 @@
 // npm install 해주세요.
 import axios from 'axios';
 
-const BASE_URL = 'https://three-view-my-startup-3team-be.onrender.com';
+const BASE_URL = 'http://localhost:8000';
 
 /**
  * 백엔드 api 라우터의 주석과 순서를 그대로 했습니다.
@@ -62,7 +62,7 @@ async function getAllInvestments(params = {}) {
 
 // 특정 기업에 투자하기
 async function createInvestment(surveyData) {
-  const res = await axios.post(`${BASE_URL}/api/investments`, surveyData);
+  const res = await axios.post(`${BASE_URL}/investments`, surveyData);
   return res.data;
 }
 

@@ -1,6 +1,6 @@
-import "./App.css";
+import "./index.css";
 import { useState } from "react";
-import DeleteIcon from "./image/ic_delete.png";
+import DeleteIcon from "../../assets/images/icons/ic_delete.png";
 import Oneye from "../../assets/images/icons/visibility/btn_visibility_on.png";
 import Offeye from "../../assets/images/icons/visibility/btn_visibility_off.png";
 import { apiRouter } from "../../api/allApiService";
@@ -29,14 +29,14 @@ function InvestmentInput() {
     e.preventDefault();
 
     const investData = {
-      startupId,
+      startupId: Number(startupId),
       name:name,
       investAmount: Number(investAmount),
       comment: comment,
       password,
     };
     try{
-      const result = await createInvestment(investData);
+      const result = await apiRouter.createInvestment(investData);
       console.log("투자 성공:", result);
     }catch(error){
       console.log("투자 실패:", error)
@@ -93,6 +93,12 @@ return (
     <form onSubmit={handleSubmit}>
       <label>
     <p>투자 기업 정보</p>
+    <input id="startupId"
+    value={startupId}
+    onChange={(e) => {
+      setStartupId(e.target.value);
+    }}
+    />
     </label>
     <label>
       <p>투자자 이름</p>
