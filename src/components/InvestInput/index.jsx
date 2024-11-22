@@ -93,12 +93,6 @@ return (
     <form onSubmit={handleSubmit}>
       <label>
     <p>투자 기업 정보</p>
-    <input id="startupId"
-    value={startupId}
-    onChange={(e) => {
-      setStartupId(e.target.value);
-    }}
-    />
     </label>
     <label>
       <p>투자자 이름</p>

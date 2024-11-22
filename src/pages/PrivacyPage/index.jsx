@@ -1,5 +1,6 @@
 import "./index.css";
 
+
 function PrivacyPage() {
   return (
     <div id="privacyPage" style={{ color: "#FFFFFF" }}>
