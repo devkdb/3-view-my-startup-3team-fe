@@ -29,12 +29,12 @@
   }
 }
 
-.pageListItemLank {
+.allStartupListItemRank {
   height: 100%;
   width: 68px;
 }
 
-.pageListItemName {
+.allStartupListItemName {
   width: 213px;
   font-size: 14px;
   font-weight: 500;
@@ -43,21 +43,21 @@
   padding-left: 24px;
 }
 
-.pageListItemName img {
+.allStartupListItemName img {
   width: 32px;
   height: 32px;
   margin-right: 12px;
   border-radius: 50%;
 }
 
-.pageListItemDescription {
+.allStartupListItemDescription {
   width: 304px;
   padding: 15px 16px;
   font-size: 14px;
   font-weight: 400;
 }
 
-.pageListItemDescription span {
+.allStartupListItemDescription span {
   line-height: 16.71px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -68,18 +68,18 @@
   /* 표준 속성 추가 */
 }
 
-.pageListItemCategory {
+.allStartupListItemCategory {
   width: 153.75px;
 }
 
-.pageListItemTotalInvestment {
+.allStartupListItemTotalInvestment {
   width: 153.75px;
 }
 
-.pageListItemRevenueTotal {
+.allStartupListItemRevenueTotal {
   width: 153.75px;
 }
 
-.pageListItemStaffTotal {
+.allStartupListItemStaffTotal {
   width: 153.75px;
 }

@@ -54,13 +54,16 @@ table{
   }
 
   .startupInvest{
-    width: 230.62px;
+    width: 153.75px;
   }
 
   .startupRevenue{
-    width: 230.62px;
+    width: 153.75px;
   }
 
+  .startupEmployee{
+    width: 153.75px;
+  }
 
 
   @media (min-width:768px){
