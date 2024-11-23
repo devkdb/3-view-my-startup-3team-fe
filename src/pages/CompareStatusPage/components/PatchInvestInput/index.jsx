@@ -29,16 +29,17 @@ function InvestmentInput() {
     e.preventDefault();
 
     const investData = {
+      startupId: Number(startupId),
       name:name,
       investAmount: Number(investAmount),
       comment: comment,
       password,
     };
     try{
-      const result = await apiRouter.patchInvestment(startupId, investData);
+      const result = await apiRouter.patchInvestment(investData);
       console.log("투자 성공:", result);
     }catch(error){
-      console.log("투자 실패:", error)
+      console.error("투자 실패:", error)
     }
   };
 

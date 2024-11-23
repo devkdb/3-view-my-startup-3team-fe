@@ -39,7 +39,7 @@ function InvestmentInput() {
       const result = await apiRouter.createInvestment(investData);
       console.log("투자 성공:", result);
     }catch(error){
-      console.log("투자 실패:", error)
+      console.error("투자 실패:", error)
     }
   };
 
