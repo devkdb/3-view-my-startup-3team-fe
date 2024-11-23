@@ -1,24 +1,24 @@
 import "./index.css";
 
-function Pagination() {
-  
+function Pagination({ totalPages, totalStartups, currentPage, hasNextPage, pageHandler }) {
+  const pages = Array.from({ length: totalPages }, (_, index) => index + 1);
   return (
     <div className="PaginationLayer">
-      <button
-        className="leftArrowButton arrowImg"
-      >
-      </button>
+      <button className="leftArrowButton arrowImg"></button>
       <div className="BtnLayer">
-        <button className="InnerBtn">1</button>
-        <button className="InnerBtn">2</button>
-        <button className="InnerBtn">3</button>
-        <button className="InnerBtn">4</button>
-        <button className="InnerBtn">5</button>
+        {pages.map((item, index) => {
+          return (
+            <button
+              className="InnerBtn"
+              key={item}
+              onClick={pageHandler}
+            >
+              {index + 1}
+            </button>
+          )
+        })}
       </div>
-      <button
-        className="rightArrowButton arrowImg"
-      >
-      </button>
+      <button className="rightArrowButton arrowImg"></button>
     </div>
   );
 }

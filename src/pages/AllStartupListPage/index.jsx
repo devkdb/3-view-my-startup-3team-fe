@@ -12,10 +12,17 @@ import Pagination from "./components/Pagination/index.jsx";
 
 function AllStartupListPage() {
   const [startup, setStartup] = useState([]);
+  const [offset, setOffset] = useState(0);
+  const [limit, setLimit] = useState(10);
+  const [orderBy, setOrderBy] = useState("id");
 
   const loadHandler = async () => {
     try {
-      const res = await apiRouter.getAllStartupsList();
+      const res = await apiRouter.getAllStartupsList({
+        offset: offset,
+        limit: limit,
+        order: orderBy,
+      });
       setStartup(res);
     } catch (error) {
       console.error("Error fetching startups:", error);
@@ -24,11 +31,19 @@ function AllStartupListPage() {
 
   useEffect(() => {
     loadHandler();
-  }, []);
-  console.log("startup", startup);
+  }, [startup]);
 
-  const company = startup.startups || [];
+  const companies = startup.startups || [];
+  const totalPages = startup.totalPages || 0;
+  const totalStartups = startup.totalStartups || 0;
   const currentPages = startup.currentPage || 0;
+  const hasNextPage = startup.hasNextPage || false;
+
+  const pageHandler = (e) => {
+    const page = e.target.innerText;
+    setOffset(page * 10);
+    setLimit(10);
+  };
 
   return (
     <div id="allStartupListPage">
@@ -36,12 +51,12 @@ function AllStartupListPage() {
         <h1>전체 스타트업 목록</h1>
         <div className="setPos">
           <SearchComponent />
-          <AllStartupDropdown />
+          <AllStartupDropdown setOrderBy={setOrderBy} />
         </div>
       </div>
       <StartupList />
       <div className="pageList">
-        {company.map((item, index) => {
+        {companies.map((item, index) => {
           return (
             <Link key={index} to={`/details/${item.id}`}>
               <PageList
@@ -59,7 +74,13 @@ function AllStartupListPage() {
         })}
       </div>
       <div className="pagination">
-        <Pagination />
+        <Pagination
+          totalPages={totalPages}
+          totalStartups={totalStartups}
+          currentPage={currentPages}
+          hasNextPage={hasNextPage}
+          pageHandler={pageHandler}
+        />
       </div>
     </div>
   );
