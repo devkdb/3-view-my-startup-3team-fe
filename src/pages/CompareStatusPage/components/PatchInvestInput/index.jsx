@@ -37,9 +37,9 @@ function InvestmentInput() {
     };
     try{
       const result = await apiRouter.patchInvestment(investData);
-      console.log("투자 성공:", result);
+      console.log("투자 수정 성공:", result);
     }catch(error){
-      console.error("투자 실패:", error)
+      console.error("투자 수정 실패:", error)
     }
   };
 
