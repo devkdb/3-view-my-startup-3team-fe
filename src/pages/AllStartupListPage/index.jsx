@@ -43,13 +43,13 @@ function AllStartupListPage() {
       <div className="pageList">
         {company.map((item, index) => {
           return (
-            <Link key={index} to={`/Details/${item.id}`}>
+            <Link key={index} to={`/details/${item.id}`}>
               <PageList
                 rank={(currentPages - 1) * 10 + index + 1}
                 name={item.name}
                 image={item.image}
                 description={item.description}
-                category={item.category}
+                category={item.Category.category}
                 employees={item.employees}
                 actualInvest={item.actualInvest}
                 revenue={item.revenue}
