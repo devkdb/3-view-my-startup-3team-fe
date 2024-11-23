@@ -16,26 +16,26 @@ function PageList({
 
   return (
     <div className="pageListItem">
-      <div className="allStartupListItemRank pageListItemPosition basicText">
+      <div className="pageListItemLank pageListItemPosition basicText">
         {rank}위
       </div>
-      <div className="allStartupListItemName">
+      <div className="pageListItemName">
         <img src={image} alt="스타트업 이미지" />
         <span>{name}</span>
       </div>
-      <div className="allStartupListItemDescription pageListItemPosition">
+      <div className="pageListItemDescription pageListItemPosition">
         <span className="basicText">{description}</span>
       </div>
-      <div className="allStartupListItemCategory pageListItemPosition basicText">
+      <div className="pageListItemCategory pageListItemPosition basicText">
         {category}
       </div>
-      <div className="allStartupListItemTotalInvestment pageListItemPosition basicText">
+      <div className="pageListItemTotalInvestment pageListItemPosition basicText">
         {changeActualInvest}억원
       </div>
-      <div className="allStartupListItemRevenueTotal pageListItemPosition basicText">
+      <div className="pageListItemRevenueTotal pageListItemPosition basicText">
         {changeRevenue}억원
       </div>
-      <div className="allStartupListItemStaffTotal pageListItemPosition basicText">
+      <div className="pageListItemStaffTotal pageListItemPosition basicText">
         {employees}명
       </div>
     </div>
