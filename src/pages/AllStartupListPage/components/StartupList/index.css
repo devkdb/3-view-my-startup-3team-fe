@@ -37,9 +37,31 @@ table{
     background-clip: padding-box;
   }
 
-  th{
-    width: 150px;
+  .startupRank {
+    width: 68px;
   }
+
+  .startupName {
+    width: 213px;
+  }
+
+  .startupIntro{
+    width: 304px;
+  }
+
+  .startupCategory{
+    width: 153.75px;
+  }
+
+  .startupInvest{
+    width: 230.62px;
+  }
+
+  .startupRevenue{
+    width: 230.62px;
+  }
+
+
 
   @media (min-width:768px){
     table{

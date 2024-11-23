@@ -1,7 +1,7 @@
 import mock from "./mocks/kdb.json";
 const { startups, mockinvestors } = mock;
 
-const API_BASE_URL = "https://viewmystatup-db.onrender.com/api";
+const API_BASE_URL = "https://three-view-my-startup-3team-be.onrender.com";
 
 // investment /api/investments GET 전체 투자 현황 조회 (정렬, 페이지네이션)
 

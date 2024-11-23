@@ -19,3 +19,28 @@ table{
     -ms-overflow-style: none;
     scrollbar-width: 101px;
   }
+
+  .startupRank{
+    width: 68px;
+  }
+
+  .startupCompareName{
+    width: 32px;
+  }
+
+  .startupIntro{
+    width: 304px;
+  }
+
+  .startupCategory{
+    width:153.75px
+  }
+
+  .startupCount{
+    width: 230.62px;
+  }
+
+  .startupCompareCount{
+    width: 230.62px;
+  }
+ 

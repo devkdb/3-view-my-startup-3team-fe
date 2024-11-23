@@ -7,12 +7,12 @@ function StartupList({startups}) {
       <table>
         <tbody>
           <tr>
-            <th>순위</th>
-            <th>기업 명</th>
-            <th>기업 소개</th>
-            <th>카테고리</th>
-            <th>나의 기업 선택 횟수</th>
-            <th>비교 기업 선택 횟수</th>
+            <th className="startupRank">순위</th>
+            <th className="startupCompareName">기업 명</th>
+            <th className="startupIntro">기업 소개</th>
+            <th className="startupCategory">카테고리</th>
+            <th className="startupCount">나의 기업 선택 횟수</th>
+            <th className="startupCompareCount">비교 기업 선택 횟수</th>
           </tr>
           {/* {startups.map((startup, index) => {
             return (
