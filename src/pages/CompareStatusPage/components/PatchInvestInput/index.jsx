@@ -29,7 +29,6 @@ function InvestmentInput() {
     e.preventDefault();
 
     const investData = {
-      startupId: Number(startupId),
       name:name,
       investAmount: Number(investAmount),
       comment: comment,
