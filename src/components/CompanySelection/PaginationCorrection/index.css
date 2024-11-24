@@ -1,0 +1,101 @@
+.PaginationLayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 368px;
+  height: 48px;
+  gap: 10px;
+}
+
+.BtnLayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 256px;
+  height: 48px;
+  gap: 4px;
+}
+
+.Btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--black_100);
+  color: var(--gray_200);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.48px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.Btn:hover {
+  background-color: var(--brand_orange); /* 화살표 버튼 호버 효과 */
+}
+
+.Btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.arrowimg {
+  width: 24px;
+  height: 24px;
+}
+
+.InnerBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--black_100);
+  color: var(--gray_200);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.48px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.InnerBtn.active {
+  background-color: var(--brand_orange); /* 클릭된 페이지 번호는 강조 */
+  color: var(--white_100);
+}
+
+.InnerBtn:hover,
+.InnerBtn:focus {
+  background-color: var(--brand_orange);
+  color: var(--white_100);
+}
+
+.InnerBtn:active {
+  background-color: #eb6f53;
+  color: var(--white_100);
+}
+
+/* 작은 화면에서의 스타일 */
+@media (max-width: 375px) {
+  .PaginationLayer {
+    width: 256px;
+    height: 32px;
+  }
+
+  .BtnLayer {
+    width: 176px;
+    height: 32px;
+  }
+
+  .Btn,
+  .InnerBtn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .Btn {
+    font-size: 16px;
+    line-height: 19.09px;
+  }
+}
