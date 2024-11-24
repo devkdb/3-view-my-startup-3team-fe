@@ -3,17 +3,17 @@ import "./index.css";
 
 function StartupList({startups}) {
   return (
-    <div className="scroll-x">
+    <div>
       <table>
         <tbody>
           <tr>
-            <th>순위</th>
-            <th>기업 명</th>
-            <th>기업 소개</th>
-            <th>카테고리</th>
-            <th>누적 투자 금액</th>
-            <th>매출액</th>
-            <th>고용인원</th>
+            <th className="startupRank">순위</th>
+            <th className="startupName">기업 명</th>
+            <th className="startupIntro">기업 소개</th>
+            <th className="startupCategory">카테고리</th>
+            <th className="startupInvest">누적 투자 금액</th>
+            <th className="startupRevenue">매출액</th>
+            <th className="startupEmployee">고용인원</th>
           </tr>
           {/* {startups.map((startup, index) => {
             return (

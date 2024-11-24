@@ -39,6 +39,7 @@ function AllStartupListPage() {
           <AllStartupDropdown />
         </div>
       </div>
+      <div className="scroll-x">
       <StartupList />
       <div className="pageList">
         {company.map((item, index) => {
@@ -57,6 +58,7 @@ function AllStartupListPage() {
             </Link>
           );
         })}
+        </div>
       </div>
       <div className="pagination">
         <Pagination />

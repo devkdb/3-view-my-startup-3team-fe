@@ -12,6 +12,7 @@
 
 .pageListItem {
   height: 64px;
+  width: 1200px;
   display: flex;
   background-color: var(--black_300);
   border-bottom: 1px solid var(--gray_300);
@@ -82,4 +83,10 @@
 
 .pageListItemStaffTotal {
   width: 153.75px;
+}
+
+@media (max-width:768px){
+  .pageListItem{
+    width: 696px;
+  }
 }

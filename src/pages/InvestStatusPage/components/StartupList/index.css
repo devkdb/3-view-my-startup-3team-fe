@@ -10,4 +10,28 @@ table{
     color: #ffffff;
     background-color: #2e2e2e;
   }
+
+  .startupRank{
+    width: 68px;
+  }
+
+  .startupName{
+    width: 213px;
+  }
+
+  .startupIntro{
+    width: 304px;
+  }
+
+  .startupCategory{
+    width: 153.75px;
+  }
+
+  .startupAmount{
+    width: 230.62px;
+  }
+
+  .startupTotalInvest{
+    width: 230.62px;
+  }
   
