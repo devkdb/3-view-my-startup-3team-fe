@@ -15,6 +15,7 @@ function CompareStatusPage() {
         <h2>비교 현황</h2>
         <CompareStatusDropdown />
       </div>
+      <div className="scroll-x">
       <StartupList />
       <div className="pageList">
         {ten.map((item, index) => {
@@ -24,6 +25,7 @@ function CompareStatusPage() {
             </Link>
           );
         })}
+      </div>
       </div>
       <div className="pagination">
         <Pagination />

@@ -53,6 +53,7 @@ function AllStartupListPage() {
           <AllStartupDropdown setOrderBy={setOrderBy} />
         </div>
       </div>
+      <div className="scroll-x">
       <StartupList />
       <div className="pageList">
         {companies.map((item, index) => {
@@ -71,6 +72,7 @@ function AllStartupListPage() {
             </Link>
           );
         })}
+        </div>
       </div>
       <div className="pagination">
         <Pagination
