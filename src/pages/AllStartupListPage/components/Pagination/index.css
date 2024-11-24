@@ -31,14 +31,14 @@
   border: none;
   background-color: var(--black_100);
   color: var(--gray_200);
-  
+
   &:active,
   &:hover {
     background-color: var(--brand_orange);
     transition: background-image 0.124534s ease-in-out;
   }
-  
-  &:active{
+
+  &:active {
     transform: scale(1.1);
   }
 }
@@ -97,10 +97,15 @@
     background-color: var(--brand_orange);
     transition: color 0.124534s ease-in-out;
   }
-  
-  &:active{
+
+  &:active {
     transform: scale(1.1);
   }
+}
+
+.InnerBtn.currentPage {
+  background-color: var( --brand_orange);
+  color: var(--white_100);
 }
 
 @media (max-width: 375px) {

@@ -13,14 +13,14 @@ import Pagination from "./components/Pagination/index.jsx";
 function AllStartupListPage() {
   const [startup, setStartup] = useState([]);
   const [offset, setOffset] = useState(0);
-  const [limit, setLimit] = useState(10);
+  const [currentPage, setCurrentPage] = useState(1);
   const [orderBy, setOrderBy] = useState("id");
 
   const loadHandler = async () => {
     try {
       const res = await apiRouter.getAllStartupsList({
         offset: offset,
-        limit: limit,
+        limit: 10,
         order: orderBy,
       });
       setStartup(res);
@@ -31,7 +31,7 @@ function AllStartupListPage() {
 
   useEffect(() => {
     loadHandler();
-  }, [startup]);
+  }, [offset, orderBy]);
 
   const companies = startup.startups || [];
   const totalPages = startup.totalPages || 0;
@@ -39,10 +39,9 @@ function AllStartupListPage() {
   const currentPages = startup.currentPage || 0;
   const hasNextPage = startup.hasNextPage || false;
 
-  const pageHandler = (e) => {
-    const page = e.target.innerText;
+  const currentPageHandler = (page) => {
+    setCurrentPage(page);
     setOffset(page * 10);
-    setLimit(10);
   };
 
   return (
@@ -79,7 +78,7 @@ function AllStartupListPage() {
           totalStartups={totalStartups}
           currentPage={currentPages}
           hasNextPage={hasNextPage}
-          pageHandler={pageHandler}
+          currentPageHandler={currentPageHandler}
         />
       </div>
     </div>
