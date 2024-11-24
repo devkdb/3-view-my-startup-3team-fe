@@ -15,23 +15,34 @@ function AllStartupListPage() {
   const [offset, setOffset] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [orderBy, setOrderBy] = useState("id");
+  const [searchKeyword, setSearchKeyword] = useState("");
 
   const loadHandler = async () => {
     try {
-      const res = await apiRouter.getAllStartupsList({
-        offset: offset,
-        limit: 10,
-        order: orderBy,
-      });
-      setStartup(res);
+      if(searchKeyword !== ""){
+        const res = await apiRouter.getSearchStartupsList({
+          // offset: offset,
+          limit: 10,
+          searchKeyword,
+        });
+        setStartup(res);
+        return;
+      } else if (searchKeyword === "") {
+        const res = await apiRouter.getAllStartupsList({
+          offset: offset,
+          limit: 10,
+          order: orderBy,
+        });
+        setStartup(res);
+      }
     } catch (error) {
       console.error("Error fetching startups:", error);
     }
   };
-
+  console.log('현재', searchKeyword);
   useEffect(() => {
     loadHandler();
-  }, [offset, orderBy]);
+  }, [startup]);
 
   const companies = startup.startups || [];
   const totalPages = startup.totalPages || 0;
@@ -44,12 +55,16 @@ function AllStartupListPage() {
     setOffset(page * 10);
   };
 
+  const onChange = (value) => {
+    setSearchKeyword(value);
+  };
+
   return (
     <div id="allStartupListPage">
       <div className="title">
         <h1>전체 스타트업 목록</h1>
         <div className="setPos">
-          <SearchComponent />
+          <SearchComponent onChange={onChange} />
           <AllStartupDropdown setOrderBy={setOrderBy} />
         </div>
       </div>

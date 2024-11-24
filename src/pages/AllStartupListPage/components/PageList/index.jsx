@@ -32,7 +32,7 @@ function PageList({
       <div className="pageListItemTotalInvestment pageListItemPosition basicText">
         {changeActualInvest}억원
       </div>
-      <div className="pageListItemRevenueTotal pageListItemPosition basicText">
+      <div className="AllStartupPageListItemRevenueTotal pageListItemPosition basicText">
         {changeRevenue}억원
       </div>
       <div className="pageListItemStaffTotal pageListItemPosition basicText">

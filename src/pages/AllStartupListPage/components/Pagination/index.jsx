@@ -8,6 +8,7 @@ function Pagination({
   currentPageHandler,
 }) {
   const pages = Array.from({ length: totalPages }, (_, index) => index + 1);
+  console.log(pages); 
   const pageMovementHandler = (page) => {
     if (page < 1 || page > totalPages) return;
     currentPageHandler(page);
@@ -28,7 +29,7 @@ function Pagination({
                 currentPage === item ? "currentPage" : ""
               }`}
               key={item}
-              onClick={() => currentPageHandler(item)}
+              onClick={() => currentPageHandler(index)}
             >
               {index + 1}
             </button>
