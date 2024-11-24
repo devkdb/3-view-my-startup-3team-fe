@@ -39,10 +39,10 @@ function AllStartupListPage() {
       console.error("Error fetching startups:", error);
     }
   };
-  console.log('현재', searchKeyword);
+
   useEffect(() => {
     loadHandler();
-  }, [startup]);
+  }, [offset, searchKeyword, orderBy]);
 
   const companies = startup.startups || [];
   const totalPages = startup.totalPages || 0;
@@ -52,7 +52,7 @@ function AllStartupListPage() {
 
   const currentPageHandler = (page) => {
     setCurrentPage(page);
-    setOffset(page * 10);
+    setOffset((page - 1) * 10);
   };
 
   const onChange = (value) => {
@@ -92,7 +92,6 @@ function AllStartupListPage() {
       <div className="pagination">
         <Pagination
           totalPages={totalPages}
-          totalStartups={totalStartups}
           currentPage={currentPages}
           hasNextPage={hasNextPage}
           currentPageHandler={currentPageHandler}
