@@ -17,31 +17,31 @@ function AllStartupListPage() {
   const [orderBy, setOrderBy] = useState("id");
   const [searchKeyword, setSearchKeyword] = useState("");
 
-  const loadHandler = async () => {
-    try {
-      if (searchKeyword !== "") {
-        const res = await apiRouter.getSearchStartupsList({
-          offset: offset,
-          limit: 10,
-          // order: orderBy,
-          searchKeyword,
-        });
-        setStartup(res);
-        return;
-      } else if (searchKeyword === "") {
-        const res = await apiRouter.getAllStartupsList({
-          offset: offset,
-          limit: 10,
-          order: orderBy,
-        });
-        setStartup(res);
-      }
-    } catch (error) {
-      console.error("Error fetching startups:", error);
-    }
-  };
-
   useEffect(() => {
+    const loadHandler = async () => {
+      try {
+        if (searchKeyword !== "") {
+          const res = await apiRouter.getSearchStartupsList({
+            offset: offset,
+            limit: 10,
+            // order: orderBy,
+            searchKeyword,
+          });
+          setStartup(res);
+          return;
+        } else if (searchKeyword === "") {
+          const res = await apiRouter.getAllStartupsList({
+            offset: offset,
+            limit: 10,
+            order: orderBy,
+          });
+          setStartup(res);
+        }
+      } catch (error) {
+        console.error("Error fetching startups:", error);
+      }
+    };
+
     loadHandler();
   }, [offset, searchKeyword, orderBy]);
 
