@@ -1,9 +1,9 @@
 import "./index.css";
 import { useState } from "react";
-import DeleteIcon from "../../assets/images/icons/ic_delete.png";
-import Oneye from "../../assets/images/icons/visibility/btn_visibility_on.png";
-import Offeye from "../../assets/images/icons/visibility/btn_visibility_off.png";
-import { apiRouter } from "../../api/allApiService";
+import DeleteIcon from "../../../../assets/images/icons/ic_delete.png";
+import Oneye from "../../../../assets/images/icons/visibility/btn_visibility_on.png";
+import Offeye from "../../../../assets/images/icons/visibility/btn_visibility_off.png";
+import { apiRouter } from "../../../../api/allApiService";
 
 function InvestmentInput() {
   const [startupId, setStartupId] =useState("");

@@ -1,12 +1,12 @@
 import "./index.css";
 import { useState } from "react";
-import DeleteIcon from "../../assets/images/icons/ic_delete.png";
-import Oneye from "../../assets/images/icons/visibility/btn_visibility_on.png";
-import Offeye from "../../assets/images/icons/visibility/btn_visibility_off.png";
-import { apiRouter } from "../../api/allApiService";
+import DeleteIcon from "../../../../assets/images/icons/ic_delete.png";
+import Oneye from "../../../../assets/images/icons/visibility/btn_visibility_on.png";
+import Offeye from "../../../../assets/images/icons/visibility/btn_visibility_off.png";
+import { apiRouter } from "../../../../api/allApiService";
 
-function InvestmentInput() {
-  const [startupId, setStartupId] =useState("");
+function PatchInvestInput() {
+  const [InvestorId, setInvestorId] = useState("");
   const [name, setName] = useState("");
   const [investAmount, setInvestAmount] = useState("");
   const [comment, setComment] = useState("");
@@ -29,14 +29,13 @@ function InvestmentInput() {
     e.preventDefault();
 
     const investData = {
-      startupId: Number(startupId),
       name:name,
       investAmount: Number(investAmount),
       comment: comment,
       password,
     };
     try{
-      const result = await apiRouter.patchInvestment(investData);
+      const result = await apiRouter.patchInvestment(InvestorId,investData);
       console.log("투자 수정 성공:", result);
     }catch(error){
       console.error("투자 수정 실패:", error)
@@ -170,6 +169,7 @@ return (
         <button className="cancelBtn" type="button">취소</button>
         <button className="investBtn"
         type="submit"
+        onClick={handleSubmit}
         disabled={!name || !investAmount || !comment || !password}
         >수정하기</button>
       </div>
@@ -178,4 +178,4 @@ return (
 );
 }
 
-export default InvestmentInput;
+export default PatchInvestInput;
