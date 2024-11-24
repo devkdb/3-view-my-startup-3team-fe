@@ -1,0 +1,74 @@
+.select-modal {
+  background-color: var(--black_300);
+  width: 496px;
+  height: 931px;
+  border-radius: 16px;
+  padding: 24px 24px;
+}
+
+.select-modal-all-div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.select-modal h1 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23.87px;
+  margin-left: 0;
+}
+
+.search-h1-input {
+  height: 104px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.company-list {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.select-modal p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.48px;
+}
+
+.selected-company ul {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.selected-company li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.company-list ul {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.company-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.pagination-div {
+  display: flex;
+  justify-content: center;
+}
