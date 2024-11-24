@@ -19,10 +19,11 @@ function AllStartupListPage() {
 
   const loadHandler = async () => {
     try {
-      if(searchKeyword !== ""){
+      if (searchKeyword !== "") {
         const res = await apiRouter.getSearchStartupsList({
-          // offset: offset,
+          offset: offset,
           limit: 10,
+          // order: orderBy,
           searchKeyword,
         });
         setStartup(res);
@@ -46,7 +47,6 @@ function AllStartupListPage() {
 
   const companies = startup.startups || [];
   const totalPages = startup.totalPages || 0;
-  const totalStartups = startup.totalStartups || 0;
   const currentPages = startup.currentPage || 0;
   const hasNextPage = startup.hasNextPage || false;
 
@@ -58,7 +58,7 @@ function AllStartupListPage() {
   const onChange = (value) => {
     setSearchKeyword(value);
   };
-
+console.log('searchKeyword',searchKeyword)
   return (
     <div id="allStartupListPage">
       <div className="title">
@@ -69,24 +69,24 @@ function AllStartupListPage() {
         </div>
       </div>
       <div className="scroll-x">
-      <StartupList />
-      <div className="pageList">
-        {companies.map((item, index) => {
-          return (
-            <Link key={index} to={`/details/${item.id}`}>
-              <PageList
-                rank={(currentPages - 1) * 10 + index + 1}
-                name={item.name}
-                image={item.image}
-                description={item.description}
-                category={item.Category.category}
-                employees={item.employees}
-                actualInvest={item.actualInvest}
-                revenue={item.revenue}
-              />
-            </Link>
-          );
-        })}
+        <StartupList />
+        <div className="pageList">
+          {companies.map((item, index) => {
+            return (
+              <Link key={index} to={`/details/${item.id}`}>
+                <PageList
+                  rank={(currentPages - 1) * 10 + index + 1}
+                  name={item.name}
+                  image={item.image}
+                  description={item.description}
+                  category={item.Category.category}
+                  employees={item.employees}
+                  actualInvest={item.actualInvest}
+                  revenue={item.revenue}
+                />
+              </Link>
+            );
+          })}
         </div>
       </div>
       <div className="pagination">
