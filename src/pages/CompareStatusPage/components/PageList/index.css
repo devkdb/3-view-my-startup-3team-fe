@@ -1,29 +1,15 @@
-.pageListItemPosition {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.basicText {
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-}
-
 .pageListItem {
   height: 64px;
+  width: 100%;
   display: flex;
   background-color: var(--black_300);
   border-bottom: 1px solid var(--gray_300);
   border-radius: 4px;
   cursor: pointer;
-
+  align-items: center;
   &:hover {
     box-shadow: 0 0 0.75rem rgba(138, 137, 137, 0.63);
   }
-
-  ;
-
   &:active {
     box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0);
   }
@@ -38,6 +24,10 @@
   width: 213px;
   font-size: 14px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important;
+  text-align: left !important;
 }
 
 .pageListItemName img {
@@ -50,29 +40,52 @@
 .pageListItemDescription {
   width: 304px;
   padding: 15px 16px;
-  font-size: 14px;
-  font-weight: 400;
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: center;
+  overflow: hidden;
 }
 
-.pageListItemDescription span {
+.descriptionText {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left !important;
+  white-space: normal;
+  word-wrap: break-word;
+  display: block;
+  margin: 0;
   line-height: 16.71px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   line-clamp: 2;
-  /* 표준 속성 추가 */
 }
 
 .pageListItemCategory {
   width: 153.75px;
 }
 
-.investmentAmount {
+.pageListItemSelectCount,
+.pageListItemCompareCount {
   width: 230.62px;
 }
 
-.pageListItemRevenueTotal {
-  width: 230.62px;
+@media (max-width: 375px) {
+  .pageListItemLank {
+    width: 60px;
+  }
+  .pageListItemName {
+    width: 140px;
+  }
+  .pageListItemDescription {
+    width: 180px;
+  }
+  .pageListItemCategory {
+    width: 84px;
+  }
+  .pageListItemSelectCount,
+  .pageListItemCompareCount {
+    width: 116px;
+  }
 }

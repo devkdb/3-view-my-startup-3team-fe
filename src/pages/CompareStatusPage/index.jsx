@@ -1,34 +1,70 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { getStartupsList } from "../../api/CompareStatusApi.js";
 import "./index.css";
 import CompareStatusDropdown from "./components/Dropdown/index.jsx";
 import StartupList from "./components/StartupList/index.jsx";
 import PageList from "./components/PageList/index.jsx";
-import Pagination from "../../components/Pagination/index.jsx";
+import Pagination from "./components/Pagination/index.jsx";
 
 function CompareStatusPage() {
-  const ten = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+  const [startups, setStartups] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
+  const [orderBy, setOrderBy] = useState("selectCountDesc");
+
+  const fetchStartups = async (page, order) => {
+    setIsLoading(true);
+    const offset = (page - 1) * 10;
+    const data = await getStartupsList({
+      limit: 10,
+      offset,
+      order,
+    });
+    setStartups(data.startups);
+    setTotalPages(data.totalPages);
+    setIsLoading(false);
+  };
+
+  useEffect(() => {
+    fetchStartups(currentPage, orderBy);
+  }, [currentPage, orderBy]);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  const handleSortChange = (sortOrder) => {
+    setOrderBy(sortOrder);
+  };
 
   return (
     <div id="compareStatusPage">
       <div className="compareTitle">
         <h2>비교 현황</h2>
-        <CompareStatusDropdown />
+        <CompareStatusDropdown onItemClick={handleSortChange} />
       </div>
       <div className="scroll-x">
-      <StartupList />
-      <div className="pageList">
-        {ten.map((item, index) => {
-          return (
-            <Link key={index} to="/Details/3">
-              <PageList />
-            </Link>
-          );
-        })}
-      </div>
+        <StartupList />
+        <div className="pageList">
+          {isLoading ? (
+            <div>Loading...</div>
+          ) : (
+            startups.map((startup, index) => (
+              <Link key={index} to={`/Details/${startup.id}`}>
+                <PageList index={(currentPage - 1) * 10 + index + 1} startup={startup} />
+              </Link>
+            ))
+          )}
+        </div>
       </div>
       <div className="pagination">
-        <Pagination />
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
       </div>
     </div>
   );
