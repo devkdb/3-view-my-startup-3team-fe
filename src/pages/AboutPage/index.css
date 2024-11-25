@@ -3,22 +3,22 @@
   display: block;
   justify-content: center;
   align-items: center;
-  padding: 18px;
-  line-height: 1.5;
+  padding: 30px;
+  line-height: 1.6;
   color: var(--white_100);
   background-color: var(--black_400);
 }
 
 .about-page__header {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 17px;
+  margin-bottom: 30px;
   color: var(--white_100);
 }
 
 .about-page__section {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   padding: 12px;
   background-color: var(--black_300);
   border-radius: 8px;
@@ -26,22 +26,23 @@
 }
 
 .about-page__title {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: var(--brand_orange);
 }
 
 .about-page__text {
-  margin-bottom: 5px;
-  font-size: 1.2rem;
-  line-height: 1.3;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  padding-left: 20px;
 }
 
 .about-page__list {
   padding-left: 20px;
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .about-page__list--ordered {
@@ -49,23 +50,23 @@
 }
 
 .about-page__item {
-  margin-bottom: 5px;
-  padding-left: 5px;
-  font-size: 1.1rem;
+  margin-bottom: 8px;
+  padding-left: 10px;
+  font-size: 1.3rem;
 }
 
 .about-page__item strong {
   color: var(--gray_200);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .about-page__list--ordered .about-page__item p {
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .about-page__footer {
   text-align: center;
-  margin-top: 10px;
-  font-size: 0.7rem;
+  margin-top: 20px;
+  font-size: 1rem;
   color: var(--gray_200);
 }
