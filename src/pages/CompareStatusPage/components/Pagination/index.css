@@ -1,0 +1,82 @@
+.CompareStatusPaginationLayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 368px;
+  height: 48px;
+  gap: 10px;
+}
+
+.CompareStatusBtnLayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 256px;
+  height: 48px;
+  gap: 4px;
+}
+
+.CompareStatusBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--black_100);
+  color: var(--gray_200);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.48px;
+  text-align: center;
+  &:active {
+    background-color: #eb6f53;
+  }
+}
+
+.CompareStatusarrowimg {
+  width: 24px;
+  height: 24px;
+}
+
+.CompareStatusInnerBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--black_100);
+  color: var(--gray_200);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.48px;
+  text-align: center;
+  &:hover,
+  &:focus {
+    background-color: var(--brand_orange);
+    color: var(--white_100);
+  }
+  &:active {
+    background-color: #eb6f53;
+    color: var(--white_100);
+  }
+}
+
+@media (max-width: 375px) {
+  .CompareStatusPaginationLayer {
+    width: 256px;
+    height: 32px;
+  }
+  .CompareStatusBtnLayer {
+    width: 176px;
+    height: 32px;
+  }
+  .CompareStatusBtn,
+  .CompareStatusInnerBtn {
+    width: 32px;
+    height: 32px;
+  }
+  .CompareStatusBtn {
+    font-size: 16px;
+    line-height: 19.09px;
+  }
+}

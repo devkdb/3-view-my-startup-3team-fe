@@ -16,6 +16,15 @@
   margin-top: 40px;
 }
 
+.scroll-x{
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: 101px;
+}
+
 h2 {
   color: #ffffff;
   font-size: 20px;

@@ -1,46 +1,54 @@
-table{
-    min-width: 696px;
-    max-width: 1200px;
-    height: 39px;
-    width: 100%;
-    top: 164px;
-    left: 320px;
-    font-weight: 500;
-    font-size: 14px;
-    color: #ffffff;
-    background-color: #2e2e2e;
-  }
+.mainLayer {
+  /* min-width: 696px;
+  max-width: 1200px; */
+  /* top: 164px;
+  left: 320px; */
+  height: 39px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.71px;
+  text-align: center;
+  color: var(--white_100);
+  background-color: var(--black_100);
+}
 
-  .scroll-x{
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: none;
-    scrollbar-width: 101px;
-  }
+.rank {
+  width: 68px;
+}
 
-  .startupRank{
-    width: 68px;
-  }
+.name {
+  width: 213px;
+}
 
-  .startupCompareName{
-    width: 213px;
-  }
+.description {
+  width: 304px;
+}
 
-  .startupIntro{
-    width: 304px;
-  }
+.category {
+  width: 153.75px;
+}
 
-  .startupCategory{
-    width:153.75px
-  }
+.selectCount,
+.compareCount {
+  width: 230.62px;
+}
 
-  .startupCount{
-    width: 230.62px;
+@media (max-width: 375px) {
+  .rank {
+    width: 64px;
   }
-
-  .startupCompareCount{
-    width: 230.62px;
+  .name {
+    width: 140px;
   }
- 
+  .description {
+    width: 180px;
+  }
+  .category {
+    width: 84px;
+  }
+  .selectCount,
+  .compareCount {
+    width: 114px;
+  }
+}
