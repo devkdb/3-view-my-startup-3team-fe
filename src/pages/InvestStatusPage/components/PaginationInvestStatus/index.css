@@ -1,0 +1,89 @@
+/* 글로벌css로 적용하여 나중에 삭제할 부분 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.PaginationLayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 368px;
+  height: 48px;
+  gap: 10px;
+}
+
+.BtnLayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 256px;
+  height: 48px;
+  gap: 4px;
+}
+
+.Btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--black_100);
+  color: var(--gray_200);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.48px;
+  text-align: center;
+  &:active {
+    background-color: #eb6f53;
+  }
+}
+
+.arrowimg {
+  width: 24px;
+  height: 24px;
+}
+
+.InnerBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--black_100);
+  color: var(--gray_200);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.48px;
+  text-align: center;
+  &:hover,
+  &:focus {
+    background-color: var(--brand_orange);
+    color: var(--white_100);
+  }
+  &:active {
+    background-color: #eb6f53;
+    color: var(--white_100);
+  }
+}
+
+@media (max-width: 375px) {
+  .PaginationLayer {
+    width: 256px;
+    height: 32px;
+  }
+  .BtnLayer {
+    width: 176px;
+    height: 32px;
+  }
+  .Btn,
+  .InnerBtn {
+    width: 32px;
+    height: 32px;
+  }
+  .Btn {
+    font-size: 16px;
+    line-height: 19.09px;
+  }
+}
