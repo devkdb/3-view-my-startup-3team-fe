@@ -58,7 +58,7 @@ function AllStartupListPage() {
   const onChange = (value) => {
     setSearchKeyword(value);
   };
-console.log('searchKeyword',searchKeyword)
+
   return (
     <div id="allStartupListPage">
       <div className="title">
