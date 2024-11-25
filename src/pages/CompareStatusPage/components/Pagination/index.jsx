@@ -14,28 +14,25 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
   const handleRightMouseEnter = () => setRightImg(img4);
   const handleRightMouseLeave = () => setRightImg(img2);
 
-  // 페이지 범위 계산 (5개씩 묶음으로 페이지 버튼을 표시)
-  const btnRange = 5; // 한 묶음에 표시할 페이지 버튼 수
-  const startPage = Math.floor((currentPage - 1) / btnRange) * btnRange + 1; // 현재 페이지가 속한 묶음의 시작 페이지
-  const endPage = Math.min(startPage + btnRange - 1, totalPages); // 묶음의 끝 페이지
+  const btnRange = 5;
+  const startPage = Math.floor((currentPage - 1) / btnRange) * btnRange + 1;
+  const endPage = Math.min(startPage + btnRange - 1, totalPages);
 
   const handlePageChange = (page) => {
     if (page >= 1 && page <= totalPages) {
-      onPageChange(page); // 클릭한 페이지로 이동
+      onPageChange(page);
     }
   };
 
-  // '>' 버튼 클릭 시, 현재 페이지가 속한 묶음에서 1페이지씩 증가
   const handleNextPage = () => {
     if (currentPage < totalPages) {
-      onPageChange(currentPage + 1); // 한 페이지씩 증가
+      onPageChange(currentPage + 1);
     }
   };
 
-  // '<' 버튼 클릭 시, 현재 페이지가 속한 묶음에서 1페이지씩 감소
   const handlePrevPage = () => {
     if (currentPage > 1) {
-      onPageChange(currentPage - 1); // 한 페이지씩 감소
+      onPageChange(currentPage - 1);
     }
   };
 
@@ -46,7 +43,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         onClick={handlePrevPage}
         onMouseEnter={handleLeftMouseEnter}
         onMouseLeave={handleLeftMouseLeave}
-        disabled={currentPage === 1} // 첫 번째 페이지에서는 '<' 비활성화
+        disabled={currentPage === 1}
       >
         <img
           src={leftImg}
@@ -80,7 +77,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         onClick={handleNextPage}
         onMouseEnter={handleRightMouseEnter}
         onMouseLeave={handleRightMouseLeave}
-        disabled={currentPage === totalPages} // 마지막 페이지에서는 '>' 비활성화
+        disabled={currentPage === totalPages}
       >
         <img
           src={rightImg}
