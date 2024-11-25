@@ -24,7 +24,7 @@ function AllStartupListPage() {
           const res = await apiRouter.getSearchStartupsList({
             offset: offset,
             limit: 10,
-            // order: orderBy,
+            order: orderBy,
             searchKeyword,
           });
           setStartup(res);
@@ -47,7 +47,7 @@ function AllStartupListPage() {
 
   const companies = startup.startups || [];
   const totalPages = startup.totalPages || 0;
-  const currentPages = startup.currentPage || 0;
+  const currentPages = startup.currentPage || 1;
   const hasNextPage = startup.hasNextPage || false;
 
   const currentPageHandler = (page) => {
