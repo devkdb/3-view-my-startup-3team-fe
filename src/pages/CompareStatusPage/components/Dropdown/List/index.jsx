@@ -3,13 +3,13 @@ import "../index.css";
 
 function CompareStatusDropdownList({ onItemClick, dropdownRef }) {
   const dropdownRect = dropdownRef.current?.getBoundingClientRect();
-  const listPosition = dropdownRect ? dropdownRect.bottom + window.scrollY : 0; // 드롭다운 박스 바로 아래에 리스트 위치
+  const listPosition = dropdownRect ? dropdownRect.bottom + window.scrollY : 0;
 
   return (
     <ul
       className="DropdownListLayerCompare"
       style={{
-        top: `${listPosition + 6}px`, // 동적으로 위치 설정
+        top: `${listPosition + 6}px`,
       }}
     >
       <li
