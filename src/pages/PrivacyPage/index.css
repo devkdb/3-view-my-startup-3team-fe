@@ -1,0 +1,69 @@
+.privacy-page {
+  width: 100%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  line-height: 1.6;
+  color: var(--white_100);
+  background-color: var(--black_400);
+}
+
+.privacy-page__header {
+  font-size: 1.9rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--white_100);
+}
+
+.privacy-page__section {
+  margin-bottom: 30px;
+  padding: 16px;
+  background-color: var(--black_300);
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.privacy-page__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--brand_orange);
+}
+
+.privacy-page__text {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.privacy-page__list {
+  padding-left: 20px;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.privacy-page__list--ordered {
+  list-style: decimal;
+}
+
+.privacy-page__item {
+  margin-bottom: 8px;
+  padding-left: 10px;
+}
+
+.privacy-page__item strong {
+  color: var(--gray_200);
+}
+
+.privacy-page__list--ordered .privacy-page__item p {
+  margin-top: 6px;
+}
+
+.privacy-page__footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--gray_200);
+}

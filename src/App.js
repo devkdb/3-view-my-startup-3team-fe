@@ -22,10 +22,9 @@ function App() {
           <Route path='compare' element={<ComparePage />} />
           <Route path='compare-status' element={<CompareStatusPage />} />
           <Route path='invest-status' element={<InvestStatusPage />} />
-          {/* Footer */}
           <Route path='about' element={<AboutPage />} />
-          <Route path='terms' element={<PrivacyPage />} />
-          <Route path='privacy' element={<TermsPage />} />
+          <Route path='terms' element={<TermsPage />} />
+          <Route path='privacy' element={<PrivacyPage />} />
         </Route >
       </Routes>
     </BrowserRouter>
