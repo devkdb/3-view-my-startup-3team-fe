@@ -11,11 +11,9 @@ function CompareStatusPage() {
   const [startups, setStartups] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [isLoading, setIsLoading] = useState(false);
   const [orderBy, setOrderBy] = useState("selectCountDesc");
 
   const fetchStartups = async (page, order) => {
-    setIsLoading(true);
     const offset = (page - 1) * 10;
     const data = await getStartupsList({
       limit: 10,
@@ -24,7 +22,6 @@ function CompareStatusPage() {
     });
     setStartups(data.startups);
     setTotalPages(data.totalPages);
-    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -48,15 +45,14 @@ function CompareStatusPage() {
       <div className="scroll-x">
         <StartupList />
         <div className="pageList">
-          {isLoading ? (
-            <div>Loading...</div>
-          ) : (
-            startups.map((startup, index) => (
-              <Link key={index} to={`/Details/${startup.id}`}>
-                <PageList index={(currentPage - 1) * 10 + index + 1} startup={startup} />
-              </Link>
-            ))
-          )}
+          {startups.map((startup, index) => (
+            <Link key={index} to={`/Details/${startup.id}`}>
+              <PageList
+                index={(currentPage - 1) * 10 + index + 1}
+                startup={startup}
+              />
+            </Link>
+          ))}
         </div>
       </div>
       <div className="pagination">
