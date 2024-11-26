@@ -1,0 +1,45 @@
+.mainLayer {
+  height: 39px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.71px;
+  text-align: center;
+  color: var(--white_100);
+  background-color: var(--black_100);
+  margin-top: 16px;
+}
+
+.name {
+  width: 213px;
+}
+
+.description {
+  width: 304px;
+}
+
+.category,
+.actualInvest,
+.revenue,
+.employees {
+  width: 170.75px;
+}
+
+.check-rank {
+  width: 68px;
+}
+
+.check-name {
+  width: 213px;
+}
+
+.check-description {
+  width: 304px;
+}
+
+.check-category,
+.check-actualInvest,
+.check-revenue,
+.check-employees {
+  width: 153.75px;
+}

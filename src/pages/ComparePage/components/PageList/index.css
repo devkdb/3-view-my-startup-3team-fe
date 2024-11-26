@@ -1,0 +1,175 @@
+.pageListItemPosition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basicText {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.pageListItem {
+  height: 64px;
+  width: 1200px;
+  display: flex;
+  background-color: var(--black_300);
+  border-bottom: 1px solid var(--gray_300);
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 0.75rem rgba(138, 137, 137, 0.63);
+  }
+  &:active {
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0);
+  }
+}
+
+.pageListItemLank {
+  height: 100%;
+  width: 68px;
+}
+
+.pageListItemName {
+  width: 213px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.71px;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+.pageListItemName img {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 50%;
+}
+
+.pageListItemDescription {
+  width: 304px;
+  padding: 15px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: center;
+  overflow: hidden;
+}
+
+.pageListItemDescription span {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left !important;
+  white-space: normal;
+  word-wrap: break-word;
+  display: -webkit-box;
+  margin: 0;
+  line-height: 16.71px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  color: var(--gray_100);
+}
+
+.pageListItemCategory,
+.pageListItemActualInvest,
+.pageListItemRevenue,
+.pageListItemEmployees {
+  width: 170.75px;
+  color: var(--gray_100);
+}
+
+.rankPageListItemPosition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rankBasicText {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.rankPageListItem {
+  height: 64px;
+  width: 1200px;
+  display: flex;
+  background-color: var(--black_300);
+  border-bottom: 1px solid var(--gray_300);
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 0.75rem rgba(138, 137, 137, 0.63);
+  }
+  &:active {
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0);
+  }
+}
+
+.rankPageListItemLank {
+  height: 100%;
+  width: 68px;
+}
+
+.rankPageListItemName {
+  width: 213px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.71px;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+.rankPageListItemName img {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 50%;
+}
+
+.rankPageListItemDescription {
+  width: 304px;
+  padding: 15px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: center;
+  overflow: hidden;
+}
+
+.rankPageListItemDescription span {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left !important;
+  white-space: normal;
+  word-wrap: break-word;
+  display: -webkit-box;
+  margin: 0;
+  line-height: 16.71px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  color: var(--gray_100);
+}
+
+.rankPageListItemCategory,
+.rankPageListItemActualInvest,
+.rankPageListItemRevenue,
+.rankPageListItemEmployees {
+  width: 153.75px;
+  color: var(--gray_100);
+}
