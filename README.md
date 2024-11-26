@@ -106,12 +106,19 @@
 공통
 
 ![image](https://github.com/user-attachments/assets/697dc667-ce25-44b0-8b78-01af610f6c77)
+
 ![image](https://github.com/user-attachments/assets/b1d3b357-7e61-4d47-8574-e2976ab71a33)
 
 - 페이지네이션
 - 미디어 쿼리
 
+
 ## 파일구조 (FrontEnd)
+
+![image](https://github.com/user-attachments/assets/35771d2d-dc85-41af-9729-a42173fb85f5)
+![image](https://github.com/user-attachments/assets/5a7a0646-d3c7-4871-8499-1fec587cd02b)
+
+
 
 ## 구현 홈페이지
 
