@@ -85,6 +85,7 @@
 ![image](https://github.com/user-attachments/assets/091b313d-5694-45d1-b80a-c8bc5ed87871)
 ![image](https://github.com/user-attachments/assets/afd952c4-1857-4efe-9142-3a58c673bd28)
 ![image](https://github.com/user-attachments/assets/64ae9fda-c1f4-4ddc-b410-4cb68ec778d6)
+
 ![image](https://github.com/user-attachments/assets/ebd29400-e076-43c3-b21f-24768bc222e5)
 
 - 서치 창 컴포넌트 화
@@ -97,14 +98,15 @@
 최종훈
 
 ![image](https://github.com/user-attachments/assets/a3bd69c6-afe0-4189-b5cd-133bb6ee7149)
+
 ![image](https://github.com/user-attachments/assets/194a20ba-09b2-44d7-8841-4cf7f3dade65)
 
 - 비교 현황 페이지 작업
 
 공통
+
 ![image](https://github.com/user-attachments/assets/697dc667-ce25-44b0-8b78-01af610f6c77)
 ![image](https://github.com/user-attachments/assets/b1d3b357-7e61-4d47-8574-e2976ab71a33)
-
 
 - 페이지네이션
 - 미디어 쿼리
