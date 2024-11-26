@@ -22,6 +22,9 @@
 
   &:hover {
     box-shadow: 0 0 0.75rem rgba(138, 137, 137, 0.63);
+    background-color: var(--black_200);
+    transform: scale(1.0001);
+    transition: transform 0.2s ease-in-out;
   }
 
   ;

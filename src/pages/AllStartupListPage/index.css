@@ -37,9 +37,34 @@ h1 {
   margin-top: 40px;
 }
 
-@media (min-width: 768px) {
+.pageListItemName > span {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  max-height: 3em;
+  white-space: normal;
+}
+
+@media (min-width: 700px) {
   #allStartupListPage {
-    width: 700px;
+    width: 600px;
+  }
+
+  .pageListItemName {
+    width: 177px;
+  }
+
+  .pageListItemDescription {
+    width: 283px;
+  }
+}
+
+@media (min-width: 800px) {
+  #allStartupListPage {
+    width: 800px;
   }
 
   .title {
@@ -50,6 +75,29 @@ h1 {
 
   .setPos {
     width: 449px;
+  }
+
+  .pageListItemName > span {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5em;
+    max-height: 3em;
+    white-space: normal;
+  }
+}
+
+@media (min-width: 900px) {
+  #allStartupListPage {
+    width: 900px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #allStartupListPage {
+    width: 1000px;
   }
 }
 

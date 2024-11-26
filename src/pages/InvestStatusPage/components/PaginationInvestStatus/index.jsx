@@ -45,7 +45,7 @@ return (
       {pageNumbers.map((pageNumber) => (
         <button
           key={pageNumber} 
-          className={`InnerBtn ${currentPage === pageNumber ? "active" : ""}`} 
+          className={`${currentPage === pageNumber ? "pagenationActive" : ""} InnerBtn`} 
           onClick={() => handlePageClick(pageNumber)} 
         >
           {pageNumber}
