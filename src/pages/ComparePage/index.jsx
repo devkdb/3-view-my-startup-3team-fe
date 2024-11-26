@@ -8,6 +8,7 @@ import ChoosingMyEnterprise from "../../components/ChoosingMyEnterprise";
 import CompanySelection from "../../components/CompanySelection";
 import ResultsCheck from "./components/ResultsCheck";
 import RankCheck from "./components/RankCheck";
+import CreateMyStartupInvestment from "../CompareStatusPage/components/CreateMyStartupInvestment/index";
 
 const DEFAULT_IMAGE = "/images/default-company.png";
 
@@ -17,6 +18,16 @@ const ComparePage = () => {
   const [selectedCompanies, setSelectedCompanies] = useState([]);
   const [selectedBaseCompany, setSelectedBaseCompany] = useState(null);
   const [showResults, setShowResults] = useState(false);
+
+  //const [selectedStartup, setSelectedStartup] = useState([]);
+  const [isInvestModal, setIsInvestModal] = useState(false);
+  const handleOpenInvestModal = () => {
+    setIsInvestModal(true);
+  };
+  const handleCloseInvestModal = (e) => {
+    if (e) e.preventDefault();
+    setIsInvestModal(false);
+  };
 
   const toggleChoosingModal = () => setShowChoosingModal(!showChoosingModal);
   const toggleSelectionModal = () => setShowSelectionModal(!showSelectionModal);
@@ -71,14 +82,14 @@ const ComparePage = () => {
   };
 
   return (
-    <div className="compare-page">
-      <div className="choose-My-Enterprise">
+    <div className='compare-page'>
+      <div className='choose-My-Enterprise'>
         <h1>나의 기업을 선택해주세요!</h1>
 
         {selectedCompanies.length > 0 && (
           <Button
-            className="reset-btn"
-            variant="medium"
+            className='reset-btn'
+            variant='medium'
             onClick={handleResetAllCompanies}
           >
             전체 초기화
@@ -89,7 +100,7 @@ const ComparePage = () => {
       {selectedBaseCompany && (
         <InputActive key={selectedBaseCompany.id}>
           <p
-            className="remove-company-button"
+            className='remove-company-button'
             onClick={(e) => {
               e.stopPropagation();
               setSelectedBaseCompany(null);
@@ -97,18 +108,18 @@ const ComparePage = () => {
           >
             선택 취소
           </p>
-          <div className="selected-company1">
+          <div className='selected-company1'>
             <img
               src={selectedBaseCompany.logo}
               alt={selectedBaseCompany.name}
-              className="selected-company-logo"
+              className='selected-company-logo'
               onError={(e) => {
                 e.target.src = DEFAULT_IMAGE;
               }}
             />
-            <div className="company-details">
-              <p className="company-name">{selectedBaseCompany.name}</p>
-              <span className="company-category">
+            <div className='company-details'>
+              <p className='company-name'>{selectedBaseCompany.name}</p>
+              <span className='company-category'>
                 {selectedBaseCompany.Category?.category || "카테고리 없음"}
               </span>
             </div>
@@ -117,13 +128,13 @@ const ComparePage = () => {
       )}
 
       {selectedBaseCompany && !showResults && (
-        <div className="choose-My-Enterprise2">
+        <div className='choose-My-Enterprise2'>
           <h1>
             어떤 기업이 궁금하세요?
             {selectedCompanies.length > 0 && <span> (최대 5개)</span>}
           </h1>
           <Button
-            variant="default"
+            variant='default'
             onClick={toggleSelectionModal}
             disabled={selectedCompanies.length === 5}
             className={`plus-company-btn ${
@@ -137,11 +148,11 @@ const ComparePage = () => {
 
       {!selectedBaseCompany && !showResults && (
         <InputInactive onClick={toggleChoosingModal}>
-          <div className="btn-plus-container">
+          <div className='btn-plus-container'>
             <img
               src={btnPlusIcon}
-              alt="기업 추가 버튼"
-              className="btn-plus-icon"
+              alt='기업 추가 버튼'
+              className='btn-plus-icon'
             />
             <p>기업 추가</p>
           </div>
@@ -151,7 +162,7 @@ const ComparePage = () => {
       {selectedBaseCompany && !showResults && (
         <InputActive>
           {selectedCompanies.length === 0 && (
-            <div className="add-company-placeholder">
+            <div className='add-company-placeholder'>
               <p>
                 아직 추가한 기업이 없어요,
                 <br />
@@ -160,11 +171,11 @@ const ComparePage = () => {
             </div>
           )}
 
-          <div className="selected-companies-list">
+          <div className='selected-companies-list'>
             {selectedCompanies.map((company) => (
-              <div key={company.id} className="selected-companys">
+              <div key={company.id} className='selected-companys'>
                 <span
-                  className="remove-company-button2"
+                  className='remove-company-button2'
                   onClick={(e) => {
                     e.stopPropagation();
                     handleRemoveCompany(company.id);
@@ -175,14 +186,14 @@ const ComparePage = () => {
                 <img
                   src={company.logo}
                   alt={company.name}
-                  className="selected-company-logo"
+                  className='selected-company-logo'
                   onError={(e) => {
                     e.target.src = DEFAULT_IMAGE;
                   }}
                 />
-                <div className="company-details">
-                  <p className="company-name">{company.name}</p>
-                  <span className="company-category">
+                <div className='company-details'>
+                  <p className='company-name'>{company.name}</p>
+                  <span className='company-category'>
                     {company.Category?.category || "카테고리 없음"}
                   </span>
                 </div>
@@ -193,9 +204,9 @@ const ComparePage = () => {
       )}
 
       {!showResults && (
-        <div className="compare-button-container">
+        <div className='compare-button-container'>
           <Button
-            variant="default"
+            variant='default'
             className={`compare-btn ${
               selectedCompanies.length > 0 ? "active" : "disabled"
             }`}
@@ -208,8 +219,8 @@ const ComparePage = () => {
       )}
 
       {showChoosingModal && (
-        <div className="modal-overlay" onClick={toggleChoosingModal}>
-          <div className="modal-container" onClick={(e) => e.stopPropagation()}>
+        <div className='modal-overlay' onClick={toggleChoosingModal}>
+          <div className='modal-container' onClick={(e) => e.stopPropagation()}>
             <ChoosingMyEnterprise
               onAddCompany={handleAddCompanySingle}
               selectedCompanies={selectedCompanies}
@@ -219,8 +230,8 @@ const ComparePage = () => {
       )}
 
       {showSelectionModal && (
-        <div className="modal-overlay" onClick={toggleSelectionModal}>
-          <div className="modal-container" onClick={(e) => e.stopPropagation()}>
+        <div className='modal-overlay' onClick={toggleSelectionModal}>
+          <div className='modal-container' onClick={(e) => e.stopPropagation()}>
             <CompanySelection
               selectedCompanies={selectedCompanies}
               onAddCompanies={handleAddCompanyMultiple}
@@ -242,7 +253,17 @@ const ComparePage = () => {
             selectedCompanies={selectedCompanies}
             selectedBaseCompany={selectedBaseCompany}
           />
-          <button className="investBtn">나의 기업에 투자하기</button>
+          {
+            <button className='investBtn' onClick={handleOpenInvestModal}>
+              나의 기업에 투자하기
+            </button>
+          }
+          {isInvestModal && (
+            <CreateMyStartupInvestment
+              onClose={handleCloseInvestModal}
+              startup={selectedCompanies}
+            />
+          )}
         </>
       )}
     </div>
