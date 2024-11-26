@@ -46,11 +46,11 @@ const ComparePage = () => {
     if (
       selectedCompanies.length < 5 &&
       !selectedCompanies.some((c) => c.id === company.id) &&
-      selectedBaseCompany?.id !== company.id // 기준 기업 제외
+      selectedBaseCompany?.id !== company.id
     ) {
       const companyWithDefaults = {
         ...company,
-        logo: company.logo || DEFAULT_IMAGE,
+        logo: company.image || DEFAULT_IMAGE, // 'image' 필드를 사용
         Category: company.Category || { category: "카테고리 없음" },
         name: company.name || "기업 이름 없음",
       };
@@ -127,6 +127,9 @@ const ComparePage = () => {
             variant="default"
             onClick={toggleSelectionModal}
             disabled={selectedCompanies.length === 5}
+            className={`plus-company-btn ${
+              selectedCompanies.length === 5 ? "disabled" : ""
+            }`}
           >
             기업 추가하기
           </Button>
@@ -163,7 +166,16 @@ const ComparePage = () => {
           <div className="selected-companies-list">
             {/* 기준 기업 제외하고 최대 5개 기업만 하단에 표시 */}
             {selectedCompanies.map((company) => (
-              <div key={company.id} className="selected-company">
+              <div key={company.id} className="selected-companys">
+                <span
+                  className="remove-company-button2"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleRemoveCompany(company.id); // 선택 해제
+                  }}
+                >
+                  ー
+                </span>
                 <img
                   src={company.logo}
                   alt={company.name}
@@ -178,15 +190,6 @@ const ComparePage = () => {
                     {company.Category?.category || "카테고리 없음"}
                   </span>
                 </div>
-                <p
-                  className="remove-company-button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleRemoveCompany(company.id); // 선택 해제
-                  }}
-                >
-                  선택 취소
-                </p>
               </div>
             ))}
           </div>
@@ -194,7 +197,13 @@ const ComparePage = () => {
       )}
 
       <div className="compare-button-container">
-        <Button variant="default" disabled={selectedCompanies.length === 0}>
+        <Button
+          variant="default"
+          className={`compare-btn ${
+            selectedCompanies.length > 0 ? "active" : "disabled"
+          }`}
+          disabled={selectedCompanies.length === 0}
+        >
           기업 비교하기
         </Button>
       </div>
