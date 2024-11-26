@@ -18,12 +18,34 @@ function ResultsCheck({ selectedCompanies, selectedBaseCompany }) {
         id: selectedCompanies.map((company) => company.id),
       });
       if (data && Array.isArray(data.compareStartups)) {
-        const validStartups = data.compareStartups.filter(
+        let validStartups = data.compareStartups.filter(
           (startup) =>
             startup.hasOwnProperty("id") &&
             startup.hasOwnProperty("compareCount")
         );
         if (validStartups.length > 0) {
+          switch (order) {
+            case "actualInvestDesc":
+              validStartups.sort((a, b) => b.actualInvest - a.actualInvest);
+              break;
+            case "actualInvestAsc":
+              validStartups.sort((a, b) => a.actualInvest - b.actualInvest);
+              break;
+            case "revenueDesc":
+              validStartups.sort((a, b) => b.revenue - a.revenue);
+              break;
+            case "revenueAsc":
+              validStartups.sort((a, b) => a.revenue - b.revenue);
+              break;
+            case "employeesDesc":
+              validStartups.sort((a, b) => b.employees - a.employees);
+              break;
+            case "employeesAsc":
+              validStartups.sort((a, b) => a.employees - b.employees);
+              break;
+            default:
+              break;
+          }
           setStartups(validStartups);
         } else {
           console.error("비교할 스타트업 데이터가 없습니다.");
