@@ -41,11 +41,12 @@
   Axios, Classnames, Web Vitals, React Scripts, ESLint,
 - Backend: Node.js, Express, Prisma, Nodemon, CORS, dotenv, is-email, superstruct,
 - Database: PostgreSQL
-- 공통 Tool: Git & Github, Discord, Zoom, VS Code
+- 공통 Tool: Git & Github, Discord, Zoom, Netlify, Render, Figma
 
 ### 팀원별 구현 기능 상세
 
 김두봉
+![image](https://github.com/user-attachments/assets/09e392b6-3702-49ec-a7cb-c2f54af4e753)
 
 - 기업 상세 페이지 작업
 - 버튼, 모달 공통컴포넌트 구현
