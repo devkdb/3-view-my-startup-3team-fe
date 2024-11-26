@@ -1,6 +1,8 @@
 import "./index.css";
 
 export function CompareStartupPageList({ startup }) {
+  const changeActualInvest = Math.floor(startup.actualInvest / 100000000);
+  const changeRevenue = Math.floor(startup.revenue / 100000000);
   return (
     <div className="pageListItem">
       <div className="pageListItemName pageListItemPosition">
@@ -11,22 +13,24 @@ export function CompareStartupPageList({ startup }) {
         <span className="descriptionText">{startup.description}</span>
       </div>
       <div className="pageListItemCategory pageListItemPosition basicText">
-        {startup.category}
+        {startup.Category.category}
       </div>
       <div className="pageListItemActualInvest pageListItemPosition basicText">
-        {startup.actualInvest}
+        {changeActualInvest}억 원
       </div>
       <div className="pageListItemRevenue pageListItemPosition basicText">
-        {startup.revenue}
+        {changeRevenue}억 원
       </div>
       <div className="pageListItemEmployees pageListItemPosition basicText">
-        {startup.employees}
+        {startup.employees}명
       </div>
     </div>
   );
 }
 
 export function CompareStartupRankPageList({ startup }) {
+  const changeActualInvest = Math.floor(startup.actualInvest / 100000000);
+  const changeRevenue = Math.floor(startup.revenue / 100000000);
   return (
     <div className="rankPageListItem">
       <div className="rankPageListItemLank rankPageListItemPosition rankbasicText">
@@ -40,16 +44,16 @@ export function CompareStartupRankPageList({ startup }) {
         <span className="descriptionText">{startup.description}</span>
       </div>
       <div className="rankPageListItemCategory rankPageListItemPosition rankBasicText">
-        {startup.category}
+        {startup.Category.category}
       </div>
       <div className="rankPageListItemActualInvest rankPageListItemPosition rankBasicText">
-        {startup.actualInvest}
+        {changeActualInvest}억 원
       </div>
       <div className="rankPageListItemRevenue rankPageListItemPosition rankBasicText">
-        {startup.revenue}
+        {changeRevenue}억 원
       </div>
       <div className="rankPageListItemEmployees rankPageListItemPosition rankBasicText">
-        {startup.employees}
+        {startup.employees}명
       </div>
     </div>
   );
