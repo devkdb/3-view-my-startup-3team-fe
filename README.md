@@ -48,6 +48,7 @@
 김두봉
 
 ![image](https://github.com/user-attachments/assets/09e392b6-3702-49ec-a7cb-c2f54af4e753)
+
 ![image](https://github.com/user-attachments/assets/b0329e60-0128-4c5e-947f-0bb05d20abc6)
 ![image](https://github.com/user-attachments/assets/58fdad71-871c-4e8c-a109-f7ab56514f36)
 ![image](https://github.com/user-attachments/assets/5dd6d5eb-efaa-4294-bce9-122a1c173030)
@@ -57,8 +58,11 @@
 - 투자자 조회, 생성, 수정, 삭제 구현
 
 김혁진
+
 ![image](https://github.com/user-attachments/assets/350a0d1a-2712-46a2-8273-40f591bc5436)
+
 ![image](https://github.com/user-attachments/assets/be1870c6-f806-4959-a0ea-6fd09e602af5)
+
 ![image](https://github.com/user-attachments/assets/b98ea338-c73e-4470-bd63-b7701baa5b85)
 
 - 기업 비교 페이지 작업
