@@ -21,10 +21,13 @@ function DetailsPageInvest() {
 
   const maxItems = MAX_ITEMS; // 5개의 기업투자리스트를 받아온다.
   const [currentPage, setCurrentPage] = useState(1);
+  const [refresh, setRefresh] = useState(false); // 데이터 새로 고침 상태 추가 (create했을때 새로 만든 항목 리스트에서 보여주고 싶어서 만듬)
+
   const { investors, error, totalCount, showLoading } = useFetchInvestors(
     startupId,
     currentPage,
-    maxItems
+    maxItems,
+    refresh // refresh 상태를 전달
   );
 
   // 기업 정보를 얻어온다.
@@ -38,11 +41,19 @@ function DetailsPageInvest() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
+  // create modal 에서 생성한 res.data를 파라미터로 받아와서
+  const handleCloseCreateModal = async (newInvestment) => {
+    setCreateModalOpen(false);
+    if (newInvestment) {
+      // 새로운 투자 추가 후 새로 고침 상태 업데이트
+      setRefresh((prev) => !prev); // refresh 토글
+    }
+  };
+
   // 모달 열기/닫기 함수들이 유사하므로, 하나의 함수로 통합한다.
   const toggleModal = (setter) => setter((prev) => !prev);
 
   const handleOpenCreateModal = () => toggleModal(setCreateModalOpen);
-  const handleCloseCreateModal = () => toggleModal(setCreateModalOpen);
 
   const handleOpenPatchModal = () => toggleModal(setPatchModalOpen);
   const handleClosePatchModal = () => toggleModal(setPatchModalOpen);
