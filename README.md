@@ -46,6 +46,7 @@
 ### 팀원별 구현 기능 상세
 
 김두봉
+
 ![image](https://github.com/user-attachments/assets/09e392b6-3702-49ec-a7cb-c2f54af4e753)
 
 - 기업 상세 페이지 작업
