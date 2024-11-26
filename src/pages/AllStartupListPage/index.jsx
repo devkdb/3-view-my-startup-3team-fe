@@ -79,7 +79,7 @@ function AllStartupListPage() {
                 name={item.name}
                 image={item.image}
                 description={item.description}
-                category={item.category}
+                category={item.Category.category}
                 employees={item.employees}
                 actualInvest={item.actualInvest}
                 revenue={item.revenue}

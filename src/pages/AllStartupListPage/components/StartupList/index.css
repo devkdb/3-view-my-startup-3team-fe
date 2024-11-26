@@ -49,7 +49,7 @@ table {
   width: 304px;
 }
 
-.startupCategory {
+.allStartupCategory {
   width: 153.75px;
 }
 
@@ -66,23 +66,15 @@ table {
 }
 
 @media (max-width:1280px) {
-  .startupIntro {
-    width: 354px;
-  }
+
 }
 
 @media (max-width:1000px) {
-  .startupRank {
-    width: 52px;
-  }
 
-  .startupIntro {
-    width: 400px;
-  }
 }
 
-@media (max-width:768px) {
-  table {
-    width: 696px;
+@media (max-width:744px) {
+  .hide{
+    display: none;
   }
 }

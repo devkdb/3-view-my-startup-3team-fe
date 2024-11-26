@@ -7,30 +7,14 @@ function StartupList({startups}) {
       <table>
         <tbody>
           <tr>
-            <th className="startupRank">순위</th>
+            <th className="startupRank hide">순위</th>
             <th className="startupName">기업 명</th>
             <th className="startupIntro">기업 소개</th>
-            <th className="startupCategory">카테고리</th>
+            <th className="allStartupCategory">카테고리</th>
             <th className="startupInvest">누적 투자 금액</th>
             <th className="startupRevenue">매출액</th>
             <th className="startupEmployee">고용인원</th>
           </tr>
-          {/* {startups.map((startup, index) => {
-            return (
-              <tr key={startup.id}>
-                <td>{startup.rank}위</td>
-                <td>
-                  <img src={startup.image} alt="회사 로고 이미지"/>
-                  {startup.name}
-                </td>
-                <td>{startup.description}</td>
-                <td>{startup.category}</td>
-                <td>{startup.actualInvest}</td>
-                <td>{startup.revenue}</td>
-                <td>{startup.employees}</td>
-              </tr>
-            )
-          })} */}
         </tbody>
       </table>
     </div>
