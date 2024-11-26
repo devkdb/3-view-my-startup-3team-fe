@@ -1,112 +1,86 @@
-import React from "react";
 import styles from "./index.module.css";
-import X from "../../../../assets/images/icons/x/ic_x.svg";
-import visibilityOff from "../../../../assets/images/icons/visibility/btn_visibility_off.svg";
-import visibilityOn from "../../../../assets/images/icons/visibility/btn_visibility_on.svg";
-import Modal from "../../../../components/Modal/index";
+import X from "../../../../../assets/images/icons/x/ic_x.svg";
+import Modal from "../../../../../components/Modal/index";
+import visibilityOff from "../../../../../assets/images/icons/visibility/btn_visibility_off.svg";
+import visibilityOn from "../../../../../assets/images/icons/visibility/btn_visibility_on.svg";
 import { useState } from "react";
-import useValidate from "../../../../hooks/useValidate.js";
+import { apiRouter } from "../../../../../api/allApiService.js";
+import useValidate from "../../../../../hooks/useValidate.js";
+import UpdateConfirmInvestment from "../UpdateConfirmInvestment/index.jsx";
 
-import { apiRouter } from "../../../../api/allApiService.js";
-import CompleteInvestment from "../Modal/CompleteInvestment/index.jsx";
+export default function UpdateInvestment({
+  onClose,
+  startup,
+  mockInvestor,
+  initialValues,
+}) {
+  const { image, name, categoryName } = startup || {};
+  const { values, errors, handleChange, validate, handleBlur, getRawValues } =
+    useValidate({
+      name: initialValues?.name || "",
+      investAmount: initialValues?.investAmount || "",
+      comment: initialValues?.comment || "",
+      password: initialValues?.password || "",
+      checkPassword: "",
+    });
 
-function CreateCompanyInvestment({ onClose, startup }) {
-  const { id: startupId, image, name, categoryName } = startup || {};
-
-  //  useValidate 훅 사용. 사용자가 입력할 때마다 유효성검사 수행.
-  const {
-    values,
-    setValues,
-    errors,
-    handleChange,
-    validate,
-    handleBlur,
-    getRawValues,
-  } = useValidate({
-    name: "",
-    investAmount: "",
-    comment: "",
-    password: "",
-    checkPassword: "",
-  });
-
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [checkPasswordVisible, setCheckPasswordVisible] = useState(false);
   const [error, setError] = useState("");
-  const [isComplete, setIsComplete] = useState(false);
-
-  const togglePasswordVisibility = () => {
-    setIsPasswordVisible(!isPasswordVisible);
-  };
+  const [confirm, setConfirm] = useState(false);
 
   const toggleCheckPasswordVisibility = () => {
     setCheckPasswordVisible(!checkPasswordVisible);
   };
 
-  // 폼 제출 또는 유효성 검사를 수행하기 전에 모든 필드가 입력되었는지 확인
-  // 모든 필드가 비어 있지 않다면, 이 함수는 true 반환.
-  // 하나 이상의 필드가 비어 있을 경우 false 반환.
   const isInputEmpty = () => {
     return (
       values.name.trim() !== "" &&
       values.investAmount.trim() !== "" &&
       values.comment.trim() !== "" &&
-      values.password.trim() !== "" &&
       values.checkPassword.trim() !== ""
     );
   };
 
-  const handleSubmit = async (e) => {
+  const handleUpdateSubmit = async (e) => {
     e.preventDefault();
 
-    if (!validate() || !isInputEmpty()) {
-      return; // 유효성 검사 통과 여부 확인
+    if (!validate()) {
+      return;
     }
 
+    setConfirm(true);
+  };
+
+  const confirmUpdate = async () => {
     const rawValues = getRawValues();
     const investAmount = parseFloat(rawValues.investAmount);
 
     try {
-      const investment = { ...rawValues, investAmount, startupId };
-      delete investment.checkPassword; // 서버로 전송할 필요가 없는 비밀번호 확인 필드(checkPassword)를 제거
+      const investment = { ...rawValues, investAmount };
+      delete investment.checkPassword;
 
-      const res = await apiRouter.createInvestment(investment);
+      const updateRes = await apiRouter.patchInvestment(
+        mockInvestor.id,
+        investment
+      );
 
-      if (!res) {
-        setError("투자 생성 요청이 실패했습니다.");
-        return;
-      } else if (!res.id) {
-        setError("투자 ID를 얻는 데 실패하였습니다.");
-        return;
+      if (updateRes.status === 200) {
+        onClose();
+        window.location.reload();
       } else {
-        resetForm(); // 상태 초기화 (폼 비우기)
-        setIsComplete(true);
+        console.log(updateRes.status);
+        setError("수정 요청이 실패했습니다.");
       }
-    } catch (error) {
-      setError("투자에 실패하였습니다.");
+    } catch (err) {
+      console.error(err);
+      setError("투자 수정 중 오류가 발생했습니다.");
     }
-  };
-
-  const resetForm = () => {
-    setValues({
-      name: "",
-      investAmount: "",
-      comment: "",
-      password: "",
-      checkPassword: "",
-    });
-  };
-
-  const handleCloseCompleteModal = () => {
-    setIsComplete(false);
-    onClose();
-    // window.location.reload(); 이거 대신에 setValues() 사용.
   };
 
   return (
     <>
       <Modal>
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form className={styles.form} onSubmit={handleUpdateSubmit}>
           <div>
             <h1>기업에 투자하기</h1>
             <img
@@ -186,34 +160,6 @@ function CreateCompanyInvestment({ onClose, startup }) {
             )}
           </div>
 
-          {/* 비밀번호 */}
-          <div className={styles.group}>
-            <label htmlFor='password'>비밀번호</label>
-            <div className={styles.password}>
-              <input
-                type={isPasswordVisible ? "text" : "password"}
-                id='password'
-                placeholder='비밀번호를 입력해 주세요'
-                value={values.password}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                style={{
-                  border: errors.password
-                    ? "0.1rem solid var(--error-color)"
-                    : "0.1rem solid var(--gray_200)",
-                }}
-              />
-              <img
-                src={isPasswordVisible ? visibilityOff : visibilityOn}
-                alt={isPasswordVisible ? "비밀번호 표시" : "비밀번호 숨기기"}
-                onClick={togglePasswordVisibility}
-              />
-            </div>
-            {errors.password && (
-              <div className={styles.error}>{errors.password}</div>
-            )}
-          </div>
-
           {/* 비밀번호 확인 */}
           <div className={styles.group}>
             <label htmlFor='checkPassword'>비밀번호 확인</label>
@@ -250,14 +196,18 @@ function CreateCompanyInvestment({ onClose, startup }) {
               type='submit'
               disabled={!isInputEmpty()}
             >
-              투자하기
+              수정하기
             </button>
           </div>
           {error && <div className={styles.error}>{error}</div>}
         </form>
+        {confirm && (
+          <UpdateConfirmInvestment
+            onUpdate={confirmUpdate}
+            onClose={() => setConfirm(false)}
+          />
+        )}
       </Modal>
-      {isComplete && <CompleteInvestment onClose={handleCloseCompleteModal} />}
     </>
   );
 }
-export default CreateCompanyInvestment;

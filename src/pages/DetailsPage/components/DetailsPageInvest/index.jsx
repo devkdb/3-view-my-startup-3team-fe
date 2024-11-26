@@ -10,24 +10,25 @@ import { useParams } from "react-router-dom";
 import useFetchInvestors from "../../../../hooks/useFetchInvestors";
 import useFetchStartup from "../../../../hooks/useFetchCompanyDetail";
 import Warn from "../../../../components/Warn";
+import Pagination from "../../Pagination/index";
+//import Pagination from "../../Pagination_new/index";
 
 const MAX_ITEMS = 5;
 
 function DetailsPageInvest() {
-  const { companyId } = useParams();
-  console.log(`DetailsPageInvest: companyId:${companyId}`);
+  const { startupId } = useParams();
+  console.log(`DetailsPageInvest: startupId:${startupId}`);
 
-  // 5개의 기업투자리스트를 받아온다.
-  const maxItems = MAX_ITEMS;
+  const maxItems = MAX_ITEMS; // 5개의 기업투자리스트를 받아온다.
   const [currentPage, setCurrentPage] = useState(1);
-  const { investors, error, totalCount } = useFetchInvestors(
-    companyId,
+  const { investors, error, totalCount, showLoading } = useFetchInvestors(
+    startupId,
     currentPage,
     maxItems
   );
 
   // 기업 정보를 얻어온다.
-  const { startup } = useFetchStartup(companyId);
+  const { startup } = useFetchStartup(startupId);
 
   const [isCreateModalOpen, setCreateModalOpen] = useState(false);
   const [isPatchModalOpen, setPatchModalOpen] = useState(false);
@@ -37,21 +38,24 @@ function DetailsPageInvest() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  const handleOpenCreateModal = () => setCreateModalOpen(true);
-  const handleCloseCreateModal = () => setCreateModalOpen(false);
+  // 모달 열기/닫기 함수들이 유사하므로, 하나의 함수로 통합한다.
+  const toggleModal = (setter) => setter((prev) => !prev);
 
-  const handleOpenPatchModal = () => setPatchModalOpen(true);
-  const handleClosePatchModal = () => setPatchModalOpen(false);
+  const handleOpenCreateModal = () => toggleModal(setCreateModalOpen);
+  const handleCloseCreateModal = () => toggleModal(setCreateModalOpen);
 
-  const handleOpenDeleteModal = () => setDeleteModalOpen(true);
-  const handleCloseDeleteModal = () => setDeleteModalOpen(false);
+  const handleOpenPatchModal = () => toggleModal(setPatchModalOpen);
+  const handleClosePatchModal = () => toggleModal(setPatchModalOpen);
 
-  // 수정하기, 삭제하기
+  const handleOpenDeleteModal = () => toggleModal(setDeleteModalOpen);
+  const handleCloseDeleteModal = () => toggleModal(setDeleteModalOpen);
+
   const handleMenuClick = (investor) => {
     setSelectedInvestor(investor);
     setDropdownOpen((prev) => !prev);
   };
 
+  // 수정하기, 삭제하기
   const handleDropdownOptionClick = (action) => {
     setDropdownOpen(false);
     if (action === "patch") {
@@ -80,11 +84,21 @@ function DetailsPageInvest() {
   }, [dropdownOpen]);
 
   if (error) {
-    return <Warn variant="error" title="오류발생" description={error} />;
+    return (
+      <Warn
+        variant='error'
+        title='투자자 목록을 불러오는 중에 오류가 발생했습니다.'
+        description={error}
+      />
+    );
+  }
+
+  if (showLoading && !investors) {
+    return <div>목록을 불러오는 중입니다....</div>;
   }
 
   if (!startup) {
-    return;
+    return null;
   }
 
   // 주어진 숫자보다 크거나 같은 가장 작은 정수 반환
@@ -126,7 +140,7 @@ function DetailsPageInvest() {
                         <td style={{ position: "relative" }}>
                           <img
                             src={kebab}
-                            alt="더보기 아이콘"
+                            alt='더보기 아이콘'
                             onClick={() => handleMenuClick(item)}
                             style={{ cursor: "pointer" }}
                           />
@@ -148,7 +162,12 @@ function DetailsPageInvest() {
                   </tbody>
                 </table>
               </div>
-              {/*페이지네이션 위치/> */}
+              <Pagination
+                // className='pagination'
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={setCurrentPage}
+              />
             </>
           ) : (
             <div className={styles.null}>

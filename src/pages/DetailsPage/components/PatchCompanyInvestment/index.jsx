@@ -1,7 +1,123 @@
 import React from "react";
+import styles from "./index.module.css";
+import X from "../../../../assets/images/icons/x/ic_x.svg";
+import visibilityOff from "../../../../assets/images/icons/visibility/btn_visibility_off.svg";
+import visibilityOn from "../../../../assets/images/icons/visibility/btn_visibility_on.svg";
+import Modal from "../../../../components/Modal/index";
+import { useState, useRef, useEffect } from "react";
+import UpdateInvestment from "../Modal/UpdateInvestment/index";
+import FailInvestmentPassword from "../Modal/FailInvestmentPassword/index";
 
 function PatchCompanyInvestment({ onClose, mockInvestor, startup }) {
-  return <div></div>;
+  const { password: storedPassword } = mockInvestor || {};
+
+  const [password, setPassword] = useState("");
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const [showInvestmentUpdate, setShowInvestmentUpdate] = useState(false);
+  const [fail, setFail] = useState(false);
+  const passwordInputRef = useRef(null);
+
+  const [isPasswordDisable, setPasswordDisable] = useState(false); // 패스워드 글자 입력시 버튼 활성화 여부
+
+  const togglePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible);
+  };
+
+  const handleChange = (e) => {
+    setPassword(e.target.value);
+
+    // 한글자라도 입력하면 버튼 활성화
+    if (e.target.value.length > 0) setPasswordDisable(true);
+    else setPasswordDisable(false);
+  };
+
+  const handlePasswordSubmit = (e) => {
+    e.preventDefault();
+
+    if (password !== storedPassword) {
+      setFail(true);
+      return;
+    } else {
+      setShowInvestmentUpdate(true);
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handlePasswordSubmit(e);
+    }
+  };
+
+  useEffect(() => {
+    if (passwordInputRef.current) {
+      passwordInputRef.current.focus();
+    }
+  }, []);
+
+  return (
+    <div>
+      <Modal>
+        <div className={styles.content}>
+          <div className={styles.header}>
+            <h1>수정 권한 인증</h1>
+            <img
+              src={X}
+              onClick={onClose}
+              style={{ cursor: "pointer" }}
+              alt='close btn'
+            />
+          </div>
+
+          {/* 비밀번호 입력 */}
+          <div className={styles.group}>
+            <h1>비밀번호</h1>
+            <div className={styles.password}>
+              <input
+                ref={passwordInputRef}
+                type={isPasswordVisible ? "text" : "password"}
+                id='password'
+                placeholder='비밀번호를 입력해 주세요'
+                value={password}
+                onChange={handleChange}
+                onKeyDown={handleKeyDown}
+              />
+              <img
+                src={isPasswordVisible ? visibilityOff : visibilityOn}
+                alt={isPasswordVisible ? "비밀번호 표시" : "비밀번호 숨기기"}
+                onClick={togglePasswordVisibility}
+              />
+            </div>
+          </div>
+          <button
+            className={styles.patch}
+            disabled={!isPasswordDisable}
+            onClick={handlePasswordSubmit}
+          >
+            수정하기
+          </button>
+        </div>
+      </Modal>
+
+      {fail && <FailInvestmentPassword setFail={setFail} />}
+
+      {showInvestmentUpdate && (
+        <UpdateInvestment
+          onClose={() => {
+            setShowInvestmentUpdate(false);
+            onClose();
+          }}
+          startup={startup}
+          mockInvestor={mockInvestor}
+          initialValues={{
+            name: mockInvestor.name,
+            investAmount: mockInvestor.investAmount,
+            comment: mockInvestor.comment,
+            password: mockInvestor.password,
+          }}
+        />
+      )}
+    </div>
+  );
 }
 
 export default PatchCompanyInvestment;

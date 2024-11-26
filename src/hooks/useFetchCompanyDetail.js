@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { getStartup } from "../api/DetailsPageService";
+//import { getStartup } from "../api/DetailsPageService";
+import { apiRouter } from "../api/allApiService.js";
 
 const useFetchStartup = (companyId) => {
   const [startup, setStartup] = useState(null);
@@ -8,7 +9,7 @@ const useFetchStartup = (companyId) => {
   useEffect(() => {
     const fetchStartup = async () => {
       try {
-        const startupData = await getStartup(companyId);
+        const startupData = await apiRouter.getStartup(companyId);
         setStartup(startupData || {});
       } catch (e) {
         setError("스타트업 정보를 불러오는 데 실패하였습니다");
