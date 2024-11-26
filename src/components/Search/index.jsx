@@ -46,7 +46,12 @@ function SearchComponent(props) {
         className={`delete ${text ? "show" : ""}`} // 텍스트가 있으면 show 클래스를 추가
         src={DeleteIcon}
         alt="삭제"
-        onClick={() => setText("")}
+        onClick={() => {
+          setText("")
+          if(props.onChange){
+            props.onChange("")
+          }
+        }}
         style={{ opacity: type_num }}
       />
       <img src={SearchIcon} alt="돋보기" style={{ opacity: type_num }} />

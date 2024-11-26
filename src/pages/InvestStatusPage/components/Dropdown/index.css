@@ -33,6 +33,7 @@ li {
   }
   &:active {
     box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0);
+    background-color: var(--black_300);
   }
 }
 
@@ -67,7 +68,15 @@ li {
   font-size: 14px;
   font-weight: 400;
   line-height: 16.71px;
-  border-top: 1px solid var(--gray_100); /* 각 항목들 사이에 상단 경계선 추가 */
+  border-top: 1px solid var(--gray_100);
+  &:hover {
+    box-shadow: 0 0 0.75rem rgba(138, 137, 137, 0.63);
+    transform: scale(1.01);
+
+  }
+  &:active {
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0);
+  }
 }
 
 /* 첫 번째 항목을 제외한 나머지 항목들에만 경계선 추가 */

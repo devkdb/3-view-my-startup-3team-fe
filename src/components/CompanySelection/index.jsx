@@ -108,9 +108,7 @@ const CompanySelection = ({
 
         {/* 검색 결과 및 기업 리스트 */}
         <div className="company-list">
-          {isLoading ? (
-            <p>로딩 중...</p>
-          ) : error ? (
+          {error ? (
             <p className="error-message">{error}</p>
           ) : totalCompanies === 0 ? (
             <p>검색 결과가 없습니다.</p>

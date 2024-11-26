@@ -13,37 +13,37 @@ function AllStartupDropdownList({ onItemClick, dropdownRef }) {
     >
       <li
         className="DropdownListFontStartup"
-        onClick={() => onItemClick("누적 투자금액 높은순")}
+        onClick={() => onItemClick("누적 투자금액 높은순", "actualInvestDesc")}
       >
         누적 투자금액 높은순
       </li>
       <li
         className="DropdownListFontStartup"
-        onClick={() => onItemClick("누적 투자금액 낮은순")}
+        onClick={() => onItemClick("누적 투자금액 낮은순", "actualInvestAsc")}
       >
         누적 투자금액 낮은순
       </li>
       <li
         className="DropdownListFontStartup"
-        onClick={() => onItemClick("매출액 높은순")}
+        onClick={() => onItemClick("매출액 높은순", "revenueDesc")}
       >
         매출액 높은순
       </li>
       <li
         className="DropdownListFontStartup"
-        onClick={() => onItemClick("매출액 낮은순")}
+        onClick={() => onItemClick("매출액 낮은순", "revenueAsc")}
       >
         매출액 낮은순
       </li>
       <li
         className="DropdownListFontStartup"
-        onClick={() => onItemClick("고용 인원 많은순")}
+        onClick={() => onItemClick("고용 인원 많은순", "employeesDesc")}
       >
         고용 인원 많은순
       </li>
       <li
         className="DropdownListFontStartup"
-        onClick={() => onItemClick("고용 인원 적은순")}
+        onClick={() => onItemClick("고용 인원 적은순", "employeesAsc")}
       >
         고용 인원 적은순
       </li>

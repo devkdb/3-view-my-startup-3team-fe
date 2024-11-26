@@ -6,7 +6,9 @@
   flex: 1;
   align-items: center;
   width: 188px;
-  height: 48px;
+  height: 40px;
+  margin-top: 7px;
+  margin-left: 7px;
   top: 115px;
   left: 16px;
   padding: 0px 12px;
@@ -55,45 +57,16 @@
   /* 입력값이 있을 때만 삭제 아이콘을 보이게 함 */
 }
 
-@media (min-width: 375px) {
-
-  .searchInput,
-  .searchInput::placeholder {
-    font-size: 12px;
-  }
-
-  .searchInput {
-    width: 120px;
-  }
-
+@media (min-width: 800px) {
   .searchWrapper {
-    width: 170px;
+  height: 48px;
+  width: 269px;
   }
+}
 
-  .searchInput::placeholder  {
-    font-size: 11.5px;
-  }
+@media (min-width: 1000px) {
   .searchWrapper {
-    width: 160px;
-  }
-
-    .searchWrapper {
-      width: 160px;
-    }
-
-    .searchInput.hasText {
-      width: 80px;
-      /* 텍스트가 있을 때 너비를 좁힘 */
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .searchWrapper {
-      width: 448px;
       height: 48px;
-    }
-
-    .searchInput::placeholder {
-      font-size: 14px;
-    }
+      width: 438px;
   }
+}

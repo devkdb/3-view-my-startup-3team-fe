@@ -16,7 +16,7 @@ function PageList({
 
   return (
     <div className="pageListItem">
-      <div className="pageListItemLank pageListItemPosition basicText">
+      <div className="allPageListItemLank pageListItemPosition basicText" id="hide">
         {rank}위
       </div>
       <div className="pageListItemName">
@@ -32,7 +32,7 @@ function PageList({
       <div className="pageListItemTotalInvestment pageListItemPosition basicText">
         {changeActualInvest}억원
       </div>
-      <div className="pageListItemRevenueTotal pageListItemPosition basicText">
+      <div className="AllStartupPageListItemRevenueTotal pageListItemPosition basicText">
         {changeRevenue}억원
       </div>
       <div className="pageListItemStaffTotal pageListItemPosition basicText">

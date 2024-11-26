@@ -23,7 +23,7 @@
   gap: 4px;
 }
 
-.Btn {
+.arrowImg {
   width: 48px;
   height: 48px;
   border-radius: 10px;
@@ -31,18 +31,52 @@
   border: none;
   background-color: var(--black_100);
   color: var(--gray_200);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.48px;
-  text-align: center;
+
+  &:active,
+  &:hover {
+    background-color: var(--brand_orange);
+    transition: background-image 0.124534s ease-in-out;
+  }
+
   &:active {
-    background-color: #eb6f53;
+    transform: scale(1.1);
   }
 }
 
-.arrowimg {
-  width: 24px;
-  height: 24px;
+.leftArrowButton {
+  background-image: url(../../../../assets/images/icons/arrow/ic_arrow_left.png);
+  background-size: 24px 24px cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:hover {
+    background-image: url(../../../../assets/images/icons/arrow/Image20241112162519.png);
+    background-size: 24px 24px;
+  }
+
+  &:active {
+    background-image: url(../../../../assets/images/icons/arrow/Image20241112162519.png);
+    background-color: var(--hover_orange);
+    background-size: 24px 24px;
+  }
+}
+
+.rightArrowButton {
+  background-image: url(../../../../assets/images/icons/arrow/ic_arrow_right.png);
+  background-size: 24px 24px cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:hover {
+    background-image: url(../../../../assets/images/icons/arrow/Image20241112162513.png);
+    background-size: 24px 24px;
+  }
+
+  &:active {
+    background-image: url(../../../../assets/images/icons/arrow/Image20241112162513.png);
+    background-color: var(--hover_orange);
+    background-size: 24px 24px;
+  }
 }
 
 .InnerBtn {
@@ -57,15 +91,21 @@
   font-weight: 400;
   line-height: 21.48px;
   text-align: center;
-  &:hover,
-  &:focus {
+
+  &:active,
+  &:hover {
     background-color: var(--brand_orange);
-    color: var(--white_100);
+    transition: color 0.124534s ease-in-out;
   }
+
   &:active {
-    background-color: #eb6f53;
-    color: var(--white_100);
+    transform: scale(1.1);
   }
+}
+
+.InnerBtn.currentPage {
+  background-color: var( --brand_orange);
+  color: var(--white_100);
 }
 
 @media (max-width: 375px) {
@@ -73,15 +113,18 @@
     width: 256px;
     height: 32px;
   }
+
   .BtnLayer {
     width: 176px;
     height: 32px;
   }
+
   .Btn,
   .InnerBtn {
     width: 32px;
     height: 32px;
   }
+
   .Btn {
     font-size: 16px;
     line-height: 19.09px;

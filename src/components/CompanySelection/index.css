@@ -51,6 +51,10 @@
   gap: 12px;
 }
 
+.company-logo{
+  border-radius: 50%;
+}
+
 .selected-company li {
   display: flex;
   justify-content: space-between;
@@ -95,6 +99,10 @@
   display: flex;
   gap: 16px;
   align-items: center;
+}
+
+.selected-info img{
+  border-radius: 50%;
 }
 
 .Button_button__d9BQ-.Button_select__tozxu,
@@ -156,6 +164,7 @@
 
   .company-logo {
     width: 40px;
+    
   }
 
   .searchWrapper {
@@ -186,4 +195,5 @@
 
 .selected-company-logo {
   width: 80px;
+  border-radius: 50%;
 }

@@ -27,20 +27,22 @@ li {
   line-height: 16.71px;
   text-align: center;
   position: relative; /* 부모 요소에 relative를 추가 */
-  z-index: 1; /* 드롭다운이 다른 요소들 위에 오도록 z-index 설정 */
+  z-index: 1; 
   &:hover {
     box-shadow: 0 0 0.75rem rgba(138, 137, 137, 0.63);
+    transform: scale(1.01);
+    transition: color 0.124534s ease-in-out;
   }
   &:active {
     box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0);
+    background-color: var(--black_300);
   }
 }
 
 .DropdownListLayerCompare {
-  /* display: block; */
   align-items: center;
   justify-content: center;
-  position: absolute; /* 자식 요소에 absolute 적용*/
+  position: absolute;
   cursor: pointer;
   width: 264px !important;
   min-height: 48px;
@@ -48,12 +50,9 @@ li {
   border-radius: 10px;
   border: 1px solid var(--gray_200);
   background-color: var(--black_400);
-  z-index: 2; /* 드롭다운 리스트가 드롭다운 버튼 위로 오도록 z-index 설정 */
+  z-index: 2;
   &:hover {
     box-shadow: 0 0 0.75rem rgba(138, 137, 137, 0.63);
-  }
-  &:active {
-    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0);
   }
 }
 
@@ -67,7 +66,15 @@ li {
   font-size: 14px;
   font-weight: 400;
   line-height: 16.71px;
-  border-top: 1px solid var(--gray_100); /* 각 항목들 사이에 상단 경계선 추가 */
+  border-top: 1px solid var(--gray_100);
+  &:hover {
+    box-shadow: 0 0 0.75rem rgba(138, 137, 137, 0.63);
+    transform: scale(1.01);
+
+  }
+  &:active {
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0);
+  }
 }
 
 /* 첫 번째 항목을 제외한 나머지 항목들에만 경계선 추가 */

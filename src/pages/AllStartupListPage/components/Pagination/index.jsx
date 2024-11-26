@@ -1,50 +1,49 @@
 import "./index.css";
-import img1 from "../../../../assets/images/icons/arrow/ic_arrow_left.png";
-import img3 from "../../../../assets/images/icons/arrow/Image20241112162519.png";
-import img2 from "../../../../assets/images/icons/arrow/ic_arrow_right.png";
-import img4 from "../../../../assets/images/icons/arrow/Image20241112162513.png";
-import { useState } from "react";
 
-function Pagination() {
-  const [leftImg, setLeftImg] = useState(img1);
-  const [rightImg, setRightImg] = useState(img2);
-  const handleLeftMouseEnter = () => {
-    setLeftImg(img3); // hover 시 이미지 변경
-  };
-  const handleLeftMouseLeave = () => {
-    setLeftImg(img1); // hover 종료 시 이미지 원래대로
-  };
-  const handleRightMouseEnter = () => {
-    setRightImg(img4); // hover 시 이미지 변경
-  };
-  const handleRightMouseLeave = () => {
-    setRightImg(img2); // hover 종료 시 이미지 원래대로
-  };
+function Pagination({
+  totalPages,
+  currentPage,
+  hasNextPage,
+  currentPageHandler,
+}) {
+
+   // 페이지 번호 계산 (페이지네이션 핸들러에서 총 8페이지 필요하다고 알 수 있음)
+   const startPage = Math.max(1, currentPage - 2); // 현재 페이지 기준으로 이전 2개의 페이지 번호 계산
+   // (쉽게 이해하자면 앞 두 개페이지를 보여 주고 음수가 안되도록 최소 1로 지정)
+  const endPage = Math.min(totalPages, startPage + 4); // 현재 페이지 기준으로 최대 5개의 페이지 번호 표시
+  
+  const pageNumbers = Array.from(
+    { length: endPage - startPage + 1 }, // 표시할 페이지 번호의 개수
+    (_, i) => startPage + i // 페이지 번호 계산
+  );
+  
   return (
     <div className="PaginationLayer">
       <button
-        className="Btn"
-        onMouseEnter={handleLeftMouseEnter}
-        onMouseLeave={handleLeftMouseLeave}
-      >
-        {/* &lt; */}
-        <img src={leftImg} alt="왼쪽 화살표" className="arrowimg" />
-      </button>
+        onClick={() => currentPageHandler(currentPage - 1)}
+        className="leftArrowButton arrowImg"
+        disabled={currentPage === 1}
+      ></button>
       <div className="BtnLayer">
-        <button className="InnerBtn">1</button>
-        <button className="InnerBtn">2</button>
-        <button className="InnerBtn">3</button>
-        <button className="InnerBtn">4</button>
-        <button className="InnerBtn">5</button>
+        {pageNumbers.map((pageNumber) => {
+          return (
+            <button
+              className={`InnerBtn ${
+                currentPage === pageNumber ? "currentPage" : ""
+              }`}
+              key={pageNumber}
+              onClick={() => currentPageHandler(pageNumber)}
+            >
+              {pageNumber}
+            </button>
+          );
+        })}
       </div>
       <button
-        className="Btn"
-        onMouseEnter={handleRightMouseEnter}
-        onMouseLeave={handleRightMouseLeave}
-      >
-        {/* &gt; */}
-        <img src={rightImg} alt="오른쪽 화살표" className="arrowimg" />
-      </button>
+        onClick={() => currentPageHandler(currentPage + 1)}
+        className="rightArrowButton arrowImg"
+        disabled={currentPage === totalPages}
+      ></button>
     </div>
   );
 }
