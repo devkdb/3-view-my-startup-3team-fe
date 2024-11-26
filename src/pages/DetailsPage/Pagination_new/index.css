@@ -2,11 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 368px;
-  height: 48px;
-  gap: 10px;
-  padding-bottom: 10rem; /* 페이지네이션을 위한 추가 공간 */
-  z-index: 1; /* 테이블이 footer 위에 오도록 */
+  gap: 0.8rem;
+  margin: 4rem auto;
 }
 
 .CompareStatusBtnLayer {

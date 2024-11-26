@@ -10,8 +10,8 @@ import { useParams } from "react-router-dom";
 import useFetchInvestors from "../../../../hooks/useFetchInvestors";
 import useFetchStartup from "../../../../hooks/useFetchCompanyDetail";
 import Warn from "../../../../components/Warn";
-import Pagination from "../../Pagination/index";
-//import Pagination from "../../Pagination_new/index";
+//import Pagination from "../../Pagination/index";
+import Pagination from "../../Pagination_new/index";
 
 const MAX_ITEMS = 5;
 
