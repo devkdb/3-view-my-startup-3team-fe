@@ -162,6 +162,7 @@ h1 {
 
 .selected-company-logo {
   width: 80px;
+  border-radius: 50%;
 }
 
 .add-company-placeholder p {

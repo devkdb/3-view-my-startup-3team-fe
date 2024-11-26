@@ -64,15 +64,9 @@
   }
 }
 
-/*
-  @media (min-width: 1280px) {
-    .searchWrapper {
-      width: 448px;
+@media (min-width: 1000px) {
+  .searchWrapper {
       height: 48px;
-    }
-
-    .searchInput::placeholder {
-      font-size: 14px;
-    }
+      width: 438px;
   }
-    */
+}
