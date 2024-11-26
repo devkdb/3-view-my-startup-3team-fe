@@ -6,8 +6,9 @@ import Modal from "../../../../components/Modal/index";
 import { useState, useRef, useEffect } from "react";
 import DeleteConfirmInvestment from "../Modal/DeleteConfirmInvestment/index";
 import FailInvestmentPassword from "../Modal/FailInvestmentPassword/index";
+import { apiRouter } from "../../../../api/allApiService.js";
 
-import PasswordInput from "../../../../components/PasswordInput/index";
+//import PasswordInput from "../../../../components/PasswordInput/index";
 
 // MockInvestor 테이블의 id, password를 가져와서 input에 입력한 password와 비교한다.
 function DeleteCompanyInvestment({ onClose, mockInvestor }) {
@@ -72,10 +73,14 @@ function DeleteCompanyInvestment({ onClose, mockInvestor }) {
   }, []);
 
   const confirmDelete = async () => {
-    console.log("삭제하기 누름");
-    // TODO: FE-REQUEST-DELETE (서버에 삭제 요청)
-    onClose();
-    window.location.reload(); // TODO:이거 말고 UseEffect() 사용해서 해볼것
+    try {
+      await apiRouter.deleteInvestment(id, { password });
+      onClose();
+      window.location.reload();
+    } catch (err) {
+      console.error("삭제 요청 중 오류 발생:", err);
+      console.error(err.response.data);
+    }
   };
 
   return (
@@ -87,7 +92,7 @@ function DeleteCompanyInvestment({ onClose, mockInvestor }) {
             src={X}
             onClick={onClose}
             style={{ cursor: "pointer" }}
-            alt="close button"
+            alt='close button'
           />
         </div>
 
@@ -98,8 +103,8 @@ function DeleteCompanyInvestment({ onClose, mockInvestor }) {
             <input
               ref={passwordInputRef}
               type={isPasswordVisible ? "text" : "password"}
-              id="password"
-              placeholder="패스워드를 입력해 주세요"
+              id='password'
+              placeholder='패스워드를 입력해 주세요'
               value={password}
               onChange={handleChange}
               onKeyDown={handleKeyDown}

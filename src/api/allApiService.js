@@ -1,7 +1,8 @@
 // npm install 해주세요.
-import axios from 'axios';
+import axios from "axios";
 
-const BASE_URL = 'https://three-view-my-startup-3team-be.onrender.com';
+//const BASE_URL = 'https://three-view-my-startup-3team-be.onrender.com';
+const BASE_URL = "http://localhost:8000";
 
 /**
  * 백엔드 api 라우터의 주석과 순서를 그대로 했습니다.
@@ -60,6 +61,18 @@ async function getAllInvestments(params = {}) {
   return res.data;
 }
 
+// 내가 선택한 기업의 투자자 정보 얻어오기
+async function getInvestors(companyId, currentPage, maxItems) {
+  const res = await axios.get(`${BASE_URL}/api/investors`, {
+    params: {
+      startupId: companyId,
+      offset: (currentPage - 1) * maxItems, // 페이지네이션을 위한 offset 계산
+      limit: maxItems,
+    },
+  });
+  return res.data;
+}
+
 // 특정 기업에 투자하기
 async function createInvestment(surveyData) {
   const res = await axios.post(`${BASE_URL}/api/investments`, surveyData);
@@ -70,9 +83,9 @@ async function createInvestment(surveyData) {
 async function patchInvestment(id, surveyData) {
   const res = await axios.patch(
     `${BASE_URL}/api/investments/${id}`,
-    surveyData,
+    surveyData
   );
-  return res.data
+  return res;
 }
 
 // 투자 삭제
@@ -83,7 +96,16 @@ async function deleteInvestment(id) {
 
 // Export
 const AllstartupsService = {
-  getAllStartupsList, getSearchStartupsList, getStartup, getStartupRank, getSelectStartupsList, getAllInvestments, createInvestment, patchInvestment, deleteInvestment
-}
+  getAllStartupsList,
+  getSearchStartupsList,
+  getStartup,
+  getStartupRank,
+  getSelectStartupsList,
+  getAllInvestments,
+  getInvestors,
+  createInvestment,
+  patchInvestment,
+  deleteInvestment,
+};
 
 export { AllstartupsService as apiRouter };

@@ -31,36 +31,36 @@ function AllStartupListPage() {
   const currentPages = startup.currentPage || 0;
 
   return (
-    <div id="allStartupListPage">
-      <div className="title">
+    <div id='allStartupListPage'>
+      <div className='title'>
         <h1>전체 스타트업 목록</h1>
-        <div className="setPos">
+        <div className='setPos'>
           <SearchComponent />
           <AllStartupDropdown />
         </div>
       </div>
-      <div className="scroll-x">
-      <StartupList />
-      <div className="pageList">
-        {company.map((item, index) => {
-          return (
-            <Link key={index} to={`/Details/${item.id}`}>
-              <PageList
-                rank={(currentPages - 1) * 10 + index + 1}
-                name={item.name}
-                image={item.image}
-                description={item.description}
-                category={item.category}
-                employees={item.employees}
-                actualInvest={item.actualInvest}
-                revenue={item.revenue}
-              />
-            </Link>
-          );
-        })}
+      <div className='scroll-x'>
+        <StartupList />
+        <div className='pageList'>
+          {company.map((item, index) => {
+            return (
+              <Link key={index} to={`/Details/${item.id}`}>
+                <PageList
+                  rank={(currentPages - 1) * 10 + index + 1}
+                  name={item.name}
+                  image={item.image}
+                  description={item.description}
+                  category={item.category}
+                  employees={item.employees}
+                  actualInvest={item.actualInvest}
+                  revenue={item.revenue}
+                />
+              </Link>
+            );
+          })}
         </div>
       </div>
-      <div className="pagination">
+      <div className='pagination'>
         <Pagination />
       </div>
     </div>
