@@ -123,9 +123,9 @@ function DetailsPageInvest() {
                 <table className={styles.table}>
                   <thead>
                     <tr>
-                      <th style={{ width: "8.4rem" }}>투자자 이름</th>
+                      <th style={{ width: "9.6rem" }}>투자자 이름</th>
                       <th style={{ width: "8.4rem" }}>순위</th>
-                      <th style={{ width: "8.4rem" }}>투자 금액</th>
+                      <th style={{ width: "8.6rem" }}>투자 금액</th>
                       <th style={{ width: "auto" }}>투자 코멘트</th>
                       <th style={{ width: "6.4rem" }}> </th>
                     </tr>
