@@ -84,9 +84,7 @@ function ResultsCheck({ selectedCompanies, selectedBaseCompany }) {
       <div className="scroll-x">
         {startups && startups.length > 0 ? (
           startups.map((startup, index) => (
-            <Link key={index} to={`/Details/${startup.id}`}>
               <CompareStartupPageList key={startup.id} startup={startup} />
-            </Link>
           ))
         ) : (
           <p>표시할 스타트업이 없습니다.</p>
