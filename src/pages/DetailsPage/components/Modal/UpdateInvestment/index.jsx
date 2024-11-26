@@ -111,7 +111,7 @@ export default function UpdateInvestment({
               onBlur={handleBlur}
               style={{
                 border: errors.name
-                  ? "0.1rem solid var(--error-color)"
+                  ? "0.1rem solid var(--red_error)"
                   : "0.1rem solid var(--gray_200)",
               }}
             />
@@ -130,7 +130,7 @@ export default function UpdateInvestment({
               onBlur={handleBlur}
               style={{
                 border: errors.investAmount
-                  ? "0.1rem solid var(--error-color)"
+                  ? "0.1rem solid var(--red_error)"
                   : "0.1rem solid var(--gray_200)",
               }}
             />
@@ -151,7 +151,7 @@ export default function UpdateInvestment({
               onBlur={handleBlur}
               style={{
                 border: errors.comment
-                  ? "0.1rem solid var(--error-color)"
+                  ? "0.1rem solid var(--red_error)"
                   : "0.1rem solid var(--gray_200)",
               }}
             />
@@ -173,7 +173,7 @@ export default function UpdateInvestment({
                 onBlur={handleBlur}
                 style={{
                   border: errors.checkPassword
-                    ? "0.1rem solid var(--error-color)"
+                    ? "0.1rem solid var(--red_error)"
                     : "0.1rem solid var(--gray_200)",
                 }}
               />
