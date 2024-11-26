@@ -208,3 +208,23 @@ h1 {
   top: 3px;
   right: 5px;
 }
+
+.investBtn {
+  width: 183px;
+  height: 48px;
+  gap: 10px;
+  margin-top: 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.09px;
+  color: var(--white_100);
+  background-color: var(--brand_orange);
+  &:hover {
+    background-color: var(--hover_orange);
+  }
+  &:active {
+    background-color: var(--brand_orange);
+  }
+}

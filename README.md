@@ -1,6 +1,6 @@
 # 풀스택 3기 3팀
 
-팀 협업 문서 : [View My Startup](https://www.notion.so/1374edacf3d3807293f8e4fb762bf6fb?v=1374edacf3d381928ca1000c5683bdee)
+팀 협업 문서 : [View My Startup](https://quiet-echinodon-ff0.notion.site/137ec7302e4c80a8a0d3e5b0cef2a86e?v=137ec7302e4c8175be87000c74baf92d)
 
 ### 팀원 구성
 
