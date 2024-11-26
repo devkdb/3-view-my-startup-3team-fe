@@ -79,17 +79,31 @@ table {
   }
 }
 
-@media (max-width:900px) {
+@media (max-width:1000px) {
+  .startupRank {
+    width: 60px;
+  }
+
   .allStartupName {
-    width: 350px;
+    width: 285px;
   }
 
   .allStartupIntro {
-    width: 337px;
+    width: 329px;
   }
 
-  .allStartupRevenue {
-    width: 183.75px;
+  .allStartupCategory {
+    width: 134.75px;
+  }
+}
+
+@media (max-width:900px) {
+  .allStartupName {
+    width: 314px;
+  }
+
+  .allStartupIntro {
+    width: 370px;
   }
 }
 

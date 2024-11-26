@@ -8,7 +8,7 @@
   font-size: 14px;
   font-weight: 400;
   text-align: center;
-  color:var(--gray_100);
+  color: var(--gray_100);
 }
 
 .pageListItem {
@@ -91,8 +91,12 @@
   width: 153.75px;
 }
 
-@media (max-width:744px){
-  .hide{
+@media (max-width:800px) {
+  #hide {
     display: none;
+  }
+
+  .pageList {
+    width: 700px;
   }
 }

@@ -30,21 +30,49 @@
   width: 230.62px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 1280px) {
   .rank {
-    width: 64px;
+    width: 67px;
   }
+
   .name {
-    width: 140px;
+    width: 267px;
   }
+
   .description {
-    width: 180px;
+    width: 374px;
   }
+}
+
+@media (max-width: 1000px) {
+  .name {
+    width: 461px;
+  }
+
+  .description {
+    width: 475px;
+  }
+}
+
+@media (max-width: 770px) {
+  .rank {
+    width: 58px;
+  }
+
+  .name {
+    width: 450px;
+  }
+
+  .description {
+    width: 601px;
+  }
+
   .category {
-    width: 84px;
+    width: 256px;
   }
+
   .selectCount,
   .compareCount {
-    width: 114px;
+    width: 167px;
   }
 }

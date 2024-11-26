@@ -16,7 +16,7 @@ function PageList({
 
   return (
     <div className="pageListItem">
-      <div className="allPageListItemLank pageListItemPosition basicText hide">
+      <div className="allPageListItemLank pageListItemPosition basicText" id="hide">
         {rank}위
       </div>
       <div className="pageListItemName">
