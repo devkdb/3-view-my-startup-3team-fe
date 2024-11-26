@@ -9,9 +9,11 @@ const SelectedList = ({ selected, onRemove }) => {
 
         return (
           <li key={company.id} className="selected-item">
-            <img src={company.image} alt={company.name} width={48} />
-            <span>{company.name}</span>
-            <span className="company-tag">{categoryName}</span>{" "}
+            <div className="selected-info">
+              <img src={company.image} alt={company.name} width={48} />
+              <span className="company-name">{company.name}</span>
+              <span className="company-tag">{categoryName}</span>{" "}
+            </div>
             <Button variant="cancel" onClick={() => onRemove(company.id)}>
               선택 해제
             </Button>
