@@ -71,7 +71,7 @@ function AllStartupListPage() {
       <div className="scroll-x">
       <StartupList />
       <div className="pageList">
-        {company.map((item, index) => {
+        {companies.map((item, index) => {
           return (
             <Link key={index} to={`/Details/${item.id}`}>
               <PageList
