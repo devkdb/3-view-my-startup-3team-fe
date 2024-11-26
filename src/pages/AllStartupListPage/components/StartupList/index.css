@@ -41,11 +41,11 @@ table {
   width: 68px;
 }
 
-.startupName {
+.allStartupName {
   width: 213px;
 }
 
-.startupIntro {
+.allStartupIntro {
   width: 304px;
 }
 
@@ -53,28 +53,63 @@ table {
   width: 153.75px;
 }
 
-.startupInvest {
+.allStartupInvest {
   width: 153.75px;
 }
 
-.startupRevenue {
+.allStartupRevenue {
   width: 153.75px;
 }
 
-.startupEmployee {
+.allStartupEmployee {
   width: 153.75px;
 }
 
 @media (max-width:1280px) {
+  .startupRank {
+    width: 60px;
+  }
 
+  .allStartupName {
+    width: 290px;
+  }
+
+  .allStartupIntro {
+    width: 275px;
+  }
 }
 
-@media (max-width:1000px) {
+@media (max-width:900px) {
+  .allStartupName {
+    width: 350px;
+  }
 
+  .allStartupIntro {
+    width: 337px;
+  }
+
+  .allStartupRevenue {
+    width: 183.75px;
+  }
 }
 
-@media (max-width:744px) {
-  .hide{
+@media (max-width:800px) {
+  .hide {
     display: none;
+  }
+
+  .allStartupName {
+    width: 150px;
+  }
+
+  .allStartupIntro {
+    width: 180px;
+  }
+
+  .allStartupCategory,
+  .allStartupInvest,
+  .allStartupRevenue,
+  .allStartupEmployee {
+    width: 91.5px;
   }
 }
