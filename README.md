@@ -71,6 +71,9 @@
 - 기업비교 모달 구현
 
 배진한
+![image](https://github.com/user-attachments/assets/3bd0f716-7dd4-4e9e-a780-01c2f1de1d6f)
+
+![image](https://github.com/user-attachments/assets/93c665b9-b113-4375-93f7-386864cddc5c)
 
 - 기업 리스트 전체 조회
 - 페이지 작업
