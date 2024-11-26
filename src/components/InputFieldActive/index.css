@@ -5,9 +5,6 @@
   border-radius: 4px;
   border: 1px solid var(--black_300);
   background-color: var(--black_300);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 @media (max-width: 696px) {

@@ -1,7 +1,7 @@
 import "../InputFieldActive/index.css";
 
-function InputActive() {
-  return <div className="input"></div>;
+function InputActive({ children }) {
+  return <div className="input">{children}</div>;
 }
 
 export default InputActive;

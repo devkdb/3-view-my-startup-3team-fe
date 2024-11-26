@@ -1,7 +1,6 @@
 .select-modal {
   background-color: var(--black_300);
   width: 496px;
-  height: 931px;
   border-radius: 16px;
   padding: 24px 24px;
 }
@@ -32,6 +31,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+
+.company-list ul {
+  /*max-height: 440px;
+  overflow-y: auto;*/
 }
 
 .select-modal p {
@@ -71,4 +75,115 @@
 .pagination-div {
   display: flex;
   justify-content: center;
+}
+
+.company-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.09px;
+}
+
+.company-tag {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.71px;
+  color: var(--gray_200);
+}
+
+.company-info,
+.selected-info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.Button_button__d9BQ-.Button_select__tozxu,
+.Button_button__d9BQ-.Button_complete__iwnWt,
+.Button_button__d9BQ-.Button_cancel__Fp1L3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.09px;
+  width: 120px;
+  height: 48px;
+}
+
+@media (max-width: 343px) {
+  .select-modal {
+    width: 100%;
+    padding: 16px 16px;
+  }
+
+  .select-modal-all-div {
+    gap: 22px;
+  }
+
+  .select-modal h1 {
+    font-size: 16px;
+    line-height: 19.09px;
+    margin-left: 0;
+  }
+
+  .search-h1-input {
+    height: 104px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .company-list {
+    gap: 8px; /* 리스트 항목 간 간격을 줄임 */
+  }
+
+  .select-modal p {
+    font-size: 14px; /* 글씨 크기 줄임 */
+    line-height: 16px;
+  }
+
+  .company-name {
+    font-size: 12px;
+  }
+
+  .company-tag {
+    font-size: 10px;
+  }
+
+  .Button_button__d9BQ-.Button_select__tozxu {
+    font-size: 14px;
+    line-height: 16.71px;
+    width: 70px;
+    height: 32px;
+  }
+
+  .company-logo {
+    width: 40px;
+  }
+
+  .searchWrapper {
+    width: 311px;
+    height: 40px;
+  }
+}
+
+.selected-company {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.company-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.company-category {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.71px;
+  color: var(--gray_200);
+}
+
+.selected-company-logo {
+  width: 80px;
 }

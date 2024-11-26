@@ -1,9 +1,9 @@
 import React from "react";
-import Button from "../../Button/index";
+import Button from "../../Button/";
 
 const DEFAULT_IMAGE = "/images/default-company.png";
 
-const SearchResultList = ({ results, selectedCompanies, onSelect }) => {
+const SearchResult = ({ results, selectedCompanies, onSelect }) => {
   // 결과 데이터가 비어 있는 경우 처리
   if (!results || results.length === 0) {
     return <p>검색 결과가 없습니다.</p>;
@@ -41,4 +41,4 @@ const SearchResultList = ({ results, selectedCompanies, onSelect }) => {
   );
 };
 
-export default SearchResultList;
+export default SearchResult;
