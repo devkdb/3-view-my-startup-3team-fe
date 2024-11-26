@@ -74,7 +74,7 @@ function DeleteCompanyInvestment({ onClose, mockInvestor }) {
 
   const confirmDelete = async () => {
     try {
-      await apiRouter.deleteInvestment(id, { password });
+      await apiRouter.deleteInvestment(id, password);
       onClose();
       window.location.reload();
     } catch (err) {
