@@ -92,7 +92,7 @@ function AllStartupListPage() {
       <div className='pagination'>
         <Pagination
           totalPages={totalPages}
-          currentPage={currentPages}
+          currentPage={currentPage}
           hasNextPage={hasNextPage}
           currentPageHandler={currentPageHandler}
         />
