@@ -4,6 +4,7 @@ import React from "react";
 import DetailsPageHeader from "./components/DetailsPageHeader/index";
 import DetailsPageInfo from "./components/DetailsPageInfo/index";
 import DetailsPageInvest from "./components/DetailsPageInvest/index";
+import "./index.css";
 
 function DetailsPage() {
   // const { companyId } = useParams();
@@ -11,7 +12,7 @@ function DetailsPage() {
   console.log("DetailsPage");
 
   return (
-    <div>
+    <div className="DetailsMainLayer">
       <DetailsPageHeader />
       <DetailsPageInfo />
       <DetailsPageInvest />
