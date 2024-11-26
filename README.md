@@ -57,6 +57,9 @@
 - 투자자 조회, 생성, 수정, 삭제 구현
 
 김혁진
+![image](https://github.com/user-attachments/assets/350a0d1a-2712-46a2-8273-40f591bc5436)
+![image](https://github.com/user-attachments/assets/be1870c6-f806-4959-a0ea-6fd09e602af5)
+![image](https://github.com/user-attachments/assets/b98ea338-c73e-4470-bd63-b7701baa5b85)
 
 - 기업 비교 페이지 작업
 - 인풋필드 공통컴포넌트 구현
