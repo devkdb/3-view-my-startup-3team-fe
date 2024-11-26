@@ -1,0 +1,17 @@
+.results-check {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.scroll-x{
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: 101px;
+}

@@ -13,37 +13,37 @@ function CompareDropdownList({ onItemClick, dropdownRef }) {
     >
       <li
         className="DropdownListFont"
-        onClick={() => onItemClick("누적 투자금액 높은순")}
+        onClick={() => onItemClick("actualInvestDesc", "누적 투자금액 높은순")}
       >
         누적 투자금액 높은순
       </li>
       <li
         className="DropdownListFont"
-        onClick={() => onItemClick("누적 투자금액 낮은순")}
+        onClick={() => onItemClick("actualInvestAsc", "누적 투자금액 낮은순")}
       >
         누적 투자금액 낮은순
       </li>
       <li
         className="DropdownListFont"
-        onClick={() => onItemClick("매출액 높은순")}
+        onClick={() => onItemClick("revenueDesc", "매출액 높은순")}
       >
         매출액 높은순
       </li>
       <li
         className="DropdownListFont"
-        onClick={() => onItemClick("매출액 낮은순")}
+        onClick={() => onItemClick("revenueAsc", "매출액 낮은순")}
       >
         매출액 낮은순
       </li>
       <li
         className="DropdownListFont"
-        onClick={() => onItemClick("고용 인원 많은순")}
+        onClick={() => onItemClick("employeesDesc", "고용 인원 많은순")}
       >
         고용 인원 많은순
       </li>
       <li
         className="DropdownListFont"
-        onClick={() => onItemClick("고용 인원 적은순")}
+        onClick={() => onItemClick("employeesAsc", "고용 인원 적은순")}
       >
         고용 인원 적은순
       </li>

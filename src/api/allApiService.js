@@ -51,6 +51,21 @@ async function getSelectStartupsList(params = {}) {
 // 나의 기업 선택하기
 
 // 비교 기업 선택하기
+async function patchSelections({ surveyData, id }) {
+  const compareIds = Array.isArray(id) ? id.join(",") : id;
+  try {
+    const res = await axios.patch(
+      `${BASE_URL}/api/startups/selections?startupId=${
+        Array.isArray(id) ? id[0] : id
+      }&compareIds=${compareIds}`,
+      surveyData
+    );
+    return res.data;
+  } catch (error) {
+    console.error("Error in patchSelections:", error);
+    throw error;
+  }
+}
 
 // 전체 투자 현황 조회
 async function getAllInvestments(params = {}) {
@@ -107,6 +122,7 @@ const AllstartupsService = {
   createInvestment,
   patchInvestment,
   deleteInvestment,
+  patchSelections,
 };
 
 export { AllstartupsService as apiRouter };

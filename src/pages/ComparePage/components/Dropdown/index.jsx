@@ -3,7 +3,7 @@ import toggle from "../../../../assets/images/icons/ic_toggle.png";
 import "./index.css";
 import CompareDropdownList from "./List/index";
 
-function CompareDropdown() {
+function CompareDropdown({ onItemClick }) {
   const [isOpen, setIsOpen] = useState(false); // 드롭다운 열기/닫기 상태
   const [selectedValue, setSelectedValue] = useState("누적 투자금액 높은순"); // 선택된 항목의 기본 값 설정
   const dropdownRef = useRef(null); // 드롭다운 박스의 ref
@@ -12,9 +12,10 @@ function CompareDropdown() {
     setIsOpen((prevState) => !prevState);
   };
   // 리스트 항목을 클릭했을 때 호출되는 함수
-  const handleItemClick = (value) => {
-    setSelectedValue(value); // 선택된 항목을 상태로 업데이트
+  const handleItemClick = (value, label) => {
+    setSelectedValue(label); // 선택된 항목을 상태로 업데이트
     setIsOpen(false); // 클릭 후 드롭다운 닫기
+    onItemClick(value);
   };
   return (
     <div className="DropdownBody">
