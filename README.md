@@ -48,6 +48,9 @@
 김두봉
 
 ![image](https://github.com/user-attachments/assets/09e392b6-3702-49ec-a7cb-c2f54af4e753)
+![image](https://github.com/user-attachments/assets/b0329e60-0128-4c5e-947f-0bb05d20abc6)
+![image](https://github.com/user-attachments/assets/58fdad71-871c-4e8c-a109-f7ab56514f36)
+![image](https://github.com/user-attachments/assets/5dd6d5eb-efaa-4294-bce9-122a1c173030)
 
 - 기업 상세 페이지 작업
 - 버튼, 모달 공통컴포넌트 구현
