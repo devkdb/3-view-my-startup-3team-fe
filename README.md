@@ -121,4 +121,4 @@
 
 
 ## 구현 홈페이지
-[3팀 초급 미션](https://famous-cat-84e283.netlify.app/)
+[3팀 초급 미션 홈페이지](https://famous-cat-84e283.netlify.app/)
