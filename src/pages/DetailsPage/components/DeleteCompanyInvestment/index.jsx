@@ -80,6 +80,13 @@ function DeleteCompanyInvestment({ onClose, mockInvestor }) {
     } catch (err) {
       console.error("삭제 요청 중 오류 발생:", err);
       console.error(err.response.data);
+
+      // 비밀번호 불일치 등의 오류 처리
+      if (err.response && err.response.status === 401) {
+        alert("비밀번호가 일치하지 않습니다.");
+      } else {
+        alert("삭제 중 오류가 발생했습니다.");
+      }
     }
   };
 

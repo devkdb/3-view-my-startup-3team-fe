@@ -1,8 +1,8 @@
 // npm install 해주세요.
 import axios from "axios";
 
-//const BASE_URL = 'https://three-view-my-startup-3team-be.onrender.com';
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://three-view-my-startup-3team-be.onrender.com";
+// const BASE_URL = "http://localhost:8000";
 
 /**
  * 백엔드 api 라우터의 주석과 순서를 그대로 했습니다.
@@ -89,8 +89,10 @@ async function patchInvestment(id, surveyData) {
 }
 
 // 투자 삭제
-async function deleteInvestment(id) {
-  const url = await axios.delete(`${BASE_URL}/api/investments/${id}`);
+async function deleteInvestment(id, password) {
+  const url = await axios.delete(`${BASE_URL}/api/investments/${id}`, {
+    data: { password }, // 비밀번호를 요청 body에 포함
+  });
   return url.data;
 }
 

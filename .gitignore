@@ -371,6 +371,9 @@ gradle-app.setting
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 
+### debug config
+.vscode/launch.json
+
 # Local History for Visual Studio Code
 .history/
 
