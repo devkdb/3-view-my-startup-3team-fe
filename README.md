@@ -58,6 +58,7 @@
 - 버튼, 모달 공통컴포넌트 구현
 - 투자자 조회, 생성, 수정, 삭제 구현
 
+
 김혁진
 
 ![image](https://github.com/user-attachments/assets/350a0d1a-2712-46a2-8273-40f591bc5436)
