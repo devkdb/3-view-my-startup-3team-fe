@@ -81,6 +81,7 @@ function CreateCompanyInvestment({ onClose, startup }) {
       } else {
         resetForm(); // 상태 초기화 (폼 비우기)
         setIsComplete(true);
+        onClose(res); // 새로운 투자 정보를 전달
       }
     } catch (error) {
       setError("투자에 실패하였습니다.");
