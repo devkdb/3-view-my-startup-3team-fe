@@ -12,9 +12,9 @@ function HomePage() {
         <div className="mainText2">모의 투자를 시작하세요!</div>
       </div>
       <div className="mainButtionContainer">
-        <button className="mainButtion">
-          <Link to="/all-startup-list">투자 시작하기</Link>
-        </button>
+        <Link to="/all-startup-list">
+          <button className="mainButtion">투자 시작하기</button>
+        </Link>
       </div>
     </div>
   );

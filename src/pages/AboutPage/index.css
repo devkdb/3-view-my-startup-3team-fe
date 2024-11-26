@@ -1,4 +1,5 @@
 .about-page {
+  max-width: 1250px;
   width: 100%;
   display: block;
   justify-content: center;
@@ -26,7 +27,7 @@
 }
 
 .about-page__title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
   margin-bottom: 10px;
   color: var(--brand_orange);
@@ -34,7 +35,7 @@
 
 .about-page__text {
   margin-bottom: 10px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   line-height: 1.5;
   padding-left: 20px;
 }
@@ -42,7 +43,7 @@
 .about-page__list {
   padding-left: 20px;
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .about-page__list--ordered {
@@ -52,12 +53,12 @@
 .about-page__item {
   margin-bottom: 8px;
   padding-left: 10px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .about-page__item strong {
   color: var(--gray_200);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .about-page__list--ordered .about-page__item p {
@@ -67,6 +68,6 @@
 .about-page__footer {
   text-align: center;
   margin-top: 20px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--gray_200);
 }
