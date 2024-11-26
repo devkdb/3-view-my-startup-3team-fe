@@ -138,7 +138,7 @@
       "investAmount": "3000000000",
       "comment": "유망한 스타트업입니다.",
       "password": "pw1234",
-      "startupId": 1,
+      "startupId": 3,
       "rank": 1
     },
     {
@@ -156,7 +156,7 @@
       "investAmount": "500000000",
       "comment": "신뢰할 수 있는 기업입니다.",
       "password": "pw1234",
-      "startupId": 3,
+      "startupId": 1,
       "rank": 5
     },
     {
@@ -192,7 +192,7 @@
       "investAmount": "1000000000",
       "comment": "미래가 기대됩니다.",
       "password": "pw1234",
-      "startupId": 2,
+      "startupId": 1,
       "rank": 7
     },
     {
@@ -201,7 +201,7 @@
       "investAmount": "1000000000",
       "comment": "혁신적인 아이디어가 좋습니다.",
       "password": "pw1234",
-      "startupId": 2,
+      "startupId": 1,
       "rank": 6
     },
     {

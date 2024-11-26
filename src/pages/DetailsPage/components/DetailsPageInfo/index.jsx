@@ -38,15 +38,15 @@ dangerouslySetInnerHTML={{
 function DetailspageInfo() {
   console.log("DetailsPageInfo");
 
-  const { companyId } = useParams();
-  const { startup, error } = useFetchStartup(companyId);
+  const { startupId } = useParams();
+  const { startup, error } = useFetchStartup(startupId);
 
   if (error) {
-    return <Warn variant="error" title="오류발생" description={error} />;
+    return <Warn variant='error' title='오류발생' description={error} />;
   }
 
   if (!startup) {
-    return;
+    return null;
   }
 
   return (

@@ -13,7 +13,7 @@ const API_BASE_URL = "http://localhost:8000";
 
 export async function getStartup(companyId) {
   try {
-    const response = await fetch(`${API_BASE_URL}/startups/${companyId}`);
+    const response = await fetch(`${API_BASE_URL}/api/startups/${companyId}`);
     if (!response.ok) {
       const errorMessage = await response.text();
       console.log("errMessage", errorMessage);
@@ -34,7 +34,7 @@ export async function getInvestors(
   sort = "desc"
 ) {
   return mockinvestors.filter(
-    (mockinvestor) => mockinvestor.startupId === Number(100)
+    (mockinvestor) => mockinvestor.startupId === Number(1)
   );
   // .limit(5); TODO: 5개 제한 구현할것. 여기가 아니더라도. 현재 제한 없음
 }

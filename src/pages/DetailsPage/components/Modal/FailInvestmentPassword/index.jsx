@@ -14,7 +14,7 @@ function FailInvestmentPassword({ setFail }) {
           src={X}
           onClick={handleCloseFailModal}
           style={{ cursor: "pointer" }}
-          alt="close btn"
+          alt='close btn'
         />
         <span>잘못된 비밀번호입니다.</span>
         <button className={styles.fail} onClick={handleCloseFailModal}>

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  gap: 2.4rem;
+  /* gap: 2.4rem; */
 }
 
 .content h1 {
@@ -64,7 +64,7 @@
 }
 
 .tableContainer {
-  padding-bottom: 7rem;
+  padding-bottom: 20rem;
 }
 
 .wrapper {
@@ -72,6 +72,17 @@
   overflow-y: visible;
   border-radius: 0.4rem;
   position: relative;
+  padding-bottom: 10rem; /* 페이지네이션을 위한 추가 공간 */
+  z-index: 1; /* 테이블이 footer 위에 오도록 */
+}
+
+/* Pagination 컴포넌트에 대한 추가 스타일 */
+.pagination {
+  position: absolute;
+  bottom: 2rem; /* footer와 겹치지 않도록 */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 .table tr:hover {

@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
-import X from "../../../assets/images/icons/svg/ic_x.svg";
-import Modal from "../../../../../../components/Modal/index";
+import X from "../../../../../assets/images/icons/x/ic_x.svg";
+import Modal from "../../../../../components/Modal/index";
 
 function CompleteInvestment({ onClose }) {
   return (
@@ -10,7 +10,7 @@ function CompleteInvestment({ onClose }) {
           src={X}
           onClick={onClose}
           style={{ cursor: "pointer" }}
-          alt="close btn"
+          alt='close btn'
         />
         <span>투자가 완료되었어요!</span>
         <button className={styles.complete} onClick={onClose}>
