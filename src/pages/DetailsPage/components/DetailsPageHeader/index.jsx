@@ -44,7 +44,6 @@ const CATEGORIES = [
 
 function DetailsPageheader() {
   const { startupId } = useParams();
-
   const { startup, error } = useFetchStartup(startupId);
 
   if (error) {
