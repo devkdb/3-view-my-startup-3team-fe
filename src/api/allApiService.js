@@ -1,7 +1,7 @@
 // npm install 해주세요.
-import axios from "axios";
+import axios from 'axios';
 
-const BASE_URL = "https://three-view-my-startup-3team-be.onrender.com";
+const BASE_URL = 'https://three-view-my-startup-3team-be.onrender.com';
 
 /**
  * 백엔드 api 라우터의 주석과 순서를 그대로 했습니다.
@@ -25,6 +25,12 @@ async function getSearchStartupsList(params = {}) {
 }
 
 // 내 기업과 비교 대상 기업들 비교하기
+async function compareStartups(params = {}) {
+  const res = await axios.get(`${BASE_URL}/api/startups/comparison`, {
+    params,
+  });
+  return res.data;
+}
 
 // 특정 기업 상세 조회
 async function getStartup(id) {
@@ -49,8 +55,19 @@ async function getSelectStartupsList(params = {}) {
 }
 
 // 나의 기업 선택하기
+async function selectMyStartup(startupId) {
+  const url = `${BASE_URL}/api/selections/${startupId}/myStartup`;
+  const res = await axios.patch(url);
+  return res.data;
+}
 
 // 비교 기업 선택하기
+async function selectComparisonStartups(params = {}) {
+  const res = await axios.patch(`${BASE_URL}/api/startups/selections`, null, {
+    params,
+  });
+  return res.data;
+}
 
 // 전체 투자 현황 조회
 async function getAllInvestments(params = {}) {
@@ -83,8 +100,10 @@ async function patchInvestment(id, surveyData) {
   const res = await axios.patch(
     `${BASE_URL}/api/investments/${id}`,
     surveyData
+    surveyData
   );
   return res;
+  return res.data;
 }
 
 // 투자 삭제
@@ -104,6 +123,19 @@ const AllstartupsService = {
   getSelectStartupsList,
   getAllInvestments,
   getInvestors,
+  createInvestment,
+  patchInvestment,
+  deleteInvestment,
+};
+  getAllStartupsList,
+  getSearchStartupsList,
+  compareStartups,
+  getStartup,
+  getStartupRank,
+  getSelectStartupsList,
+  selectMyStartup,
+  selectComparisonStartups,
+  getAllInvestments,
   createInvestment,
   patchInvestment,
   deleteInvestment,
