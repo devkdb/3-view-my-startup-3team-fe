@@ -8,7 +8,7 @@
 
 김혁진 ([개인 Github 링크](https://github.com/whiteuni))
 
-배진한([개인 Github 링크](https://github.com/Jin-coding-333))
+[배진한](#배진한)([개인 Github 링크](https://github.com/Jin-coding-333))
 
 임예지([개인 Github 링크](https://github.com/Bluemoon105))
 
@@ -68,14 +68,37 @@
 - 기업선택 모달 구현
 - 기업비교 모달 구현
 
-배진한
+## 배진한
+#### 초기 프로젝트 설정
+- 전체적인 폴더 구조 설정
+- 기본적인 코드 컨벤션 구상 및 공유
 
-![image](https://github.com/user-attachments/assets/3bd0f716-7dd4-4e9e-a780-01c2f1de1d6f)
+#### API 기능 구현
+- 전체 기업 목록 조회
+- 전체 기업 검색 기능
+- 특정 기업 상세 조회
+- 내 기업의 순위와 근접한 순위의 기업 정보 확인
+- 기업 선택 횟수 조회
+- 전체 투자 현황 조회
+- 특정 기업에 투자하기
+- 투자 수정
 
-![image](https://github.com/user-attachments/assets/93c665b9-b113-4375-93f7-386864cddc5c)
+#### Page
+##### Landin Page
+![view_my_startup_landing_page-img](https://github.com/user-attachments/assets/7fd5b607-164e-4d49-bfcf-97d015d6ef73)
 
-- 기업 리스트 전체 조회
-- 페이지 작업
+##### 기업 전체, 투자 현황, 비교 현황 페이지
+![view_my_startup_list_page-img](https://github.com/user-attachments/assets/d6acd532-90a5-4f56-89b4-29a5d0901aaf)
+
+#### 컴포넌트
+##### GNB & Footer
+<img width="1279" alt="view_my_startup_GNB-img" src="https://github.com/user-attachments/assets/98dbb044-c902-40d1-ba38-2de7a2e9cd0d" />
+<img width="1241" alt="view_my_startup_footer-img" src="https://github.com/user-attachments/assets/bd5965c1-7978-40c2-b891-43f08e955fe4" />
+
+
+#### 그 외
+##### Favicon
+![favorite_photo_favicon-img](https://github.com/user-attachments/assets/1d3c2065-b21f-4670-919e-cd8bfaacacfd)
 
 임예지
 
